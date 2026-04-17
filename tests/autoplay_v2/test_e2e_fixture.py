@@ -44,14 +44,19 @@ def test_e2e_fixture_flow(tmp_path: Path):
         fixture_path=fixture_path,
         dry_run=True,
         runs_dir=tmp_path / "runs",
-        tile_reader=tile_reader,
         max_words=3,
-        deps={"feedback_fn": lambda **kwargs: feedback_rows.append(kwargs)},
+        deps={
+            "tile_reader_factory": lambda: tile_reader,
+            "feedback_fn": lambda **kwargs: feedback_rows.append(kwargs),
+        },
     )
 
     assert artifact.run_id
     assert artifact.calibration_id == "e2e-cal"
+    assert artifact.board_tokens[:5] == ["TH", "E", "N", "A", "R"]
     assert artifact.solved_words
+    solved_words = {item.word for item in artifact.solved_words}
+    assert {"THEN", "THENA", "THENAR"}.issubset(solved_words)
     assert artifact.swipe_attempts
     assert all(attempt.status == "dry_run" for attempt in artifact.swipe_attempts)
 

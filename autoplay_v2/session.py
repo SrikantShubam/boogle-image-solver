@@ -11,6 +11,7 @@ from autoplay_v2.config import AUTOPLAY_RUNS_DIR, CALIBRATION_PATH, ensure_runti
 from autoplay_v2.feedback import append_feedback_entry
 from autoplay_v2.input_driver import playback_word
 from autoplay_v2.models import CalibrationConfig, RunArtifact, SolvedWord, SwipeAttempt
+from autoplay_v2 import ocr as ocr_module
 from autoplay_v2.ocr import ocr_board
 from autoplay_v2.ranking import rank_solved_words
 from autoplay_v2.solver import build_solver_resources, solve_board_with_paths
@@ -48,6 +49,47 @@ def _status_for_feedback(attempt: SwipeAttempt) -> str:
     return "unknown"
 
 
+def _resolve_runtime_tile_reader(
+    tile_reader: Optional[Callable[..., tuple[str, float]]],
+    deps: Dict[str, Any],
+) -> Callable[..., tuple[str, float]]:
+    if tile_reader is not None:
+        return tile_reader
+
+    injected_reader = deps.get("tile_reader")
+    if callable(injected_reader):
+        return injected_reader
+
+    injected_factory = deps.get("tile_reader_factory")
+    if callable(injected_factory):
+        resolved_reader = injected_factory()
+        if callable(resolved_reader):
+            return resolved_reader
+        raise RuntimeError("OCR tile_reader_factory did not return a callable reader.")
+
+    for factory_name in (
+        "build_runtime_tile_reader",
+        "create_runtime_tile_reader",
+        "get_runtime_tile_reader",
+    ):
+        factory = getattr(ocr_module, factory_name, None)
+        if not callable(factory):
+            continue
+        resolved_reader = factory()
+        if callable(resolved_reader):
+            return resolved_reader
+
+    direct_reader = getattr(ocr_module, "runtime_tile_reader", None)
+    if callable(direct_reader):
+        return direct_reader
+
+    raise RuntimeError(
+        "No runtime OCR reader is configured. Provide tile_reader, tile_reader_factory, "
+        "or expose build_runtime_tile_reader/create_runtime_tile_reader/get_runtime_tile_reader "
+        "from autoplay_v2.ocr."
+    )
+
+
 def run_once(
     calibration: Optional[CalibrationConfig] = None,
     calibration_path: Path = CALIBRATION_PATH,
@@ -79,10 +121,16 @@ def run_once(
     )
 
     ocr_fn = deps.get("ocr_fn", ocr_board)
+    effective_tile_reader = tile_reader
+    if ocr_fn is ocr_board:
+        effective_tile_reader = _resolve_runtime_tile_reader(
+            tile_reader=tile_reader,
+            deps=deps,
+        )
     ocr_result = ocr_fn(
         capture.frame,
         current_calibration,
-        tile_reader=tile_reader,
+        tile_reader=effective_tile_reader,
         debug_dir=run_dir,
     )
 

@@ -45,12 +45,16 @@ def _cmd_calibrate(args: argparse.Namespace) -> int:
 
 def _cmd_play_once(args: argparse.Namespace) -> int:
     calibration = load_calibration()
-    artifact = run_once(
-        calibration=calibration,
-        fixture_path=Path(args.fixture) if args.fixture else None,
-        dry_run=not args.live,
-        max_words=args.max_words,
-    )
+    try:
+        artifact = run_once(
+            calibration=calibration,
+            fixture_path=Path(args.fixture) if args.fixture else None,
+            dry_run=not args.live,
+            max_words=args.max_words,
+        )
+    except RuntimeError as exc:
+        print(f"OCR integration error: {exc}")
+        return 2
     print(f"Run ID: {artifact.run_id}")
     print(f"Solved words: {len(artifact.solved_words)}")
     print(f"Swipe attempts: {len(artifact.swipe_attempts)}")
@@ -62,7 +66,15 @@ def _cmd_play_once(args: argparse.Namespace) -> int:
 def _cmd_hotkey(args: argparse.Namespace) -> int:
     def _play_runner() -> None:
         calibration = load_calibration()
-        artifact = run_once(calibration=calibration, dry_run=not args.live, max_words=args.max_words)
+        try:
+            artifact = run_once(
+                calibration=calibration,
+                dry_run=not args.live,
+                max_words=args.max_words,
+            )
+        except RuntimeError as exc:
+            print(f"[autoplay-v2] OCR integration error: {exc}")
+            return
         print(
             f"[autoplay-v2] run={artifact.run_id} solved={len(artifact.solved_words)} "
             f"attempts={len(artifact.swipe_attempts)}"

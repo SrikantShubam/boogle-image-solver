@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import numpy as np
+import pytest
 
 from autoplay_v2.calibration import create_calibration
 from autoplay_v2.hotkey import DualHotkeyRuntime, HotkeyTrigger
@@ -140,6 +141,40 @@ def test_run_once_aborts_on_low_confidence_ocr(tmp_path: Path):
     )
     assert called["solve"] == 0
     assert artifact.notes == "ocr_low_confidence_abort"
+
+
+def test_run_once_requires_runtime_reader_for_default_ocr(tmp_path: Path, monkeypatch):
+    calibration = create_calibration(
+        roi_left=0,
+        roi_top=0,
+        roi_width=500,
+        roi_height=500,
+        grid_size=5,
+        calibration_id="session-reader",
+    )
+    frame = np.zeros((500, 500, 3), dtype=np.uint8)
+
+    def capture_fn(*args, **kwargs):
+        return CapturedFrame(
+            calibration_id="session-reader",
+            captured_at="2026-04-17T10:00:00+00:00",
+            frame=frame,
+            source="fixture",
+        )
+
+    def no_reader(*args, **kwargs):
+        raise RuntimeError("no runtime reader configured")
+
+    monkeypatch.setattr("autoplay_v2.session._resolve_runtime_tile_reader", no_reader)
+    with pytest.raises(RuntimeError, match="no runtime reader configured"):
+        run_once(
+            calibration=calibration,
+            words={"TEST"},
+            runs_dir=tmp_path,
+            deps={
+                "capture_fn": capture_fn,
+            },
+        )
 
 
 def test_failed_word_logging_on_playback_rejection(tmp_path: Path):
