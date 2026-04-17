@@ -1,0 +1,10 @@
+.env
+.env.*
+.claude/
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+dist/
+debug_canvas.*

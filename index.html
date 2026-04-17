@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boggle Image Solver</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #111827;
+        --muted: #334155;
+        --text: #e5e7eb;
+        --sub: #94a3b8;
+        --accent: #22d3ee;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: radial-gradient(circle at 20% 20%, #1f2937 0, var(--bg) 50%);
+        color: var(--text);
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      @media (min-width: 860px) {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .card {
+        background: color-mix(in oklab, var(--card) 92%, black);
+        border: 1px solid var(--muted);
+        border-radius: 14px;
+        padding: 14px;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 1.2rem;
+      }
+      .row {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+      label {
+        font-size: 0.85rem;
+        color: var(--sub);
+      }
+      input,
+      select,
+      button {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid var(--muted);
+        padding: 10px;
+        background: #0b1220;
+        color: var(--text);
+      }
+      button {
+        background: linear-gradient(120deg, #0891b2, var(--accent));
+        color: #001018;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      .meta {
+        color: var(--sub);
+        font-size: 0.9rem;
+      }
+      .preview {
+        width: 100%;
+        max-height: 380px;
+        object-fit: contain;
+        border-radius: 12px;
+        border: 1px solid var(--muted);
+        background: #0b1220;
+      }
+      .board {
+        display: grid;
+        gap: 8px;
+        margin: 10px 0;
+      }
+      .board .r {
+        display: grid;
+        gap: 8px;
+      }
+      .cell {
+        border: 1px solid var(--muted);
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 700;
+        padding: 8px 0;
+        background: #0b1220;
+      }
+      .bonus {
+        outline: 2px solid #22d3ee;
+      }
+      .words {
+        max-height: 52vh;
+        overflow: auto;
+        border: 1px solid var(--muted);
+        border-radius: 10px;
+        padding: 8px;
+        background: #0b1220;
+      }
+      .word {
+        padding: 4px 2px;
+        border-bottom: 1px dashed #1f2937;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+      .err {
+        color: #fda4af;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Boggle Solver (Image -> Words)</h1>
+      <div class="grid">
+        <section class="card">
+          <div class="row">
+            <label>Screenshot</label>
+            <input id="file" type="file" accept="image/*" />
+          </div>
+          <div class="row">
+            <label>NVIDIA API Key (optional if server has NVIDIA_API_KEY)</label>
+            <input id="apiKey" type="password" placeholder="nvapi-..." />
+          </div>
+          <div class="row">
+            <button id="run">Extract + Solve</button>
+          </div>
+          <img id="preview" class="preview" alt="preview" />
+          <p id="status" class="meta"></p>
+        </section>
+
+        <section class="card">
+          <div id="summary" class="meta">Upload an image to start.</div>
+          <div id="board" class="board"></div>
+          <div id="words" class="words"></div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      const fileInput = document.getElementById("file");
+      const preview = document.getElementById("preview");
+      const runBtn = document.getElementById("run");
+      const statusEl = document.getElementById("status");
+      const boardEl = document.getElementById("board");
+      const wordsEl = document.getElementById("words");
+      const summaryEl = document.getElementById("summary");
+      const keyEl = document.getElementById("apiKey");
+
+      let imageDataUrl = "";
+
+      function readAsDataUrl(file) {
+        return new Promise((resolve, reject) => {
+          const fr = new FileReader();
+          fr.onload = () => resolve(fr.result);
+          fr.onerror = reject;
+          fr.readAsDataURL(file);
+        });
+      }
+
+      fileInput.addEventListener("change", async () => {
+        const file = fileInput.files?.[0];
+        if (!file) return;
+        imageDataUrl = await readAsDataUrl(file);
+        preview.src = imageDataUrl;
+        statusEl.textContent = "Image loaded.";
+      });
+
+      function renderBoard(board) {
+        boardEl.innerHTML = "";
+        const n = board.grid_size;
+        const bonus = board.bonus;
+        boardEl.style.gridTemplateRows = `repeat(${n}, auto)`;
+        for (let r = 0; r < n; r++) {
+          const row = document.createElement("div");
+          row.className = "r";
+          row.style.gridTemplateColumns = `repeat(${n}, 1fr)`;
+          for (let c = 0; c < n; c++) {
+            const cell = document.createElement("div");
+            cell.className = "cell";
+            if (bonus && bonus.row === r && bonus.col === c) {
+              cell.classList.add("bonus");
+            }
+            cell.textContent = board.grid[r][c];
+            row.appendChild(cell);
+          }
+          boardEl.appendChild(row);
+        }
+      }
+
+      function renderWords(words) {
+        wordsEl.innerHTML = "";
+        for (const w of words) {
+          const div = document.createElement("div");
+          div.className = "word";
+          div.textContent = w;
+          wordsEl.appendChild(div);
+        }
+      }
+
+      runBtn.addEventListener("click", async () => {
+        if (!imageDataUrl) {
+          statusEl.textContent = "Pick an image first.";
+          return;
+        }
+        runBtn.disabled = true;
+        statusEl.textContent = "Running OCR + solver...";
+        summaryEl.textContent = "";
+        boardEl.innerHTML = "";
+        wordsEl.innerHTML = "";
+
+        try {
+          const res = await fetch("/api/solve", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              imageDataUrl,
+              apiKey: keyEl.value.trim() || undefined,
+            }),
+          });
+          const data = await res.json();
+          if (!res.ok) {
+            throw new Error(data.error || `Request failed (${res.status})`);
+          }
+
+          renderBoard(data.board);
+          renderWords(data.words || []);
+          summaryEl.textContent = `Model: ${data.model_used} | Fallback: mistral -> gemma3 | Grid: ${data.board.grid_size}x${data.board.grid_size} | Words: ${data.count} | Score est: ${data.score_estimate}`;
+          statusEl.textContent = "Done.";
+        } catch (err) {
+          summaryEl.innerHTML = `<span class="err">${err.message}</span>`;
+          statusEl.textContent = "Failed.";
+        } finally {
+          runBtn.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>
