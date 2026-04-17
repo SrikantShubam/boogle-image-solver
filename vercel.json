@@ -3,7 +3,7 @@
   "outputDirectory": "public",
   "functions": {
     "api/solve.js": {
-      "maxDuration": 30
+      "maxDuration": 60
     }
   }
 }
