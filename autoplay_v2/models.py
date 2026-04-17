@@ -192,6 +192,7 @@ class SwipeAttempt:
     duration_ms: int
     status: str
     message: str = ""
+    commands: List[str] = field(default_factory=list)
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -201,6 +202,7 @@ class SwipeAttempt:
             "duration_ms": self.duration_ms,
             "status": self.status,
             "message": self.message,
+            "commands": list(self.commands),
         }
 
     @classmethod
@@ -214,6 +216,7 @@ class SwipeAttempt:
             duration_ms=int(payload["duration_ms"]),
             status=str(payload["status"]),
             message=str(payload.get("message", "")),
+            commands=[str(item) for item in payload.get("commands", [])],
         )
 
 

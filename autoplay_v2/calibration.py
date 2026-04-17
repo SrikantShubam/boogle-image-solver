@@ -128,6 +128,10 @@ def create_and_save_calibration(
     return calibration
 
 
+def tile_centers_by_index(calibration: CalibrationConfig) -> dict[int, TileCenter]:
+    return {center.index: center for center in calibration.tile_centers}
+
+
 def save_calibration(calibration: CalibrationConfig, path=CALIBRATION_PATH) -> None:
     save_json_file(path, calibration.to_dict())
 
