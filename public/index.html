@@ -176,10 +176,28 @@
         });
       }
 
+      // Resize image to max 1400px so the base64 payload stays under 4MB.
+      function resizeImage(dataUrl, maxPx = 1400) {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.onload = () => {
+            const scale = Math.min(1, maxPx / Math.max(img.width, img.height));
+            const w = Math.round(img.width * scale);
+            const h = Math.round(img.height * scale);
+            const c = document.createElement("canvas");
+            c.width = w; c.height = h;
+            c.getContext("2d").drawImage(img, 0, 0, w, h);
+            resolve(c.toDataURL("image/jpeg", 0.88));
+          };
+          img.src = dataUrl;
+        });
+      }
+
       fileInput.addEventListener("change", async () => {
         const file = fileInput.files?.[0];
         if (!file) return;
-        imageDataUrl = await readAsDataUrl(file);
+        const raw = await readAsDataUrl(file);
+        imageDataUrl = await resizeImage(raw);
         preview.src = imageDataUrl;
         statusEl.textContent = "Image loaded.";
       });
@@ -216,6 +234,22 @@
         }
       }
 
+      async function readApiResponse(res) {
+        const text = await res.text();
+        const contentType = (res.headers.get("content-type") || "").toLowerCase();
+        if (!contentType.includes("application/json")) {
+          const preview = text.slice(0, 220).trim() || "Non-JSON response";
+          throw new Error(`Server error (${res.status}): ${preview}`);
+        }
+
+        try {
+          return JSON.parse(text);
+        } catch {
+          const preview = text.slice(0, 220).trim() || "Invalid JSON response";
+          throw new Error(`Invalid JSON from server (${res.status}): ${preview}`);
+        }
+      }
+
       runBtn.addEventListener("click", async () => {
         if (!imageDataUrl) {
           statusEl.textContent = "Pick an image first.";
@@ -236,7 +270,7 @@
               apiKey: keyEl.value.trim() || undefined,
             }),
           });
-          const data = await res.json();
+          const data = await readApiResponse(res);
           if (!res.ok) {
             throw new Error(data.error || `Request failed (${res.status})`);
           }

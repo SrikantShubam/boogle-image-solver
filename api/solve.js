@@ -2,7 +2,15 @@ const fs = require("fs");
 const path = require("path");
 const os = require("os");
 const { spawnSync } = require("child_process");
-const sharp = require("sharp");
+
+let sharpInstance = null;
+function getSharp() {
+  if (sharpInstance) return sharpInstance;
+  // Load lazily so deployment-time native module issues return JSON from handler.
+  // Top-level require failures bypass the handler entirely and Vercel returns HTML/plain text.
+  sharpInstance = require("sharp");
+  return sharpInstance;
+}
 
 const MIN_WORD_LEN = 3;
 const PRIMARY_MODEL = "mistralai/mistral-large-3-675b-instruct-2512";
@@ -142,8 +150,14 @@ function parseJsonFromText(s) {
 }
 
 async function callNvidiaModel({ imageDataUrl, apiKey, model, detectedGridSize }) {
-  const size = detectedGridSize || 4;
-  const prompt = `This image shows a ${size}x${size} Boggle board — ${size * size} white circular tiles arranged in a grid. Each tile has exactly one uppercase letter. One tile may be highlighted cyan/teal. Read the letters row by row, left to right, top to bottom. Return ONLY a JSON object, no markdown:\n{"grid_size":${size},"grid":[${Array(size).fill('["?","?","?","?"]').join(",")}],"bonus":{"row":0,"col":0}}\nSet bonus to the row/col of the cyan tile, or null if none.`;
+  const rowTemplate = (n) => `[${Array(n).fill('"?"').join(",")}]`;
+  const fixedSizePrompt = detectedGridSize
+    ? `This image shows a ${detectedGridSize}x${detectedGridSize} Boggle board with ${detectedGridSize * detectedGridSize} white circular tiles arranged in a grid.`
+    : `This image shows either a 4x4 or 5x5 Boggle board made of white circular tiles arranged in a square grid. You must detect whether it is 4x4 or 5x5 before reading the letters.`;
+  const schemaHint = detectedGridSize
+    ? `{"grid_size":${detectedGridSize},"grid":[${Array(detectedGridSize).fill(rowTemplate(detectedGridSize)).join(",")}],"bonus":{"row":0,"col":0}}`
+    : `{"grid_size":4_or_5,"grid":[["?","?","?","?"],["?","?","?","?"],["?","?","?","?"],["?","?","?","?"]],"bonus":{"row":0,"col":0}}\nIf the board is 5x5, return five rows with five entries each instead.`;
+  const prompt = `${fixedSizePrompt} Each tile has exactly one uppercase letter. One tile may be highlighted cyan/teal. Read the letters row by row, left to right, top to bottom. Return ONLY a JSON object, no markdown:\n${schemaHint}\nSet bonus to the row/col of the cyan tile, or null if none. Do not force 4x4 if the board is actually 5x5.`;
 
   const body = {
     model,
@@ -202,6 +216,7 @@ function parseDataUrl(imageDataUrl) {
 }
 
 async function preprocessBoardImage(imageDataUrl) {
+  const sharp = getSharp();
   const { mimeType, buffer } = parseDataUrl(imageDataUrl);
   const meta = await sharp(buffer).metadata();
   const width = meta.width;
