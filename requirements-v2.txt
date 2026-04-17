@@ -2,4 +2,5 @@ opencv-python
 mss
 pillow
 keyboard
+numpy
 pytest
