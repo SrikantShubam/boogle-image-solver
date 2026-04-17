@@ -5,7 +5,9 @@ from pathlib import Path
 from typing import Any, Dict
 
 
-DEFAULT_HOTKEY = "Shift"
+DEFAULT_HOTKEY = "shift+a+s"
+DEFAULT_PLAY_HOTKEY = "shift+a+s"
+DEFAULT_CALIBRATE_HOTKEY = "ctrl+shift+a+s"
 DEFAULT_GRID_SIZE = 5
 DEFAULT_TILE_PADDING = 8
 

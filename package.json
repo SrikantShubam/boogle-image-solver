@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "autoplay:v2:calibrate": "python -m autoplay_v2.cli calibrate --left 100 --top 200 --width 500 --height 500 --grid-size 5 --tile-padding 8 --emulator-label android-studio --hotkey Shift",
+    "autoplay:v2:calibrate": "python -m autoplay_v2.cli calibrate",
+    "autoplay:v2:calibrate:manual": "python -m autoplay_v2.cli calibrate --left 100 --top 200 --width 500 --height 500 --grid-size 5 --tile-padding 8 --emulator-label android-studio",
     "autoplay:v2:play": "python -m autoplay_v2.cli play-once",
     "autoplay:v2:hotkey": "python -m autoplay_v2.cli hotkey",
     "autoplay:v2:review": "python -m autoplay_v2.cli review-last --show-feedback"

@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 from dataclasses import replace
-from typing import List, Tuple
+import platform
+from typing import Callable, List, Optional, Tuple
 
 from autoplay_v2.config import (
     CALIBRATION_PATH,
@@ -125,6 +126,149 @@ def create_and_save_calibration(
         calibration_id=calibration_id,
     )
     save_calibration(calibration)
+    return calibration
+
+
+def prompt_grid_size(
+    default_grid_size: int = DEFAULT_GRID_SIZE,
+    input_fn: Callable[[str], str] = input,
+) -> int:
+    prompt = (
+        f"Grid size selection: press '4' then Enter for 4x4, "
+        f"or just Enter to keep default {default_grid_size}x{default_grid_size}: "
+    )
+    raw = input_fn(prompt).strip()
+    if raw == "4":
+        return 4
+    return default_grid_size
+
+
+def select_roi_with_overlay() -> Tuple[int, int, int, int]:
+    if platform.system().lower() != "windows":
+        raise RuntimeError("Interactive calibration overlay is supported on Windows only")
+
+    try:
+        import mss
+    except ImportError as exc:
+        raise RuntimeError("mss is required for interactive calibration capture") from exc
+
+    try:
+        import tkinter as tk
+        from PIL import Image, ImageTk
+    except ImportError as exc:
+        raise RuntimeError("tkinter and pillow are required for interactive calibration overlay") from exc
+
+    with mss.mss() as sct:
+        monitor = sct.monitors[0]
+        shot = sct.grab(monitor)
+
+    screenshot = Image.frombytes("RGB", shot.size, shot.bgra, "raw", "BGRX")
+    root = tk.Tk()
+    root.title("Autoplay V2 Calibration")
+    root.attributes("-fullscreen", True)
+    root.attributes("-topmost", True)
+    root.configure(bg="black")
+    canvas = tk.Canvas(root, highlightthickness=0, cursor="crosshair")
+    canvas.pack(fill="both", expand=True)
+
+    tk_img = ImageTk.PhotoImage(screenshot)
+    canvas.create_image(0, 0, anchor="nw", image=tk_img)
+
+    state = {
+        "start_x": None,
+        "start_y": None,
+        "rect_id": None,
+        "roi": None,
+        "done": False,
+        "cancelled": False,
+    }
+
+    info_text = (
+        "Drag one bounding box around the board. "
+        "Press Enter to confirm, Esc to cancel."
+    )
+    canvas.create_text(20, 20, anchor="nw", text=info_text, fill="yellow", font=("Segoe UI", 16, "bold"))
+
+    def on_press(event):
+        state["start_x"] = event.x
+        state["start_y"] = event.y
+        if state["rect_id"] is not None:
+            canvas.delete(state["rect_id"])
+        state["rect_id"] = canvas.create_rectangle(event.x, event.y, event.x, event.y, outline="lime", width=3)
+
+    def on_drag(event):
+        if state["rect_id"] is None or state["start_x"] is None or state["start_y"] is None:
+            return
+        canvas.coords(state["rect_id"], state["start_x"], state["start_y"], event.x, event.y)
+
+    def on_release(event):
+        if state["start_x"] is None or state["start_y"] is None:
+            return
+        x1, y1 = state["start_x"], state["start_y"]
+        x2, y2 = event.x, event.y
+        left = min(x1, x2)
+        top = min(y1, y2)
+        right = max(x1, x2)
+        bottom = max(y1, y2)
+        width = max(1, right - left)
+        height = max(1, bottom - top)
+        state["roi"] = (
+            int(monitor["left"] + left),
+            int(monitor["top"] + top),
+            int(width),
+            int(height),
+        )
+
+    def on_confirm(_event=None):
+        if state["roi"] is None:
+            return
+        state["done"] = True
+        root.quit()
+
+    def on_cancel(_event=None):
+        state["cancelled"] = True
+        root.quit()
+
+    canvas.bind("<ButtonPress-1>", on_press)
+    canvas.bind("<B1-Motion>", on_drag)
+    canvas.bind("<ButtonRelease-1>", on_release)
+    root.bind("<Return>", on_confirm)
+    root.bind("<Escape>", on_cancel)
+
+    try:
+        root.mainloop()
+    finally:
+        root.destroy()
+
+    if state["cancelled"] or state["roi"] is None:
+        raise RuntimeError("Calibration cancelled")
+
+    return state["roi"]
+
+
+def calibrate_interactive(
+    emulator_label: str = "android-studio",
+    trigger_hotkey: str = DEFAULT_HOTKEY,
+    calibration_id: str = "default",
+    tile_padding: int = DEFAULT_TILE_PADDING,
+    save_path=CALIBRATION_PATH,
+    roi_selector: Callable[[], Tuple[int, int, int, int]] = select_roi_with_overlay,
+    grid_input_fn: Callable[[str], str] = input,
+) -> CalibrationConfig:
+    roi_left, roi_top, roi_width, roi_height = roi_selector()
+    grid_size = prompt_grid_size(input_fn=grid_input_fn)
+    calibration = create_calibration(
+        roi_left=roi_left,
+        roi_top=roi_top,
+        roi_width=roi_width,
+        roi_height=roi_height,
+        grid_size=grid_size,
+        tile_padding=tile_padding,
+        emulator_label=emulator_label,
+        trigger_hotkey=trigger_hotkey,
+        calibration_id=calibration_id,
+    )
+    save_calibration(calibration, path=save_path)
     return calibration
 
 

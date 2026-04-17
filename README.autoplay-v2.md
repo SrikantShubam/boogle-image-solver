@@ -26,13 +26,25 @@ python -m pip install -r requirements-v2.txt
 adb devices
 ```
 
-## 3) Calibrate once
+## 3) Calibrate once (primary UX)
 
 ```bash
-python -m autoplay_v2.cli calibrate --left 100 --top 200 --width 500 --height 500 --grid-size 5 --tile-padding 8 --emulator-label android-studio --hotkey Shift
+python -m autoplay_v2.cli calibrate
 ```
 
-This writes `config/calibration.json`.
+This opens a fullscreen overlay. Drag one box around the board, then:
+
+- press `Enter` to confirm
+- press `4` then `Enter` for 4x4
+- press `Enter` directly to keep default 5x5
+
+Fallback/manual debug calibration remains available:
+
+```bash
+python -m autoplay_v2.cli calibrate --left 100 --top 200 --width 500 --height 500 --grid-size 5 --tile-padding 8 --emulator-label android-studio
+```
+
+Calibration writes `config/calibration.json`.
 
 ## 4) Play once
 
@@ -56,7 +68,10 @@ python -m autoplay_v2.cli play-once --live
 
 ## 5) Hotkey runtime
 
-Default hotkey is `Shift`.
+Default hotkeys:
+
+- calibrate: `ctrl+shift+a+s`
+- play once: `shift+a+s`
 
 ```bash
 python -m autoplay_v2.cli hotkey

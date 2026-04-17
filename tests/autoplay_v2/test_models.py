@@ -4,7 +4,9 @@ from autoplay_v2.config import (
     AUTOPLAY_CONFIG_DIR,
     AUTOPLAY_DATA_DIR,
     AUTOPLAY_RUNS_DIR,
+    DEFAULT_CALIBRATE_HOTKEY,
     DEFAULT_HOTKEY,
+    DEFAULT_PLAY_HOTKEY,
     repo_root,
 )
 from autoplay_v2.models import CalibrationConfig, SolvedWord, TileCenter
@@ -19,8 +21,10 @@ def test_repo_paths_are_inside_repo_root():
         assert root in path.parents or path == root
 
 
-def test_default_hotkey_is_shift():
-    assert DEFAULT_HOTKEY == "Shift"
+def test_default_hotkeys():
+    assert DEFAULT_HOTKEY == "shift+a+s"
+    assert DEFAULT_PLAY_HOTKEY == "shift+a+s"
+    assert DEFAULT_CALIBRATE_HOTKEY == "ctrl+shift+a+s"
 
 
 def test_calibration_config_round_trip():
@@ -33,7 +37,7 @@ def test_calibration_config_round_trip():
         roi_width=500,
         roi_height=500,
         tile_padding=6,
-        trigger_hotkey="Shift",
+        trigger_hotkey="shift+a+s",
         tile_centers=[
             TileCenter(index=0, row=0, col=0, x=150, y=170),
             TileCenter(index=24, row=4, col=4, x=550, y=570),

@@ -1,7 +1,10 @@
 from autoplay_v2.calibration import (
+    calibrate_interactive,
     create_calibration,
     generate_tile_centers,
     load_calibration,
+    prompt_grid_size,
+    select_roi_with_overlay,
     save_calibration,
 )
 from autoplay_v2.config import repo_root
@@ -68,3 +71,45 @@ def test_create_calibration_validates_roi():
         assert "positive" in str(exc).lower()
     else:
         raise AssertionError("Expected ValueError for invalid ROI")
+
+
+def test_prompt_grid_size_defaults_to_5():
+    grid = prompt_grid_size(default_grid_size=5, input_fn=lambda _: "")
+    assert grid == 5
+
+
+def test_prompt_grid_size_switches_to_4():
+    grid = prompt_grid_size(default_grid_size=5, input_fn=lambda _: "4")
+    assert grid == 4
+
+
+def test_calibrate_interactive_uses_roi_selector_and_saves(tmp_path):
+    output_path = repo_root() / "runs" / "_pytest_interactive_calibration.json"
+
+    selected = (10, 20, 300, 320)
+    calibration = calibrate_interactive(
+        emulator_label="android-studio",
+        trigger_hotkey="shift+a+s",
+        calibration_id="interactive-cal",
+        tile_padding=6,
+        save_path=output_path,
+        roi_selector=lambda: selected,
+        grid_input_fn=lambda _: "",
+    )
+    loaded = load_calibration(output_path)
+    assert loaded.calibration_id == "interactive-cal"
+    assert loaded.grid_size == 5
+    assert (loaded.roi_left, loaded.roi_top, loaded.roi_width, loaded.roi_height) == selected
+    output_path.unlink(missing_ok=True)
+
+
+def test_select_roi_overlay_rejects_non_windows(monkeypatch):
+    import autoplay_v2.calibration as calibration_module
+
+    monkeypatch.setattr(calibration_module.platform, "system", lambda: "Linux")
+    try:
+        select_roi_with_overlay()
+    except RuntimeError as exc:
+        assert "Windows only" in str(exc)
+    else:
+        raise AssertionError("Expected RuntimeError for non-Windows overlay")
