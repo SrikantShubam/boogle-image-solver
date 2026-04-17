@@ -218,3 +218,11 @@ class RunArtifact:
             ],
             notes=payload.get("notes"),
         )
+
+
+@dataclass(frozen=True)
+class CapturedFrame:
+    calibration_id: str
+    captured_at: str
+    frame: Any
+    source: str = "live"
