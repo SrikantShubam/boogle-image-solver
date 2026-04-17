@@ -124,6 +124,39 @@ class OCRTileResult:
 
 
 @dataclass(frozen=True)
+class OCRBoardResult:
+    calibration_id: str
+    grid_size: int
+    tiles: List[OCRTileResult]
+    normalized_grid: List[List[str]]
+    has_low_confidence: bool
+    debug_overlay_path: Optional[str] = None
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "calibration_id": self.calibration_id,
+            "grid_size": self.grid_size,
+            "tiles": [tile.to_dict() for tile in self.tiles],
+            "normalized_grid": [list(row) for row in self.normalized_grid],
+            "has_low_confidence": self.has_low_confidence,
+            "debug_overlay_path": self.debug_overlay_path,
+        }
+
+    @classmethod
+    def from_dict(cls, payload: Dict[str, Any]) -> "OCRBoardResult":
+        return cls(
+            calibration_id=str(payload["calibration_id"]),
+            grid_size=int(payload["grid_size"]),
+            tiles=[OCRTileResult.from_dict(item) for item in payload.get("tiles", [])],
+            normalized_grid=[
+                [str(token) for token in row] for row in payload.get("normalized_grid", [])
+            ],
+            has_low_confidence=bool(payload.get("has_low_confidence", False)),
+            debug_overlay_path=payload.get("debug_overlay_path"),
+        )
+
+
+@dataclass(frozen=True)
 class SolvedWord:
     word: str
     path: List[int]

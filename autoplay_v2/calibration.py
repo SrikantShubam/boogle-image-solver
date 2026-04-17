@@ -45,16 +45,24 @@ def generate_tile_centers(
     return centers
 
 
-def generate_tile_crop_rects(calibration: CalibrationConfig) -> List[Tuple[int, int, int, int]]:
+def generate_tile_crop_rects(
+    calibration: CalibrationConfig,
+    relative_to_roi: bool = True,
+) -> List[Tuple[int, int, int, int]]:
     cell_w = calibration.roi_width / calibration.grid_size
     cell_h = calibration.roi_height / calibration.grid_size
     pad = max(0, calibration.tile_padding)
     rects: List[Tuple[int, int, int, int]] = []
     for center in calibration.tile_centers:
-        left = int(round(calibration.roi_left + center.col * cell_w + pad))
-        top = int(round(calibration.roi_top + center.row * cell_h + pad))
-        right = int(round(calibration.roi_left + (center.col + 1) * cell_w - pad))
-        bottom = int(round(calibration.roi_top + (center.row + 1) * cell_h - pad))
+        left = int(round(center.col * cell_w + pad))
+        top = int(round(center.row * cell_h + pad))
+        right = int(round((center.col + 1) * cell_w - pad))
+        bottom = int(round((center.row + 1) * cell_h - pad))
+        if not relative_to_roi:
+            left += calibration.roi_left
+            top += calibration.roi_top
+            right += calibration.roi_left
+            bottom += calibration.roi_top
         width = max(1, right - left)
         height = max(1, bottom - top)
         rects.append((left, top, width, height))
