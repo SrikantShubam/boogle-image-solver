@@ -50,6 +50,14 @@ class CalibrationConfig:
     trigger_hotkey: str = "Shift"
     tile_centers: List[TileCenter] = field(default_factory=list)
 
+    @property
+    def roi_right(self) -> int:
+        return self.roi_left + self.roi_width
+
+    @property
+    def roi_bottom(self) -> int:
+        return self.roi_top + self.roi_height
+
     def to_dict(self) -> Dict[str, Any]:
         return {
             "calibration_id": self.calibration_id,

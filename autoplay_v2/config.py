@@ -6,6 +6,8 @@ from typing import Any, Dict
 
 
 DEFAULT_HOTKEY = "Shift"
+DEFAULT_GRID_SIZE = 5
+DEFAULT_TILE_PADDING = 8
 
 
 def repo_root() -> Path:
