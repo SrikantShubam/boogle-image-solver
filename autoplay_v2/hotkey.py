@@ -1,8 +1,13 @@
 from __future__ import annotations
 
 import platform
+import sys
 import threading
+from pathlib import Path
 from typing import Callable
+
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from autoplay_v2.config import DEFAULT_CALIBRATE_HOTKEY, DEFAULT_PLAY_HOTKEY
 
@@ -81,3 +86,18 @@ def run_hotkey_loop(
         "Press Ctrl+C to stop."
     )
     keyboard.wait()
+
+
+def main(argv: list[str] | None = None) -> int:
+    from autoplay_v2.cli import main as cli_main
+
+    args = ["hotkey"]
+    if argv is None:
+        args.extend(sys.argv[1:])
+    else:
+        args.extend(argv)
+    return int(cli_main(args))
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
