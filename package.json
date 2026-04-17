@@ -2,10 +2,6 @@
   "name": "boggle-image-solver",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js"
-  },
   "dependencies": {
     "sharp": "^0.34.5"
   }
