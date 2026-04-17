@@ -1,0 +1,10 @@
+server.js
+boggle_from_image.py
+boggle_winner.py
+detect_board_bbox.py
+boggle_solver_benchmark.ipynb
+.venv/
+__pycache__/
+1.jpeg
+2.jpeg
+debug_canvas.*
