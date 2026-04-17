@@ -141,6 +141,14 @@
             <input id="apiKey" type="password" placeholder="nvapi-..." />
           </div>
           <div class="row">
+            <label>Grid Size</label>
+            <select id="gridSize">
+              <option value="5" selected>5x5</option>
+              <option value="4">4x4</option>
+              <option value="auto">Auto Detect</option>
+            </select>
+          </div>
+          <div class="row">
             <button id="run">Extract + Solve</button>
           </div>
           <img id="preview" class="preview" alt="preview" />
@@ -164,6 +172,7 @@
       const wordsEl = document.getElementById("words");
       const summaryEl = document.getElementById("summary");
       const keyEl = document.getElementById("apiKey");
+      const gridSizeEl = document.getElementById("gridSize");
 
       let imageDataUrl = "";
 
@@ -268,6 +277,7 @@
             body: JSON.stringify({
               imageDataUrl,
               apiKey: keyEl.value.trim() || undefined,
+              gridSize: gridSizeEl.value,
             }),
           });
           const data = await readApiResponse(res);
@@ -277,7 +287,7 @@
 
           renderBoard(data.board);
           renderWords(data.words || []);
-          summaryEl.textContent = `Model: ${data.model_used} | Fallback: mistral -> gemma3 | Grid: ${data.board.grid_size}x${data.board.grid_size} | Words: ${data.count} | Score est: ${data.score_estimate}`;
+          summaryEl.textContent = `Model: ${data.model_used} | Fallback: mistral -> gemma3 | Mode: ${data.grid_mode} | Grid: ${data.board.grid_size}x${data.board.grid_size} | Words: ${data.count} | Score est: ${data.score_estimate}`;
           statusEl.textContent = "Done.";
         } catch (err) {
           summaryEl.innerHTML = `<span class="err">${err.message}</span>`;

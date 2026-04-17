@@ -14,9 +14,11 @@ function getSharp() {
 
 const MIN_WORD_LEN = 3;
 const PRIMARY_MODEL = "mistralai/mistral-large-3-675b-instruct-2512";
-const FALLBACK_MODEL = "meta/llama-4-maverick-17b-128e-instruct";
+const FALLBACK_MODEL = "google/gemma-3-27b-it";
 const MODEL_CHAIN = [PRIMARY_MODEL, FALLBACK_MODEL];
 const NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions";
+const MODEL_TIMEOUT_MS = 12000;
+const MODEL_MAX_TOKENS = 220;
 
 let WORD_CACHE = null;
 let TRIE_CACHE = null;
@@ -149,6 +151,12 @@ function parseJsonFromText(s) {
   return null;
 }
 
+function normalizeRequestedGridSize(gridSize) {
+  if (gridSize === 4 || gridSize === "4" || gridSize === "4x4") return 4;
+  if (gridSize === 5 || gridSize === "5" || gridSize === "5x5") return 5;
+  return null;
+}
+
 async function callNvidiaModel({ imageDataUrl, apiKey, model, detectedGridSize }) {
   const rowTemplate = (n) => `[${Array(n).fill('"?"').join(",")}]`;
   const fixedSizePrompt = detectedGridSize
@@ -157,7 +165,7 @@ async function callNvidiaModel({ imageDataUrl, apiKey, model, detectedGridSize }
   const schemaHint = detectedGridSize
     ? `{"grid_size":${detectedGridSize},"grid":[${Array(detectedGridSize).fill(rowTemplate(detectedGridSize)).join(",")}],"bonus":{"row":0,"col":0}}`
     : `{"grid_size":4_or_5,"grid":[["?","?","?","?"],["?","?","?","?"],["?","?","?","?"],["?","?","?","?"]],"bonus":{"row":0,"col":0}}\nIf the board is 5x5, return five rows with five entries each instead.`;
-  const prompt = `${fixedSizePrompt} Each tile has exactly one uppercase letter. One tile may be highlighted cyan/teal. Read the letters row by row, left to right, top to bottom. Return ONLY a JSON object, no markdown:\n${schemaHint}\nSet bonus to the row/col of the cyan tile, or null if none. Do not force 4x4 if the board is actually 5x5.`;
+  const prompt = `${fixedSizePrompt} Read only the text inside the rounded white circles. The text is black. A tile may contain either one uppercase letter like A, B, S or a mixed-case two-letter tile like Qu, Th, He. If a tile visibly contains two letters, return both letters exactly as seen and do not collapse them to one letter. Read the tiles row by row, left to right, top to bottom. Return ONLY a JSON object, no markdown:\n${schemaHint}\nSet bonus to the row/col of the cyan tile, or null if none. Do not force 4x4 if the board is actually 5x5.`;
 
   const body = {
     model,
@@ -170,7 +178,7 @@ async function callNvidiaModel({ imageDataUrl, apiKey, model, detectedGridSize }
         ],
       },
     ],
-    max_tokens: 1024,
+    max_tokens: MODEL_MAX_TOKENS,
     temperature: 0.0,
     top_p: 1.0,
     frequency_penalty: 0.0,
@@ -178,15 +186,28 @@ async function callNvidiaModel({ imageDataUrl, apiKey, model, detectedGridSize }
     stream: false,
   };
 
-  const res = await fetch(NVIDIA_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-      Accept: "application/json",
-    },
-    body: JSON.stringify(body),
-  });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), MODEL_TIMEOUT_MS);
+  let res;
+  try {
+    res = await fetch(NVIDIA_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+        Accept: "application/json",
+      },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+  } catch (err) {
+    if (err.name === "AbortError") {
+      throw new Error(`Model OCR timed out after ${MODEL_TIMEOUT_MS}ms.`);
+    }
+    throw err;
+  } finally {
+    clearTimeout(timeout);
+  }
 
   if (!res.ok) {
     const t = await res.text();
@@ -215,7 +236,7 @@ function parseDataUrl(imageDataUrl) {
   };
 }
 
-async function preprocessBoardImage(imageDataUrl) {
+async function preprocessBoardImage(imageDataUrl, requestedGridSize = null) {
   const sharp = getSharp();
   const { mimeType, buffer } = parseDataUrl(imageDataUrl);
   const meta = await sharp(buffer).metadata();
@@ -235,7 +256,7 @@ async function preprocessBoardImage(imageDataUrl) {
 
   const helperPython = path.join(process.cwd(), ".venv", "Scripts", "python.exe");
   const helperScript = path.join(process.cwd(), "detect_board_bbox.py");
-  if (fs.existsSync(helperPython) && fs.existsSync(helperScript)) {
+  if (!requestedGridSize && fs.existsSync(helperPython) && fs.existsSync(helperScript)) {
     const ext = mimeType.includes("png") ? ".png" : ".jpg";
     const tmpPath = path.join(
       os.tmpdir(),
@@ -334,13 +355,16 @@ async function preprocessBoardImage(imageDataUrl) {
 
   return {
     croppedDataUrl: `data:image/jpeg;base64,${cropped.toString("base64")}`,
-    detectedGridSize,
+    detectedGridSize: requestedGridSize || detectedGridSize,
   };
 }
 
-async function extractBoardWithFallback({ imageDataUrl, apiKey }) {
+async function extractBoardWithFallback({ imageDataUrl, apiKey, requestedGridSize }) {
   const errors = [];
-  const { croppedDataUrl, detectedGridSize } = await preprocessBoardImage(imageDataUrl);
+  const { croppedDataUrl, detectedGridSize } = await preprocessBoardImage(
+    imageDataUrl,
+    requestedGridSize
+  );
   for (const model of MODEL_CHAIN) {
     try {
       const parsed = await callNvidiaModel({
@@ -404,7 +428,7 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    const { imageDataUrl, apiKey: clientApiKey } = req.body || {};
+    const { imageDataUrl, apiKey: clientApiKey, gridSize } = req.body || {};
     if (!imageDataUrl || typeof imageDataUrl !== "string") {
       return res.status(400).json({ error: "imageDataUrl is required." });
     }
@@ -416,12 +440,16 @@ module.exports = async function handler(req, res) {
         .json({ error: "Missing API key. Set NVIDIA_API_KEY or provide apiKey in request." });
     }
 
+    const requestedGridSize = normalizeRequestedGridSize(gridSize);
+    const gridMode = requestedGridSize ? `${requestedGridSize}x${requestedGridSize}` : "auto";
+
     loadWords();
     ensureTrie();
 
     const { parsed: extracted, modelUsed } = await extractBoardWithFallback({
       imageDataUrl,
       apiKey,
+      requestedGridSize,
     });
     const board = sanitizeBoard(extracted);
     const words = [...solveExactTrieDFS(board.grid)];
@@ -447,6 +475,7 @@ module.exports = async function handler(req, res) {
 
     return res.status(200).json({
       model_used: modelUsed,
+      grid_mode: gridMode,
       board,
       count: words.length,
       score_estimate: totalScore,
