@@ -10,3 +10,9 @@ dist/
 debug_canvas.*
 
 .vercel
+runs/*
+!runs/.gitkeep
+config/calibration.json
+data/dictionary_feedback.jsonl
+debug_ocr*
+ocr_debug*
