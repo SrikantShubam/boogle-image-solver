@@ -1,0 +1,531 @@
+{
+  "criteria": {
+    "max_patterns": 120,
+    "min_attempts": 3,
+    "min_extra_share": 0.5,
+    "min_fail_rate": 0.8,
+    "motif_min_attempts": 25,
+    "motif_min_extra_share": 0.45,
+    "motif_min_fail_rate": 0.26
+  },
+  "generated_at": "2026-04-21T15:20:27Z",
+  "mode": "ground_truth",
+  "motifs": [
+    {
+      "attempts": 31,
+      "examples": [
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "1.jpeg",
+          "intended_word": "ENWRITE",
+          "typed_word_predicted": "ENWRIKTE"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "14.jpeg",
+          "intended_word": "TEAHOUSE",
+          "typed_word_predicted": "TESAHOUASE"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "SERICINS",
+          "typed_word_predicted": "SERCICINS"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "BICRONS",
+          "typed_word_predicted": "BICRIONS"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "21.jpeg",
+          "intended_word": "NAILHEAD",
+          "typed_word_predicted": "NUAILHEAD"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "21.jpeg",
+          "intended_word": "UNHEELED",
+          "typed_word_predicted": "UINHEELED"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "24.jpeg",
+          "intended_word": "OUTHOUSE",
+          "typed_word_predicted": "OUTHOUSVE"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "24.jpeg",
+          "intended_word": "DOUSED",
+          "typed_word_predicted": "DOUSVED"
+        }
+      ],
+      "extra_insertion_share": 0.75,
+      "fail_rate": 0.387097,
+      "mismatches": 12,
+      "motif": "+1+1>-1+1"
+    },
+    {
+      "attempts": 42,
+      "examples": [
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "1.jpeg",
+          "intended_word": "NEURITE",
+          "typed_word_predicted": "NEURIKTE"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "13.jpeg",
+          "intended_word": "BEHOOT",
+          "typed_word_predicted": "BEHTOTOT"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "14.jpeg",
+          "intended_word": "CAJANUS",
+          "typed_word_predicted": "CAJANUAS"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "17.jpeg",
+          "intended_word": "DOILIES",
+          "typed_word_predicted": "DOILISES"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "RICINUSES",
+          "typed_word_predicted": "RCICINUSES"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "SERICINS",
+          "typed_word_predicted": "SERCICINS"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "21.jpeg",
+          "intended_word": "NAILHEAD",
+          "typed_word_predicted": "NUAILHEAD"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "24.jpeg",
+          "intended_word": "OUTHOUSE",
+          "typed_word_predicted": "OUTHOUSVE"
+        }
+      ],
+      "extra_insertion_share": 0.5,
+      "fail_rate": 0.380952,
+      "mismatches": 16,
+      "motif": "-1+1>+1+0"
+    },
+    {
+      "attempts": 42,
+      "examples": [
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "1.jpeg",
+          "intended_word": "ENWRITE",
+          "typed_word_predicted": "ENWRIKTE"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "18.jpeg",
+          "intended_word": "BECORESH",
+          "typed_word_predicted": "BECOIRESH"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "SERICINS",
+          "typed_word_predicted": "SERCICINS"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "21.jpeg",
+          "intended_word": "NAILHEAD",
+          "typed_word_predicted": "NUAILHEAD"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "21.jpeg",
+          "intended_word": "UNMAILED",
+          "typed_word_predicted": "UINMAILED"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "23.jpeg",
+          "intended_word": "AXILLARY",
+          "typed_word_predicted": "AXILLAYRY"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "23.jpeg",
+          "intended_word": "AXILLAR",
+          "typed_word_predicted": "AXILLAYR"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "24.jpeg",
+          "intended_word": "DOUSED",
+          "typed_word_predicted": "DOUSVED"
+        }
+      ],
+      "extra_insertion_share": 0.571429,
+      "fail_rate": 0.333333,
+      "mismatches": 14,
+      "motif": "-1+1>+1+1"
+    },
+    {
+      "attempts": 25,
+      "examples": [
+        {
+          "bucket": "order_mismatch",
+          "image": "17.jpeg",
+          "intended_word": "NEREIDS",
+          "typed_word_predicted": "NERESISDS"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "RICINUSES",
+          "typed_word_predicted": "RCICINUSES"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "18.jpeg",
+          "intended_word": "BECORESH",
+          "typed_word_predicted": "BECOIRESH"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "18.jpeg",
+          "intended_word": "IRONSHOD",
+          "typed_word_predicted": "IRIONSHOD"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "SERICINS",
+          "typed_word_predicted": "SERCICINS"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "21.jpeg",
+          "intended_word": "CANALMAN",
+          "typed_word_predicted": "CAUNALMAN"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "29.jpeg",
+          "intended_word": "AOTEAROA",
+          "typed_word_predicted": "AOTEIAROA"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "6.jpeg",
+          "intended_word": "THEODORIC",
+          "typed_word_predicted": "TIHEODORIC"
+        }
+      ],
+      "extra_insertion_share": 0.625,
+      "fail_rate": 0.32,
+      "mismatches": 8,
+      "motif": "+1-1>+1+1"
+    },
+    {
+      "attempts": 39,
+      "examples": [
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "1.jpeg",
+          "intended_word": "UNTIRED",
+          "typed_word_predicted": "UNTKIRED"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "1.jpeg",
+          "intended_word": "BETIRE",
+          "typed_word_predicted": "BETKIRE"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "14.jpeg",
+          "intended_word": "CAJANUS",
+          "typed_word_predicted": "CAJANUAS"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "14.jpeg",
+          "intended_word": "HOUSEL",
+          "typed_word_predicted": "HOUHSEL"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "14.jpeg",
+          "intended_word": "MUSHAA",
+          "typed_word_predicted": "MUHSHAA"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "14.jpeg",
+          "intended_word": "TEASEL",
+          "typed_word_predicted": "TESASEL"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "17.jpeg",
+          "intended_word": "DIEHARD",
+          "typed_word_predicted": "DISEHARD"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "17.jpeg",
+          "intended_word": "NISHADA",
+          "typed_word_predicted": "NHISHADA"
+        }
+      ],
+      "extra_insertion_share": 0.454545,
+      "fail_rate": 0.282051,
+      "mismatches": 11,
+      "motif": "-1+1>-1-1"
+    },
+    {
+      "attempts": 36,
+      "examples": [
+        {
+          "bucket": "order_mismatch",
+          "image": "17.jpeg",
+          "intended_word": "NEREIDS",
+          "typed_word_predicted": "NERESISDS"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "18.jpeg",
+          "intended_word": "BECORESH",
+          "typed_word_predicted": "BECOIRESH"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "21.jpeg",
+          "intended_word": "ALAUNIAN",
+          "typed_word_predicted": "ALAUINIAUN"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "21.jpeg",
+          "intended_word": "MADELINE",
+          "typed_word_predicted": "MADELINAE"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "21.jpeg",
+          "intended_word": "ADELINE",
+          "typed_word_predicted": "ADELINAE"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "24.jpeg",
+          "intended_word": "DEADEST",
+          "typed_word_predicted": "DDEADEST"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "29.jpeg",
+          "intended_word": "AOTEAROA",
+          "typed_word_predicted": "AOTEIAROA"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "3.jpeg",
+          "intended_word": "BAGUIOS",
+          "typed_word_predicted": "BANAGUIOS"
+        }
+      ],
+      "extra_insertion_share": 0.5,
+      "fail_rate": 0.277778,
+      "mismatches": 10,
+      "motif": "-1-1>+1-1"
+    },
+    {
+      "attempts": 65,
+      "examples": [
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "1.jpeg",
+          "intended_word": "UNTIRED",
+          "typed_word_predicted": "UNTKIRED"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "1.jpeg",
+          "intended_word": "BETIRE",
+          "typed_word_predicted": "BETKIRE"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "12.jpeg",
+          "intended_word": "CRAMBOS",
+          "typed_word_predicted": "CRAMABOS"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "14.jpeg",
+          "intended_word": "ALEHOUSE",
+          "typed_word_predicted": "ALEHOUASE"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "14.jpeg",
+          "intended_word": "NAUSET",
+          "typed_word_predicted": "NAUASET"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "CORBIES",
+          "typed_word_predicted": "COIRBIES"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "CRONIED",
+          "typed_word_predicted": "CRIONIED"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "CRONIES",
+          "typed_word_predicted": "CRIONIES"
+        }
+      ],
+      "extra_insertion_share": 0.555556,
+      "fail_rate": 0.276923,
+      "mismatches": 18,
+      "motif": "-1-1>+0-1"
+    },
+    {
+      "attempts": 51,
+      "examples": [
+        {
+          "bucket": "order_mismatch",
+          "image": "1.jpeg",
+          "intended_word": "AKERITE",
+          "typed_word_predicted": "AKERIKTE"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "1.jpeg",
+          "intended_word": "ENWRITE",
+          "typed_word_predicted": "ENWRIKTE"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "1.jpeg",
+          "intended_word": "NEURITE",
+          "typed_word_predicted": "NEURIKTE"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "12.jpeg",
+          "intended_word": "CRAMBOS",
+          "typed_word_predicted": "CRAMABOS"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "12.jpeg",
+          "intended_word": "CRAMBO",
+          "typed_word_predicted": "CRAMABO"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "17.jpeg",
+          "intended_word": "NEREIDS",
+          "typed_word_predicted": "NERESISDS"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "RICINUSES",
+          "typed_word_predicted": "RCICINUSES"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "CEROSIN",
+          "typed_word_predicted": "CERIOSIN"
+        }
+      ],
+      "extra_insertion_share": 0.642857,
+      "fail_rate": 0.27451,
+      "mismatches": 14,
+      "motif": "+1+1>+1-1"
+    },
+    {
+      "attempts": 65,
+      "examples": [
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "1.jpeg",
+          "intended_word": "BETWEEN",
+          "typed_word_predicted": "BETKWEEN"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "1.jpeg",
+          "intended_word": "BETWEEN",
+          "typed_word_predicted": "BETKWEEN"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "1.jpeg",
+          "intended_word": "ATWEEN",
+          "typed_word_predicted": "ATKWEEN"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "14.jpeg",
+          "intended_word": "HUSHEL",
+          "typed_word_predicted": "HUHSHEL"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "18.jpeg",
+          "intended_word": "RICINUSES",
+          "typed_word_predicted": "RCICINUSES"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "21.jpeg",
+          "intended_word": "MADELEINE",
+          "typed_word_predicted": "MADELEINAE"
+        },
+        {
+          "bucket": "order_mismatch",
+          "image": "21.jpeg",
+          "intended_word": "ALAUNIAN",
+          "typed_word_predicted": "ALAUINIAUN"
+        },
+        {
+          "bucket": "extra_tile_insertion",
+          "image": "21.jpeg",
+          "intended_word": "MADELINE",
+          "typed_word_predicted": "MADELINAE"
+        }
+      ],
+      "extra_insertion_share": 0.705882,
+      "fail_rate": 0.261538,
+      "mismatches": 17,
+      "motif": "-1+0>-1-1"
+    }
+  ],
+  "patterns": [],
+  "source_csv": "runs\\word_path_audit_20260421T151015315605Z\\per_word.csv",
+  "version": 1
+}

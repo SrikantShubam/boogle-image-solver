@@ -17,7 +17,7 @@ const PRIMARY_MODEL = "mistralai/mistral-large-3-675b-instruct-2512";
 const FALLBACK_MODEL = "google/gemma-3-27b-it";
 const MODEL_CHAIN = [PRIMARY_MODEL, FALLBACK_MODEL];
 const NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions";
-const MODEL_TIMEOUT_MS = 12000;
+const MODEL_TIMEOUT_MS = 25000;
 const MODEL_MAX_TOKENS = 220;
 
 let WORD_CACHE = null;
@@ -256,7 +256,9 @@ async function preprocessBoardImage(imageDataUrl, requestedGridSize = null) {
 
   const helperPython = path.join(process.cwd(), ".venv", "Scripts", "python.exe");
   const helperScript = path.join(process.cwd(), "detect_board_bbox.py");
-  if (!requestedGridSize && fs.existsSync(helperPython) && fs.existsSync(helperScript)) {
+  // Prefer ML-robust preprocessing when available. Even if the caller requests a fixed
+  // grid size (e.g. 5x5), the bbox detector can still improve cropping quality.
+  if (fs.existsSync(helperPython) && fs.existsSync(helperScript)) {
     const ext = mimeType.includes("png") ? ".png" : ".jpg";
     const tmpPath = path.join(
       os.tmpdir(),
@@ -264,19 +266,28 @@ async function preprocessBoardImage(imageDataUrl, requestedGridSize = null) {
     );
     fs.writeFileSync(tmpPath, buffer);
     try {
-      const proc = spawnSync(helperPython, [helperScript, tmpPath], {
+      const helperArgs = [helperScript, tmpPath];
+      if (requestedGridSize === 4 || requestedGridSize === 5) {
+        helperArgs.push(String(requestedGridSize));
+      }
+      const proc = spawnSync(helperPython, helperArgs, {
         cwd: process.cwd(),
         encoding: "utf8",
         timeout: 15000,
       });
       if (proc.status === 0 && proc.stdout) {
         const parsed = JSON.parse(proc.stdout.trim());
-        left = parsed.left;
-        top = parsed.top;
-        cropWidth = parsed.width;
-        cropHeight = parsed.height;
-        detectedGridSize = parsed.grid_size;
-        detectedPoints = Array.isArray(parsed.points) ? parsed.points : null;
+        // Only trust the detector's bbox/points when it agrees with the requested size.
+        // If it disagrees, we fall back to the heuristic crop; applying a mismatched bbox
+        // can clip the board and lead to wrong grid_size predictions downstream.
+        if (!requestedGridSize || parsed.grid_size === requestedGridSize) {
+          left = parsed.left;
+          top = parsed.top;
+          cropWidth = parsed.width;
+          cropHeight = parsed.height;
+          detectedGridSize = parsed.grid_size;
+          detectedPoints = Array.isArray(parsed.points) ? parsed.points : null;
+        }
       }
     } catch (_) {
       // Fall back to heuristic crop.
@@ -303,7 +314,7 @@ async function preprocessBoardImage(imageDataUrl, requestedGridSize = null) {
       const tileTop = Math.max(0, p.y - radius);
       const tileSize = Math.max(1, Math.min(radius * 2, width - tileLeft, height - tileTop));
 
-      const tileBuffer = await sharp(buffer)
+      const tileBufferBase = await sharp(buffer)
         .extract({
           left: tileLeft,
           top: tileTop,
@@ -313,6 +324,19 @@ async function preprocessBoardImage(imageDataUrl, requestedGridSize = null) {
         .resize(cellSize, cellSize)
         .normalize()
         .sharpen()
+        .ensureAlpha()
+        .png()
+        .toBuffer();
+
+      // Keep only inside the circular tile region so non-board text does not
+      // leak into OCR when screenshots contain multiple grid-like regions.
+      const circleR = Math.floor(cellSize * 0.46);
+      const circleC = Math.floor(cellSize / 2);
+      const circleMask = Buffer.from(
+        `<svg width="${cellSize}" height="${cellSize}" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="black"/><circle cx="${circleC}" cy="${circleC}" r="${circleR}" fill="white"/></svg>`
+      );
+      const tileBuffer = await sharp(tileBufferBase)
+        .composite([{ input: circleMask, blend: "dest-in" }])
         .png()
         .toBuffer();
 
@@ -359,12 +383,22 @@ async function preprocessBoardImage(imageDataUrl, requestedGridSize = null) {
   };
 }
 
-async function extractBoardWithFallback({ imageDataUrl, apiKey, requestedGridSize }) {
+async function extractBoardWithFallback({
+  imageDataUrl,
+  apiKey,
+  requestedGridSize,
+  preprocessedImageDataUrl = null,
+  preprocessedDetectedGridSize = null,
+}) {
   const errors = [];
-  const { croppedDataUrl, detectedGridSize } = await preprocessBoardImage(
-    imageDataUrl,
-    requestedGridSize
-  );
+  let croppedDataUrl = preprocessedImageDataUrl;
+  let detectedGridSize = preprocessedDetectedGridSize;
+  if (!croppedDataUrl) {
+    const prep = await preprocessBoardImage(imageDataUrl, requestedGridSize);
+    croppedDataUrl = prep.croppedDataUrl;
+    detectedGridSize = prep.detectedGridSize;
+  }
+
   for (const model of MODEL_CHAIN) {
     try {
       const parsed = await callNvidiaModel({
@@ -373,7 +407,10 @@ async function extractBoardWithFallback({ imageDataUrl, apiKey, requestedGridSiz
         model,
         detectedGridSize,
       });
-      return { parsed, modelUsed: model };
+      // Treat schema/normalization issues as a model failure so we can fall back
+      // to the next model rather than failing the whole request.
+      const board = sanitizeBoard(parsed);
+      return { board, modelUsed: model };
     } catch (err) {
       errors.push(`${model}: ${err.message}`);
     }
@@ -422,13 +459,20 @@ function scoreWord(word) {
   return Math.max(0, word.length - 2);
 }
 
-module.exports = async function handler(req, res) {
+async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const { imageDataUrl, apiKey: clientApiKey, gridSize } = req.body || {};
+    const {
+      imageDataUrl,
+      apiKey: clientApiKey,
+      gridSize,
+      preprocessedImageDataUrl,
+      preprocessedDetectedGridSize,
+      skipPreprocess,
+    } = req.body || {};
     if (!imageDataUrl || typeof imageDataUrl !== "string") {
       return res.status(400).json({ error: "imageDataUrl is required." });
     }
@@ -446,12 +490,19 @@ module.exports = async function handler(req, res) {
     loadWords();
     ensureTrie();
 
-    const { parsed: extracted, modelUsed } = await extractBoardWithFallback({
+    const { board, modelUsed } = await extractBoardWithFallback({
       imageDataUrl,
       apiKey,
       requestedGridSize,
+      preprocessedImageDataUrl:
+        skipPreprocess && typeof preprocessedImageDataUrl === "string"
+          ? preprocessedImageDataUrl
+          : null,
+      preprocessedDetectedGridSize:
+        skipPreprocess && Number.isInteger(preprocessedDetectedGridSize)
+          ? preprocessedDetectedGridSize
+          : null,
     });
-    const board = sanitizeBoard(extracted);
     const words = [...solveExactTrieDFS(board.grid)];
     words.sort((a, b) => b.length - a.length || a.localeCompare(b));
 
@@ -486,4 +537,7 @@ module.exports = async function handler(req, res) {
       error: err.message || "Unknown error",
     });
   }
-};
+}
+
+module.exports = handler;
+module.exports.preprocessBoardImage = preprocessBoardImage;

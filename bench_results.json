@@ -1,0 +1,206 @@
+[
+  {
+    "file": "1.jpeg",
+    "grid_size": 5,
+    "detected": false,
+    "tesseract": {
+      "correct": 0,
+      "total": 25,
+      "pct": 0.0,
+      "ms": 105.23529999773018,
+      "error": "wrong_size_4x4"
+    }
+  },
+  {
+    "file": "10.jpeg",
+    "grid_size": 5,
+    "detected": true,
+    "tesseract": {
+      "correct": 15,
+      "total": 25,
+      "pct": 60.0,
+      "ms": 6489.340300031472,
+      "grid": [
+        [
+          "A",
+          "O",
+          "H",
+          "S",
+          "E"
+        ],
+        [
+          "O",
+          "G",
+          "M",
+          "O",
+          "A"
+        ],
+        [
+          "U",
+          "M",
+          "T",
+          "O",
+          "N"
+        ],
+        [
+          "I",
+          "O",
+          "M",
+          "Y",
+          "K"
+        ],
+        [
+          "U",
+          "E",
+          "E",
+          "O",
+          "B"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "12.jpeg",
+    "grid_size": 5,
+    "detected": true,
+    "tesseract": {
+      "correct": 11,
+      "total": 25,
+      "pct": 44.0,
+      "ms": 7882.386699988274,
+      "grid": [
+        [
+          "W",
+          "D",
+          "I",
+          "E",
+          "I"
+        ],
+        [
+          "N",
+          "L",
+          "M",
+          "O",
+          "M"
+        ],
+        [
+          "E",
+          "M",
+          "O",
+          "O",
+          "M"
+        ],
+        [
+          "M",
+          "O",
+          "M",
+          "O",
+          "E"
+        ],
+        [
+          "S",
+          "N",
+          "O",
+          "A",
+          "H"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "13.jpeg",
+    "grid_size": 5,
+    "detected": true,
+    "tesseract": {
+      "correct": 15,
+      "total": 25,
+      "pct": 60.0,
+      "ms": 6075.559299963061,
+      "grid": [
+        [
+          "H",
+          "Z",
+          "E",
+          "I",
+          "S"
+        ],
+        [
+          "M",
+          "O",
+          "Q",
+          "O",
+          "M"
+        ],
+        [
+          "E",
+          "O",
+          "O",
+          "O",
+          "B"
+        ],
+        [
+          "N",
+          "G",
+          "O",
+          "O",
+          "W"
+        ],
+        [
+          "K",
+          "I",
+          "T",
+          "D",
+          "E"
+        ]
+      ]
+    }
+  },
+  {
+    "file": "14.jpeg",
+    "grid_size": 5,
+    "detected": true,
+    "tesseract": {
+      "correct": 14,
+      "total": 25,
+      "pct": 56.0,
+      "ms": 5610.990999994101,
+      "grid": [
+        [
+          "Z",
+          "Q",
+          "A",
+          "A",
+          "H"
+        ],
+        [
+          "M",
+          "G",
+          "O",
+          "O",
+          "A"
+        ],
+        [
+          "C",
+          "O",
+          "S",
+          "M",
+          "IN"
+        ],
+        [
+          "E",
+          "O",
+          "A",
+          "O",
+          "A"
+        ],
+        [
+          "E",
+          "E",
+          "M",
+          "F",
+          "H"
+        ]
+      ]
+    }
+  }
+]

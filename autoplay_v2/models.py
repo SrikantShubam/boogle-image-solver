@@ -98,6 +98,7 @@ class OCRTileResult:
     normalized_token: str
     confidence: float
     low_confidence: bool = False
+    source_method: str = "local_ocr"
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -108,6 +109,7 @@ class OCRTileResult:
             "normalized_token": self.normalized_token,
             "confidence": self.confidence,
             "low_confidence": self.low_confidence,
+            "source_method": self.source_method,
         }
 
     @classmethod
@@ -120,6 +122,7 @@ class OCRTileResult:
             normalized_token=str(payload.get("normalized_token", "")),
             confidence=float(payload.get("confidence", 0.0)),
             low_confidence=bool(payload.get("low_confidence", False)),
+            source_method=str(payload.get("source_method", "local_ocr")),
         )
 
 
@@ -131,6 +134,11 @@ class OCRBoardResult:
     normalized_grid: List[List[str]]
     has_low_confidence: bool
     debug_overlay_path: Optional[str] = None
+    template_match_count: int = 0
+    local_ocr_count: int = 0
+    selected_geometry_mode: str = "base"
+    geometry_retry_used: bool = False
+    diagnostics: Optional[Dict[str, Any]] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -140,6 +148,11 @@ class OCRBoardResult:
             "normalized_grid": [list(row) for row in self.normalized_grid],
             "has_low_confidence": self.has_low_confidence,
             "debug_overlay_path": self.debug_overlay_path,
+            "template_match_count": self.template_match_count,
+            "local_ocr_count": self.local_ocr_count,
+            "selected_geometry_mode": self.selected_geometry_mode,
+            "geometry_retry_used": self.geometry_retry_used,
+            "diagnostics": self.diagnostics,
         }
 
     @classmethod
@@ -153,6 +166,11 @@ class OCRBoardResult:
             ],
             has_low_confidence=bool(payload.get("has_low_confidence", False)),
             debug_overlay_path=payload.get("debug_overlay_path"),
+            template_match_count=int(payload.get("template_match_count", 0)),
+            local_ocr_count=int(payload.get("local_ocr_count", 0)),
+            selected_geometry_mode=str(payload.get("selected_geometry_mode", "base")),
+            geometry_retry_used=bool(payload.get("geometry_retry_used", False)),
+            diagnostics=payload.get("diagnostics"),
         )
 
 
@@ -193,6 +211,9 @@ class SwipeAttempt:
     status: str
     message: str = ""
     commands: List[str] = field(default_factory=list)
+    route_confidence: Optional[float] = None
+    predicted_touched: List[int] = field(default_factory=list)
+    reject_reason: str = ""
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -203,10 +224,14 @@ class SwipeAttempt:
             "status": self.status,
             "message": self.message,
             "commands": list(self.commands),
+            "route_confidence": self.route_confidence,
+            "predicted_touched": list(self.predicted_touched),
+            "reject_reason": self.reject_reason,
         }
 
     @classmethod
     def from_dict(cls, payload: Dict[str, Any]) -> "SwipeAttempt":
+        route_confidence = payload.get("route_confidence")
         return cls(
             word=str(payload["word"]),
             path=[int(item) for item in payload.get("path", [])],
@@ -217,6 +242,13 @@ class SwipeAttempt:
             status=str(payload["status"]),
             message=str(payload.get("message", "")),
             commands=[str(item) for item in payload.get("commands", [])],
+            route_confidence=(
+                None if route_confidence is None else float(route_confidence)
+            ),
+            predicted_touched=[
+                int(item) for item in payload.get("predicted_touched", [])
+            ],
+            reject_reason=str(payload.get("reject_reason", "")),
         )
 
 
@@ -262,3 +294,71 @@ class CapturedFrame:
     captured_at: str
     frame: Any
     source: str = "live"
+
+
+@dataclass(frozen=True)
+class DetectedTile:
+    """A single tile detected by auto-detection (circle in the game board)."""
+    index: int
+    row: int
+    col: int
+    cx: int   # centre x in image pixel coordinates
+    cy: int   # centre y in image pixel coordinates
+    radius: int
+
+    def to_dict(self) -> Dict[str, int]:
+        return {
+            "index": self.index,
+            "row": self.row,
+            "col": self.col,
+            "cx": self.cx,
+            "cy": self.cy,
+            "radius": self.radius,
+        }
+
+    @classmethod
+    def from_dict(cls, payload: Dict[str, Any]) -> "DetectedTile":
+        return cls(
+            index=int(payload["index"]),
+            row=int(payload["row"]),
+            col=int(payload["col"]),
+            cx=int(payload["cx"]),
+            cy=int(payload["cy"]),
+            radius=int(payload["radius"]),
+        )
+
+
+@dataclass(frozen=True)
+class DetectedBoard:
+    """Board layout detected from a screenshot via circle detection."""
+    grid_size: int          # 4 or 5
+    tiles: List[DetectedTile]
+    roi_left: int
+    roi_top: int
+    roi_width: int
+    roi_height: int
+
+    @property
+    def tile_by_index(self) -> Dict[int, DetectedTile]:
+        return {t.index: t for t in self.tiles}
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "grid_size": self.grid_size,
+            "tiles": [t.to_dict() for t in self.tiles],
+            "roi_left": self.roi_left,
+            "roi_top": self.roi_top,
+            "roi_width": self.roi_width,
+            "roi_height": self.roi_height,
+        }
+
+    @classmethod
+    def from_dict(cls, payload: Dict[str, Any]) -> "DetectedBoard":
+        return cls(
+            grid_size=int(payload["grid_size"]),
+            tiles=[DetectedTile.from_dict(t) for t in payload.get("tiles", [])],
+            roi_left=int(payload["roi_left"]),
+            roi_top=int(payload["roi_top"]),
+            roi_width=int(payload["roi_width"]),
+            roi_height=int(payload["roi_height"]),
+        )

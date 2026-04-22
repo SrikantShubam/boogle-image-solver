@@ -65,7 +65,7 @@ def find_candidate_tiles(image_bgr):
     return nms
 
 
-def select_grid_points(candidates):
+def select_grid_points(candidates, preferred_n=None):
     if len(candidates) < 14:
         return None
 
@@ -74,8 +74,14 @@ def select_grid_points(candidates):
     radii = pts[:, 2]
 
     best = None
-    for n in (4, 5):
-        if len(candidates) < n * n:
+    if preferred_n in (4, 5):
+        n_values = (preferred_n,)
+    else:
+        # Prefer 5x5 when both are plausible; most boards in this project are 5x5.
+        n_values = (5, 4)
+
+    for n in n_values:
+        if preferred_n is None and len(candidates) < n * n:
             continue
 
         x_vals = centers[:, 0].reshape(-1, 1).astype(np.float32)
@@ -110,13 +116,23 @@ def select_grid_points(candidates):
                 cells[key] = (d2, i)
 
         coverage = len(cells) / float(n * n)
-        if coverage < 0.92:
+        min_coverage = 0.80 if preferred_n else 0.92
+        if coverage < min_coverage:
             continue
 
         selected = []
+        median_radius = int(np.median(radii)) if len(radii) else 28
         for row in range(n):
             for col in range(n):
                 if (row, col) not in cells:
+                    # If caller asked for a fixed grid (for example 5x5), infer a
+                    # missing circle center from k-means centroids so we can still
+                    # produce a full tile canvas for OCR.
+                    if preferred_n:
+                        cx = int(round(x_centroids[x_order[col], 0]))
+                        cy = int(round(y_centroids[y_order[row], 0]))
+                        selected.append((cx, cy, median_radius))
+                        continue
                     selected = None
                     break
                 idx = cells[(row, col)][1]
@@ -127,7 +143,7 @@ def select_grid_points(candidates):
         if selected is None:
             continue
 
-        # Slight penalty for larger grids so 4x4 wins when coverage ties.
+        # Slight penalty for larger grids so smaller boards can still win if clearly better.
         score = coverage - n * 0.001
         if best is None or score > best[0]:
             best = (score, n, selected)
@@ -135,12 +151,12 @@ def select_grid_points(candidates):
     return best
 
 
-def detect_bbox(image_path):
+def detect_bbox(image_path, preferred_n=None):
     image = cv2.imread(str(image_path))
     if image is None:
       raise RuntimeError(f"Could not read image: {image_path}")
 
-    result = select_grid_points(find_candidate_tiles(image))
+    result = select_grid_points(find_candidate_tiles(image), preferred_n=preferred_n)
     if result is None:
         raise RuntimeError("Could not detect a 4x4 or 5x5 board.")
 
@@ -167,9 +183,17 @@ def detect_bbox(image_path):
 
 
 def main():
-    if len(sys.argv) != 2:
-        raise SystemExit("usage: detect_board_bbox.py <image_path>")
-    data = detect_bbox(Path(sys.argv[1]))
+    if len(sys.argv) not in (2, 3):
+        raise SystemExit("usage: detect_board_bbox.py <image_path> [grid_size]")
+    preferred_n = None
+    if len(sys.argv) == 3:
+        try:
+            parsed = int(sys.argv[2])
+            if parsed in (4, 5):
+                preferred_n = parsed
+        except Exception:
+            preferred_n = None
+    data = detect_bbox(Path(sys.argv[1]), preferred_n=preferred_n)
     print(json.dumps(data))
 
 

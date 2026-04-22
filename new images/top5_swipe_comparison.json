@@ -1,0 +1,1226 @@
+[
+  {
+    "image": "1.jpeg",
+    "top5_exact": 3,
+    "top5": [
+      {
+        "solver_word": "BEAKERMEN",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          7,
+          1,
+          0,
+          5
+        ],
+        "traced_path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          7,
+          1,
+          0,
+          5
+        ],
+        "ocr_word_from_traced_path": "BEAKERMEN",
+        "ground_truth_word_from_traced_path": "BEAKERINEN",
+        "ground_truth_word_from_solver_path": "BEAKERINEN",
+        "route": [
+          [
+            223,
+            961
+          ],
+          [
+            372,
+            1059
+          ],
+          [
+            441,
+            1023
+          ],
+          [
+            359,
+            844
+          ],
+          [
+            234,
+            678
+          ],
+          [
+            342,
+            663
+          ],
+          [
+            210,
+            540
+          ],
+          [
+            87,
+            545
+          ],
+          [
+            87,
+            646
+          ]
+        ]
+      },
+      {
+        "solver_word": "DEMURITY",
+        "strategy": "anchor_dp",
+        "exact": false,
+        "solver_path": [
+          10,
+          6,
+          1,
+          2,
+          7,
+          13,
+          17,
+          23
+        ],
+        "traced_path": [
+          10,
+          6,
+          1,
+          2,
+          7,
+          13,
+          12,
+          17,
+          18,
+          23
+        ],
+        "ocr_word_from_traced_path": "DEMURIKTAY",
+        "ground_truth_word_from_traced_path": "DEINURIKTAY",
+        "ground_truth_word_from_solver_path": "DEINURITY",
+        "route": [
+          [
+            100,
+            787
+          ],
+          [
+            210,
+            650
+          ],
+          [
+            223,
+            545
+          ],
+          [
+            360,
+            545
+          ],
+          [
+            378,
+            663
+          ],
+          [
+            427,
+            818
+          ],
+          [
+            375,
+            947
+          ],
+          [
+            483,
+            1060
+          ]
+        ]
+      },
+      {
+        "solver_word": "SHIREMEN",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          8,
+          9,
+          13,
+          7,
+          6,
+          1,
+          0,
+          5
+        ],
+        "traced_path": [
+          8,
+          9,
+          13,
+          7,
+          6,
+          1,
+          0,
+          5
+        ],
+        "ocr_word_from_traced_path": "SHIREMEN",
+        "ground_truth_word_from_traced_path": "SHIREINEN",
+        "ground_truth_word_from_solver_path": "SHIREINEN",
+        "route": [
+          [
+            515,
+            664
+          ],
+          [
+            614,
+            664
+          ],
+          [
+            435,
+            760
+          ],
+          [
+            345,
+            674
+          ],
+          [
+            241,
+            663
+          ],
+          [
+            223,
+            545
+          ],
+          [
+            87,
+            545
+          ],
+          [
+            87,
+            646
+          ]
+        ]
+      },
+      {
+        "solver_word": "AKERITE",
+        "strategy": "anchor_dp",
+        "exact": false,
+        "solver_path": [
+          18,
+          12,
+          6,
+          7,
+          13,
+          17,
+          22
+        ],
+        "traced_path": [
+          18,
+          12,
+          6,
+          7,
+          13,
+          12,
+          17,
+          22
+        ],
+        "ocr_word_from_traced_path": "AKERIKTE",
+        "ground_truth_word_from_traced_path": "AKERIKTE",
+        "ground_truth_word_from_solver_path": "AKERITE",
+        "route": [
+          [
+            452,
+            968
+          ],
+          [
+            391,
+            887
+          ],
+          [
+            234,
+            678
+          ],
+          [
+            360,
+            681
+          ],
+          [
+            427,
+            818
+          ],
+          [
+            375,
+            947
+          ],
+          [
+            360,
+            1055
+          ]
+        ]
+      },
+      {
+        "solver_word": "BEAKERS",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          7,
+          8
+        ],
+        "traced_path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          7,
+          8
+        ],
+        "ocr_word_from_traced_path": "BEAKERS",
+        "ground_truth_word_from_traced_path": "BEAKERS",
+        "ground_truth_word_from_solver_path": "BEAKERS",
+        "route": [
+          [
+            223,
+            961
+          ],
+          [
+            372,
+            1059
+          ],
+          [
+            441,
+            1023
+          ],
+          [
+            359,
+            844
+          ],
+          [
+            234,
+            678
+          ],
+          [
+            360,
+            675
+          ],
+          [
+            479,
+            664
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "image": "2.jpeg",
+    "top5_exact": 5,
+    "top5": [
+      {
+        "solver_word": "DELETORY",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          1,
+          6,
+          2,
+          3,
+          8,
+          13,
+          9,
+          14
+        ],
+        "traced_path": [
+          1,
+          6,
+          2,
+          3,
+          8,
+          13,
+          9,
+          14
+        ],
+        "ocr_word_from_traced_path": "DELETORY",
+        "ground_truth_word_from_traced_path": "DEKETORU",
+        "ground_truth_word_from_solver_path": "DEKETORU",
+        "route": [
+          [
+            224,
+            609
+          ],
+          [
+            236,
+            650
+          ],
+          [
+            373,
+            540
+          ],
+          [
+            491,
+            609
+          ],
+          [
+            498,
+            646
+          ],
+          [
+            530,
+            797
+          ],
+          [
+            632,
+            682
+          ],
+          [
+            632,
+            782
+          ]
+        ]
+      },
+      {
+        "solver_word": "RETOOLED",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          9,
+          3,
+          8,
+          13,
+          7,
+          2,
+          6,
+          1
+        ],
+        "traced_path": [
+          9,
+          3,
+          8,
+          13,
+          7,
+          2,
+          6,
+          1
+        ],
+        "ocr_word_from_traced_path": "RETOOLED",
+        "ground_truth_word_from_traced_path": "RETOOKED",
+        "ground_truth_word_from_solver_path": "RETOOKED",
+        "route": [
+          [
+            616,
+            656
+          ],
+          [
+            515,
+            602
+          ],
+          [
+            509,
+            664
+          ],
+          [
+            501,
+            788
+          ],
+          [
+            374,
+            651
+          ],
+          [
+            360,
+            545
+          ],
+          [
+            236,
+            650
+          ],
+          [
+            224,
+            609
+          ]
+        ]
+      },
+      {
+        "solver_word": "TAXEATER",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          22,
+          21,
+          15,
+          16,
+          12,
+          8,
+          3,
+          9
+        ],
+        "traced_path": [
+          22,
+          21,
+          15,
+          16,
+          12,
+          8,
+          3,
+          9
+        ],
+        "ocr_word_from_traced_path": "TAXEATER",
+        "ground_truth_word_from_traced_path": "TAXEATER",
+        "ground_truth_word_from_solver_path": "TAXEATER",
+        "route": [
+          [
+            351,
+            1155
+          ],
+          [
+            229,
+            1100
+          ],
+          [
+            105,
+            937
+          ],
+          [
+            235,
+            937
+          ],
+          [
+            373,
+            813
+          ],
+          [
+            484,
+            651
+          ],
+          [
+            498,
+            611
+          ],
+          [
+            616,
+            656
+          ]
+        ]
+      },
+      {
+        "solver_word": "TEASELER",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          22,
+          16,
+          12,
+          11,
+          6,
+          2,
+          3,
+          9
+        ],
+        "traced_path": [
+          22,
+          16,
+          12,
+          11,
+          6,
+          2,
+          3,
+          9
+        ],
+        "ocr_word_from_traced_path": "TEASELER",
+        "ground_truth_word_from_traced_path": "TEASEKER",
+        "ground_truth_word_from_solver_path": "TEASEKER",
+        "route": [
+          [
+            360,
+            1140
+          ],
+          [
+            233,
+            952
+          ],
+          [
+            369,
+            809
+          ],
+          [
+            263,
+            823
+          ],
+          [
+            241,
+            663
+          ],
+          [
+            373,
+            540
+          ],
+          [
+            515,
+            602
+          ],
+          [
+            616,
+            656
+          ]
+        ]
+      },
+      {
+        "solver_word": "ATAXIES",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          18,
+          22,
+          21,
+          15,
+          20,
+          16,
+          11
+        ],
+        "traced_path": [
+          18,
+          22,
+          21,
+          15,
+          20,
+          16,
+          11
+        ],
+        "ocr_word_from_traced_path": "ATAXIES",
+        "ground_truth_word_from_traced_path": "ATAXKES",
+        "ground_truth_word_from_solver_path": "ATAXKES",
+        "route": [
+          [
+            508,
+            921
+          ],
+          [
+            354,
+            1146
+          ],
+          [
+            229,
+            1100
+          ],
+          [
+            97,
+            952
+          ],
+          [
+            114,
+            1081
+          ],
+          [
+            207,
+            928
+          ],
+          [
+            223,
+            873
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "image": "3.jpeg",
+    "top5_exact": 4,
+    "top5": [
+      {
+        "solver_word": "HEBRAEAN",
+        "strategy": "anchor_dp",
+        "exact": false,
+        "solver_path": [
+          18,
+          17,
+          12,
+          13,
+          8,
+          2,
+          7
+        ],
+        "traced_path": [
+          18,
+          17,
+          12,
+          13,
+          8,
+          3,
+          2,
+          7
+        ],
+        "ocr_word_from_traced_path": "HEBRAVEAN",
+        "ground_truth_word_from_traced_path": "HEBRAVEAN",
+        "ground_truth_word_from_solver_path": "HEBRAEAN",
+        "route": [
+          [
+            449,
+            977
+          ],
+          [
+            417,
+            904
+          ],
+          [
+            396,
+            797
+          ],
+          [
+            463,
+            744
+          ],
+          [
+            479,
+            660
+          ],
+          [
+            358,
+            545
+          ],
+          [
+            345,
+            685
+          ]
+        ]
+      },
+      {
+        "solver_word": "URBANELY",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          14,
+          13,
+          12,
+          7,
+          2,
+          1,
+          5
+        ],
+        "traced_path": [
+          14,
+          13,
+          12,
+          7,
+          2,
+          1,
+          5
+        ],
+        "ocr_word_from_traced_path": "URBANELY",
+        "ground_truth_word_from_traced_path": "URBANELY",
+        "ground_truth_word_from_solver_path": "URBANELY",
+        "route": [
+          [
+            620,
+            857
+          ],
+          [
+            457,
+            814
+          ],
+          [
+            396,
+            797
+          ],
+          [
+            380,
+            714
+          ],
+          [
+            358,
+            545
+          ],
+          [
+            149,
+            548
+          ],
+          [
+            96,
+            649
+          ]
+        ]
+      },
+      {
+        "solver_word": "WAVERERS",
+        "strategy": "segment",
+        "exact": true,
+        "solver_path": [
+          4,
+          8,
+          3,
+          9,
+          13,
+          17,
+          22,
+          16
+        ],
+        "traced_path": [
+          4,
+          8,
+          3,
+          9,
+          13,
+          17,
+          22,
+          16
+        ],
+        "ocr_word_from_traced_path": "WAVERERS",
+        "ground_truth_word_from_traced_path": "WAVERERS",
+        "ground_truth_word_from_solver_path": "WAVERERS",
+        "route": [
+          [
+            633,
+            527
+          ],
+          [
+            649,
+            574
+          ],
+          [
+            544,
+            680
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            478,
+            595
+          ],
+          [
+            561,
+            646
+          ],
+          [
+            605,
+            733
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            307,
+            1063
+          ],
+          [
+            189,
+            934
+          ]
+        ]
+      },
+      {
+        "solver_word": "BANAGOS",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          12,
+          7,
+          6,
+          10,
+          11,
+          16
+        ],
+        "traced_path": [
+          12,
+          7,
+          6,
+          10,
+          11,
+          16
+        ],
+        "ocr_word_from_traced_path": "BANAGOS",
+        "ground_truth_word_from_traced_path": "BANAGOS",
+        "ground_truth_word_from_solver_path": "BANAGOS",
+        "route": [
+          [
+            353,
+            769
+          ],
+          [
+            302,
+            736
+          ],
+          [
+            173,
+            704
+          ],
+          [
+            103,
+            855
+          ],
+          [
+            210,
+            871
+          ],
+          [
+            203,
+            893
+          ]
+        ]
+      },
+      {
+        "solver_word": "EOGAEAN",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          17,
+          11,
+          10,
+          6,
+          2,
+          7
+        ],
+        "traced_path": [
+          17,
+          11,
+          10,
+          6,
+          2,
+          7
+        ],
+        "ocr_word_from_traced_path": "EOGAEAN",
+        "ground_truth_word_from_traced_path": "EOGAEAN",
+        "ground_truth_word_from_solver_path": "EOGAEAN",
+        "route": [
+          [
+            357,
+            916
+          ],
+          [
+            201,
+            867
+          ],
+          [
+            103,
+            855
+          ],
+          [
+            206,
+            687
+          ],
+          [
+            358,
+            545
+          ],
+          [
+            345,
+            685
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "image": "4.jpeg",
+    "top5_exact": 5,
+    "top5": [
+      {
+        "solver_word": "DOORHEAD",
+        "strategy": "segment",
+        "exact": true,
+        "solver_path": [
+          21,
+          22,
+          16,
+          11,
+          6,
+          10,
+          15,
+          20
+        ],
+        "traced_path": [
+          21,
+          22,
+          16,
+          11,
+          6,
+          10,
+          15,
+          20
+        ],
+        "ocr_word_from_traced_path": "DOORHEAD",
+        "ground_truth_word_from_traced_path": "TNERORADL",
+        "ground_truth_word_from_solver_path": "TNERORADL",
+        "route": [
+          [
+            293,
+            1081
+          ],
+          [
+            358,
+            1089
+          ],
+          [
+            377,
+            1042
+          ],
+          [
+            272,
+            924
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1129
+          ]
+        ]
+      },
+      {
+        "solver_word": "HOARHEAD",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          7,
+          13,
+          12,
+          11,
+          6,
+          10,
+          15,
+          20
+        ],
+        "traced_path": [
+          7,
+          13,
+          12,
+          11,
+          6,
+          10,
+          15,
+          20
+        ],
+        "ocr_word_from_traced_path": "HOARHEAD",
+        "ground_truth_word_from_traced_path": "AJAORADL",
+        "ground_truth_word_from_solver_path": "AJAORADL",
+        "route": [
+          [
+            374,
+            675
+          ],
+          [
+            525,
+            782
+          ],
+          [
+            422,
+            790
+          ],
+          [
+            223,
+            791
+          ],
+          [
+            223,
+            681
+          ],
+          [
+            100,
+            813
+          ],
+          [
+            105,
+            937
+          ],
+          [
+            117,
+            1106
+          ]
+        ]
+      },
+      {
+        "solver_word": "SHARADA",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          0,
+          6,
+          12,
+          11,
+          15,
+          21,
+          17
+        ],
+        "traced_path": [
+          0,
+          6,
+          12,
+          11,
+          15,
+          21,
+          17
+        ],
+        "ocr_word_from_traced_path": "SHARADA",
+        "ground_truth_word_from_traced_path": "SRAODTO",
+        "ground_truth_word_from_solver_path": "SRAODTO",
+        "route": [
+          [
+            100,
+            540
+          ],
+          [
+            210,
+            650
+          ],
+          [
+            383,
+            820
+          ],
+          [
+            226,
+            873
+          ],
+          [
+            102,
+            947
+          ],
+          [
+            310,
+            1045
+          ],
+          [
+            352,
+            954
+          ]
+        ]
+      },
+      {
+        "solver_word": "WARHEAD",
+        "strategy": "anchor_dp",
+        "exact": true,
+        "solver_path": [
+          8,
+          12,
+          11,
+          6,
+          10,
+          15,
+          20
+        ],
+        "traced_path": [
+          8,
+          12,
+          11,
+          6,
+          10,
+          15,
+          20
+        ],
+        "ocr_word_from_traced_path": "WARHEAD",
+        "ground_truth_word_from_traced_path": "OAORADL",
+        "ground_truth_word_from_solver_path": "OAORADL",
+        "route": [
+          [
+            489,
+            680
+          ],
+          [
+            387,
+            799
+          ],
+          [
+            223,
+            791
+          ],
+          [
+            223,
+            681
+          ],
+          [
+            100,
+            813
+          ],
+          [
+            105,
+            937
+          ],
+          [
+            117,
+            1106
+          ]
+        ]
+      },
+      {
+        "solver_word": "ADOORS",
+        "strategy": "segment",
+        "exact": true,
+        "solver_path": [
+          15,
+          21,
+          22,
+          16,
+          11,
+          5
+        ],
+        "traced_path": [
+          15,
+          21,
+          22,
+          16,
+          11,
+          5
+        ],
+        "ocr_word_from_traced_path": "ADOORS",
+        "ground_truth_word_from_traced_path": "DTNEROE",
+        "ground_truth_word_from_solver_path": "DTNEROE",
+        "route": [
+          [
+            87,
+            937
+          ],
+          [
+            293,
+            1081
+          ],
+          [
+            358,
+            1089
+          ],
+          [
+            377,
+            1042
+          ],
+          [
+            272,
+            924
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            664
+          ]
+        ]
+      }
+    ]
+  }
+]

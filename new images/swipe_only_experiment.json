@@ -1,0 +1,3635 @@
+[
+  {
+    "image": "1.jpeg",
+    "grid": [
+      [
+        "E",
+        "IN",
+        "U",
+        "O",
+        "H"
+      ],
+      [
+        "N",
+        "E",
+        "R",
+        "S",
+        "H"
+      ],
+      [
+        "D",
+        "W",
+        "K",
+        "I",
+        "I"
+      ],
+      [
+        "R",
+        "B",
+        "T",
+        "A",
+        "I"
+      ],
+      [
+        "U",
+        "N",
+        "E",
+        "Y",
+        "A"
+      ]
+    ],
+    "word_count": 389,
+    "top_words": [
+      {
+        "rank": 1,
+        "word": "KAIRINE",
+        "path": [
+          12,
+          18,
+          13,
+          7,
+          1,
+          0
+        ],
+        "coords": [
+          [
+            375,
+            865
+          ],
+          [
+            476,
+            1001
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            223,
+            527
+          ],
+          [
+            87,
+            527
+          ]
+        ],
+        "segment_lengths": [
+          169.4,
+          208.69,
+          163.4,
+          193.04,
+          136.0
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 12,
+            "row": 2,
+            "col": 2,
+            "center": [
+              375,
+              865
+            ],
+            "coord": [
+              375,
+              865
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 18,
+            "row": 3,
+            "col": 3,
+            "center": [
+              476,
+              1001
+            ],
+            "coord": [
+              476,
+              1001
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 13,
+            "row": 2,
+            "col": 3,
+            "center": [
+              459,
+              793
+            ],
+            "coord": [
+              459,
+              793
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              360,
+              663
+            ],
+            "coord": [
+              360,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 1,
+            "row": 0,
+            "col": 1,
+            "center": [
+              223,
+              527
+            ],
+            "coord": [
+              223,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 0,
+            "row": 0,
+            "col": 0,
+            "center": [
+              87,
+              527
+            ],
+            "coord": [
+              87,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 375 865",
+          "sleep 0.004",
+          "input motionevent MOVE 400 899",
+          "sleep 0.004",
+          "input motionevent MOVE 426 933",
+          "sleep 0.004",
+          "input motionevent MOVE 451 967",
+          "sleep 0.004",
+          "input motionevent MOVE 476 1001",
+          "sleep 0.004",
+          "input motionevent MOVE 472 949",
+          "sleep 0.004",
+          "input motionevent MOVE 468 897",
+          "sleep 0.004"
+        ],
+        "script_line_count": 42
+      },
+      {
+        "rank": 2,
+        "word": "NEURINE",
+        "path": [
+          5,
+          6,
+          2,
+          7,
+          1,
+          0
+        ],
+        "coords": [
+          [
+            87,
+            664
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            223,
+            527
+          ],
+          [
+            87,
+            527
+          ]
+        ],
+        "segment_lengths": [
+          136.0,
+          193.04,
+          136.0,
+          193.04,
+          136.0
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 5,
+            "row": 1,
+            "col": 0,
+            "center": [
+              87,
+              664
+            ],
+            "coord": [
+              87,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 6,
+            "row": 1,
+            "col": 1,
+            "center": [
+              223,
+              663
+            ],
+            "coord": [
+              223,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 2,
+            "row": 0,
+            "col": 2,
+            "center": [
+              360,
+              527
+            ],
+            "coord": [
+              360,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              360,
+              663
+            ],
+            "coord": [
+              360,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 1,
+            "row": 0,
+            "col": 1,
+            "center": [
+              223,
+              527
+            ],
+            "coord": [
+              223,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 0,
+            "row": 0,
+            "col": 0,
+            "center": [
+              87,
+              527
+            ],
+            "coord": [
+              87,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 87 664",
+          "sleep 0.004",
+          "input motionevent MOVE 121 664",
+          "sleep 0.004",
+          "input motionevent MOVE 155 664",
+          "sleep 0.004",
+          "input motionevent MOVE 189 663",
+          "sleep 0.004",
+          "input motionevent MOVE 223 663",
+          "sleep 0.004",
+          "input motionevent MOVE 257 629",
+          "sleep 0.004",
+          "input motionevent MOVE 292 595",
+          "sleep 0.004"
+        ],
+        "script_line_count": 42
+      },
+      {
+        "rank": 3,
+        "word": "AKERITE",
+        "path": [
+          18,
+          12,
+          6,
+          7,
+          13,
+          17,
+          22
+        ],
+        "coords": [
+          [
+            476,
+            1001
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            360,
+            1073
+          ]
+        ],
+        "segment_lengths": [
+          169.4,
+          252.8,
+          137.0,
+          163.4,
+          174.75,
+          136.0
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 18,
+            "row": 3,
+            "col": 3,
+            "center": [
+              476,
+              1001
+            ],
+            "coord": [
+              476,
+              1001
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 12,
+            "row": 2,
+            "col": 2,
+            "center": [
+              375,
+              865
+            ],
+            "coord": [
+              375,
+              865
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 6,
+            "row": 1,
+            "col": 1,
+            "center": [
+              223,
+              663
+            ],
+            "coord": [
+              223,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              360,
+              663
+            ],
+            "coord": [
+              360,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 13,
+            "row": 2,
+            "col": 3,
+            "center": [
+              459,
+              793
+            ],
+            "coord": [
+              459,
+              793
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 17,
+            "row": 3,
+            "col": 2,
+            "center": [
+              360,
+              937
+            ],
+            "coord": [
+              360,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 22,
+            "row": 4,
+            "col": 2,
+            "center": [
+              360,
+              1073
+            ],
+            "coord": [
+              360,
+              1073
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 476 1001",
+          "sleep 0.004",
+          "input motionevent MOVE 451 967",
+          "sleep 0.004",
+          "input motionevent MOVE 426 933",
+          "sleep 0.004",
+          "input motionevent MOVE 400 899",
+          "sleep 0.004",
+          "input motionevent MOVE 375 865",
+          "sleep 0.004",
+          "input motionevent MOVE 337 814",
+          "sleep 0.004",
+          "input motionevent MOVE 299 764",
+          "sleep 0.004"
+        ],
+        "script_line_count": 50
+      },
+      {
+        "rank": 4,
+        "word": "BEAKERS",
+        "path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          7,
+          8
+        ],
+        "coords": [
+          [
+            190,
+            935
+          ],
+          [
+            360,
+            1073
+          ],
+          [
+            476,
+            1001
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            497,
+            664
+          ]
+        ],
+        "segment_lengths": [
+          218.96,
+          136.53,
+          169.4,
+          252.8,
+          137.0,
+          137.0
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 16,
+            "row": 3,
+            "col": 1,
+            "center": [
+              190,
+              935
+            ],
+            "coord": [
+              190,
+              935
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 22,
+            "row": 4,
+            "col": 2,
+            "center": [
+              360,
+              1073
+            ],
+            "coord": [
+              360,
+              1073
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 18,
+            "row": 3,
+            "col": 3,
+            "center": [
+              476,
+              1001
+            ],
+            "coord": [
+              476,
+              1001
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 12,
+            "row": 2,
+            "col": 2,
+            "center": [
+              375,
+              865
+            ],
+            "coord": [
+              375,
+              865
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 6,
+            "row": 1,
+            "col": 1,
+            "center": [
+              223,
+              663
+            ],
+            "coord": [
+              223,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              360,
+              663
+            ],
+            "coord": [
+              360,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 8,
+            "row": 1,
+            "col": 3,
+            "center": [
+              497,
+              664
+            ],
+            "coord": [
+              497,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 190 935",
+          "sleep 0.004",
+          "input motionevent MOVE 232 970",
+          "sleep 0.004",
+          "input motionevent MOVE 275 1004",
+          "sleep 0.004",
+          "input motionevent MOVE 318 1038",
+          "sleep 0.004",
+          "input motionevent MOVE 360 1073",
+          "sleep 0.004",
+          "input motionevent MOVE 389 1055",
+          "sleep 0.004",
+          "input motionevent MOVE 418 1037",
+          "sleep 0.004"
+        ],
+        "script_line_count": 50
+      },
+      {
+        "rank": 5,
+        "word": "BETAKEN",
+        "path": [
+          16,
+          22,
+          17,
+          18,
+          12,
+          6,
+          5
+        ],
+        "coords": [
+          [
+            190,
+            935
+          ],
+          [
+            360,
+            1073
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            476,
+            1001
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "segment_lengths": [
+          218.96,
+          136.0,
+          132.48,
+          169.4,
+          252.8,
+          136.0
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 16,
+            "row": 3,
+            "col": 1,
+            "center": [
+              190,
+              935
+            ],
+            "coord": [
+              190,
+              935
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 22,
+            "row": 4,
+            "col": 2,
+            "center": [
+              360,
+              1073
+            ],
+            "coord": [
+              360,
+              1073
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 17,
+            "row": 3,
+            "col": 2,
+            "center": [
+              360,
+              937
+            ],
+            "coord": [
+              360,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 18,
+            "row": 3,
+            "col": 3,
+            "center": [
+              476,
+              1001
+            ],
+            "coord": [
+              476,
+              1001
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 12,
+            "row": 2,
+            "col": 2,
+            "center": [
+              375,
+              865
+            ],
+            "coord": [
+              375,
+              865
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 6,
+            "row": 1,
+            "col": 1,
+            "center": [
+              223,
+              663
+            ],
+            "coord": [
+              223,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 5,
+            "row": 1,
+            "col": 0,
+            "center": [
+              87,
+              664
+            ],
+            "coord": [
+              87,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 190 935",
+          "sleep 0.004",
+          "input motionevent MOVE 232 970",
+          "sleep 0.004",
+          "input motionevent MOVE 275 1004",
+          "sleep 0.004",
+          "input motionevent MOVE 318 1038",
+          "sleep 0.004",
+          "input motionevent MOVE 360 1073",
+          "sleep 0.004",
+          "input motionevent MOVE 360 1039",
+          "sleep 0.004",
+          "input motionevent MOVE 360 1005",
+          "sleep 0.004"
+        ],
+        "script_line_count": 50
+      }
+    ],
+    "overlay": "C:\\experiments\\destroy her\\new images\\gt_swipe_1.png"
+  },
+  {
+    "image": "2.jpeg",
+    "grid": [
+      [
+        "X",
+        "D",
+        "K",
+        "E",
+        "B"
+      ],
+      [
+        "N",
+        "E",
+        "O",
+        "T",
+        "R"
+      ],
+      [
+        "O",
+        "S",
+        "A",
+        "O",
+        "U"
+      ],
+      [
+        "X",
+        "E",
+        "O",
+        "A",
+        "U"
+      ],
+      [
+        "K",
+        "A",
+        "T",
+        "D",
+        "TH"
+      ]
+    ],
+    "word_count": 368,
+    "top_words": [
+      {
+        "rank": 1,
+        "word": "BETOKENS",
+        "path": [
+          4,
+          3,
+          8,
+          7,
+          2,
+          6,
+          5,
+          11
+        ],
+        "coords": [
+          [
+            605,
+            593
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            664
+          ],
+          [
+            223,
+            832
+          ]
+        ],
+        "segment_lengths": [
+          106.0,
+          71.03,
+          137.0,
+          136.0,
+          193.04,
+          136.0,
+          216.15
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 4,
+            "row": 0,
+            "col": 4,
+            "center": [
+              605,
+              593
+            ],
+            "coord": [
+              605,
+              593
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 3,
+            "row": 0,
+            "col": 3,
+            "center": [
+              499,
+              593
+            ],
+            "coord": [
+              499,
+              593
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 8,
+            "row": 1,
+            "col": 3,
+            "center": [
+              497,
+              664
+            ],
+            "coord": [
+              497,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              360,
+              663
+            ],
+            "coord": [
+              360,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 2,
+            "row": 0,
+            "col": 2,
+            "center": [
+              360,
+              527
+            ],
+            "coord": [
+              360,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 6,
+            "row": 1,
+            "col": 1,
+            "center": [
+              223,
+              663
+            ],
+            "coord": [
+              223,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 5,
+            "row": 1,
+            "col": 0,
+            "center": [
+              87,
+              664
+            ],
+            "coord": [
+              87,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 11,
+            "row": 2,
+            "col": 1,
+            "center": [
+              223,
+              832
+            ],
+            "coord": [
+              223,
+              832
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 605 593",
+          "sleep 0.004",
+          "input motionevent MOVE 578 593",
+          "sleep 0.004",
+          "input motionevent MOVE 552 593",
+          "sleep 0.004",
+          "input motionevent MOVE 526 593",
+          "sleep 0.004",
+          "input motionevent MOVE 499 593",
+          "sleep 0.004",
+          "input motionevent MOVE 498 611",
+          "sleep 0.004",
+          "input motionevent MOVE 498 628",
+          "sleep 0.004"
+        ],
+        "script_line_count": 58
+      },
+      {
+        "rank": 2,
+        "word": "TAXEATER",
+        "path": [
+          22,
+          21,
+          15,
+          16,
+          12,
+          8,
+          3,
+          9
+        ],
+        "coords": [
+          [
+            373,
+            1159
+          ],
+          [
+            223,
+            1135
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            377,
+            863
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            632,
+            664
+          ]
+        ],
+        "segment_lengths": [
+          151.91,
+          240.21,
+          136.0,
+          170.86,
+          232.38,
+          71.03,
+          150.76
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 22,
+            "row": 4,
+            "col": 2,
+            "center": [
+              373,
+              1159
+            ],
+            "coord": [
+              373,
+              1159
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 21,
+            "row": 4,
+            "col": 1,
+            "center": [
+              223,
+              1135
+            ],
+            "coord": [
+              223,
+              1135
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 15,
+            "row": 3,
+            "col": 0,
+            "center": [
+              87,
+              937
+            ],
+            "coord": [
+              87,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 16,
+            "row": 3,
+            "col": 1,
+            "center": [
+              223,
+              937
+            ],
+            "coord": [
+              223,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 12,
+            "row": 2,
+            "col": 2,
+            "center": [
+              377,
+              863
+            ],
+            "coord": [
+              377,
+              863
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 8,
+            "row": 1,
+            "col": 3,
+            "center": [
+              497,
+              664
+            ],
+            "coord": [
+              497,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 3,
+            "row": 0,
+            "col": 3,
+            "center": [
+              499,
+              593
+            ],
+            "coord": [
+              499,
+              593
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 9,
+            "row": 1,
+            "col": 4,
+            "center": [
+              632,
+              664
+            ],
+            "coord": [
+              632,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 373 1159",
+          "sleep 0.004",
+          "input motionevent MOVE 336 1153",
+          "sleep 0.004",
+          "input motionevent MOVE 298 1147",
+          "sleep 0.004",
+          "input motionevent MOVE 260 1141",
+          "sleep 0.004",
+          "input motionevent MOVE 223 1135",
+          "sleep 0.004",
+          "input motionevent MOVE 189 1086",
+          "sleep 0.004",
+          "input motionevent MOVE 155 1036",
+          "sleep 0.004"
+        ],
+        "script_line_count": 58
+      },
+      {
+        "rank": 3,
+        "word": "BETOKEN",
+        "path": [
+          4,
+          3,
+          8,
+          7,
+          2,
+          6,
+          5
+        ],
+        "coords": [
+          [
+            605,
+            593
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "segment_lengths": [
+          106.0,
+          71.03,
+          137.0,
+          136.0,
+          193.04,
+          136.0
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 4,
+            "row": 0,
+            "col": 4,
+            "center": [
+              605,
+              593
+            ],
+            "coord": [
+              605,
+              593
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 3,
+            "row": 0,
+            "col": 3,
+            "center": [
+              499,
+              593
+            ],
+            "coord": [
+              499,
+              593
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 8,
+            "row": 1,
+            "col": 3,
+            "center": [
+              497,
+              664
+            ],
+            "coord": [
+              497,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              360,
+              663
+            ],
+            "coord": [
+              360,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 2,
+            "row": 0,
+            "col": 2,
+            "center": [
+              360,
+              527
+            ],
+            "coord": [
+              360,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 6,
+            "row": 1,
+            "col": 1,
+            "center": [
+              223,
+              663
+            ],
+            "coord": [
+              223,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 5,
+            "row": 1,
+            "col": 0,
+            "center": [
+              87,
+              664
+            ],
+            "coord": [
+              87,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 605 593",
+          "sleep 0.004",
+          "input motionevent MOVE 578 593",
+          "sleep 0.004",
+          "input motionevent MOVE 552 593",
+          "sleep 0.004",
+          "input motionevent MOVE 526 593",
+          "sleep 0.004",
+          "input motionevent MOVE 499 593",
+          "sleep 0.004",
+          "input motionevent MOVE 498 611",
+          "sleep 0.004",
+          "input motionevent MOVE 498 628",
+          "sleep 0.004"
+        ],
+        "script_line_count": 50
+      },
+      {
+        "rank": 4,
+        "word": "BROOKED",
+        "path": [
+          4,
+          9,
+          13,
+          7,
+          2,
+          6,
+          1
+        ],
+        "coords": [
+          [
+            605,
+            593
+          ],
+          [
+            632,
+            664
+          ],
+          [
+            503,
+            831
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            225,
+            589
+          ]
+        ],
+        "segment_lengths": [
+          75.96,
+          211.02,
+          220.62,
+          136.0,
+          193.04,
+          74.03
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 4,
+            "row": 0,
+            "col": 4,
+            "center": [
+              605,
+              593
+            ],
+            "coord": [
+              605,
+              593
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 9,
+            "row": 1,
+            "col": 4,
+            "center": [
+              632,
+              664
+            ],
+            "coord": [
+              632,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 13,
+            "row": 2,
+            "col": 3,
+            "center": [
+              503,
+              831
+            ],
+            "coord": [
+              503,
+              831
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              360,
+              663
+            ],
+            "coord": [
+              360,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 2,
+            "row": 0,
+            "col": 2,
+            "center": [
+              360,
+              527
+            ],
+            "coord": [
+              360,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 6,
+            "row": 1,
+            "col": 1,
+            "center": [
+              223,
+              663
+            ],
+            "coord": [
+              223,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 1,
+            "row": 0,
+            "col": 1,
+            "center": [
+              225,
+              589
+            ],
+            "coord": [
+              225,
+              589
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 605 593",
+          "sleep 0.004",
+          "input motionevent MOVE 612 611",
+          "sleep 0.004",
+          "input motionevent MOVE 618 628",
+          "sleep 0.004",
+          "input motionevent MOVE 625 646",
+          "sleep 0.004",
+          "input motionevent MOVE 632 664",
+          "sleep 0.004",
+          "input motionevent MOVE 600 706",
+          "sleep 0.004",
+          "input motionevent MOVE 568 748",
+          "sleep 0.004"
+        ],
+        "script_line_count": 50
+      },
+      {
+        "rank": 5,
+        "word": "DENSATE",
+        "path": [
+          1,
+          6,
+          5,
+          11,
+          12,
+          8,
+          3
+        ],
+        "coords": [
+          [
+            225,
+            589
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            664
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            377,
+            863
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            499,
+            593
+          ]
+        ],
+        "segment_lengths": [
+          74.03,
+          136.0,
+          216.15,
+          157.09,
+          232.38,
+          71.03
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 1,
+            "row": 0,
+            "col": 1,
+            "center": [
+              225,
+              589
+            ],
+            "coord": [
+              225,
+              589
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 6,
+            "row": 1,
+            "col": 1,
+            "center": [
+              223,
+              663
+            ],
+            "coord": [
+              223,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 5,
+            "row": 1,
+            "col": 0,
+            "center": [
+              87,
+              664
+            ],
+            "coord": [
+              87,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 11,
+            "row": 2,
+            "col": 1,
+            "center": [
+              223,
+              832
+            ],
+            "coord": [
+              223,
+              832
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 12,
+            "row": 2,
+            "col": 2,
+            "center": [
+              377,
+              863
+            ],
+            "coord": [
+              377,
+              863
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 8,
+            "row": 1,
+            "col": 3,
+            "center": [
+              497,
+              664
+            ],
+            "coord": [
+              497,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 3,
+            "row": 0,
+            "col": 3,
+            "center": [
+              499,
+              593
+            ],
+            "coord": [
+              499,
+              593
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 225 589",
+          "sleep 0.004",
+          "input motionevent MOVE 224 608",
+          "sleep 0.004",
+          "input motionevent MOVE 224 626",
+          "sleep 0.004",
+          "input motionevent MOVE 224 644",
+          "sleep 0.004",
+          "input motionevent MOVE 223 663",
+          "sleep 0.004",
+          "input motionevent MOVE 189 663",
+          "sleep 0.004",
+          "input motionevent MOVE 155 664",
+          "sleep 0.004"
+        ],
+        "script_line_count": 50
+      }
+    ],
+    "overlay": "C:\\experiments\\destroy her\\new images\\gt_swipe_2.png"
+  },
+  {
+    "image": "3.jpeg",
+    "grid": [
+      [
+        "O",
+        "L",
+        "E",
+        "V",
+        "W"
+      ],
+      [
+        "Y",
+        "A",
+        "AN",
+        "A",
+        "E"
+      ],
+      [
+        "G",
+        "O",
+        "B",
+        "R",
+        "U"
+      ],
+      [
+        "U",
+        "S",
+        "E",
+        "H",
+        "E"
+      ],
+      [
+        "I",
+        "O",
+        "R",
+        "X",
+        "E"
+      ]
+    ],
+    "word_count": 398,
+    "top_words": [
+      {
+        "rank": 1,
+        "word": "HEBRAEAN",
+        "path": [
+          18,
+          17,
+          12,
+          13,
+          8,
+          2,
+          7
+        ],
+        "coords": [
+          [
+            482,
+            1000
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            362,
+            802
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            341,
+            725
+          ]
+        ],
+        "segment_lengths": [
+          107.9,
+          140.46,
+          108.05,
+          126.15,
+          193.75,
+          198.91
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 18,
+            "row": 3,
+            "col": 3,
+            "center": [
+              482,
+              1000
+            ],
+            "coord": [
+              482,
+              1000
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 17,
+            "row": 3,
+            "col": 2,
+            "center": [
+              393,
+              939
+            ],
+            "coord": [
+              393,
+              939
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 12,
+            "row": 2,
+            "col": 2,
+            "center": [
+              362,
+              802
+            ],
+            "coord": [
+              362,
+              802
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 13,
+            "row": 2,
+            "col": 3,
+            "center": [
+              469,
+              787
+            ],
+            "coord": [
+              469,
+              787
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 8,
+            "row": 1,
+            "col": 3,
+            "center": [
+              497,
+              664
+            ],
+            "coord": [
+              497,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 2,
+            "row": 0,
+            "col": 2,
+            "center": [
+              360,
+              527
+            ],
+            "coord": [
+              360,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              341,
+              725
+            ],
+            "coord": [
+              341,
+              725
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 482 1000",
+          "sleep 0.004",
+          "input motionevent MOVE 460 985",
+          "sleep 0.004",
+          "input motionevent MOVE 438 970",
+          "sleep 0.004",
+          "input motionevent MOVE 415 954",
+          "sleep 0.004",
+          "input motionevent MOVE 393 939",
+          "sleep 0.004",
+          "input motionevent MOVE 385 905",
+          "sleep 0.004",
+          "input motionevent MOVE 378 870",
+          "sleep 0.004"
+        ],
+        "script_line_count": 50
+      },
+      {
+        "rank": 2,
+        "word": "URBANELY",
+        "path": [
+          14,
+          13,
+          12,
+          7,
+          2,
+          1,
+          5
+        ],
+        "coords": [
+          [
+            637,
+            865
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            362,
+            802
+          ],
+          [
+            341,
+            725
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            157,
+            547
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "segment_lengths": [
+          185.22,
+          108.05,
+          79.81,
+          198.91,
+          203.98,
+          136.34
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 14,
+            "row": 2,
+            "col": 4,
+            "center": [
+              637,
+              865
+            ],
+            "coord": [
+              637,
+              865
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 13,
+            "row": 2,
+            "col": 3,
+            "center": [
+              469,
+              787
+            ],
+            "coord": [
+              469,
+              787
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 12,
+            "row": 2,
+            "col": 2,
+            "center": [
+              362,
+              802
+            ],
+            "coord": [
+              362,
+              802
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              341,
+              725
+            ],
+            "coord": [
+              341,
+              725
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 2,
+            "row": 0,
+            "col": 2,
+            "center": [
+              360,
+              527
+            ],
+            "coord": [
+              360,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 1,
+            "row": 0,
+            "col": 1,
+            "center": [
+              157,
+              547
+            ],
+            "coord": [
+              157,
+              547
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 5,
+            "row": 1,
+            "col": 0,
+            "center": [
+              87,
+              664
+            ],
+            "coord": [
+              87,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 637 865",
+          "sleep 0.004",
+          "input motionevent MOVE 595 846",
+          "sleep 0.004",
+          "input motionevent MOVE 553 826",
+          "sleep 0.004",
+          "input motionevent MOVE 511 806",
+          "sleep 0.004",
+          "input motionevent MOVE 469 787",
+          "sleep 0.004",
+          "input motionevent MOVE 442 791",
+          "sleep 0.004",
+          "input motionevent MOVE 416 794",
+          "sleep 0.004"
+        ],
+        "script_line_count": 50
+      },
+      {
+        "rank": 3,
+        "word": "WAVERERS",
+        "path": [
+          4,
+          8,
+          3,
+          9,
+          13,
+          17,
+          22,
+          16
+        ],
+        "coords": [
+          [
+            633,
+            527
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            478,
+            595
+          ],
+          [
+            605,
+            733
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            307,
+            1063
+          ],
+          [
+            189,
+            934
+          ]
+        ],
+        "segment_lengths": [
+          193.04,
+          71.57,
+          187.54,
+          146.33,
+          169.94,
+          150.9,
+          174.83
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 4,
+            "row": 0,
+            "col": 4,
+            "center": [
+              633,
+              527
+            ],
+            "coord": [
+              633,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 8,
+            "row": 1,
+            "col": 3,
+            "center": [
+              497,
+              664
+            ],
+            "coord": [
+              497,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 3,
+            "row": 0,
+            "col": 3,
+            "center": [
+              478,
+              595
+            ],
+            "coord": [
+              478,
+              595
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 9,
+            "row": 1,
+            "col": 4,
+            "center": [
+              605,
+              733
+            ],
+            "coord": [
+              605,
+              733
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 13,
+            "row": 2,
+            "col": 3,
+            "center": [
+              469,
+              787
+            ],
+            "coord": [
+              469,
+              787
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 17,
+            "row": 3,
+            "col": 2,
+            "center": [
+              393,
+              939
+            ],
+            "coord": [
+              393,
+              939
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 22,
+            "row": 4,
+            "col": 2,
+            "center": [
+              307,
+              1063
+            ],
+            "coord": [
+              307,
+              1063
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 16,
+            "row": 3,
+            "col": 1,
+            "center": [
+              189,
+              934
+            ],
+            "coord": [
+              189,
+              934
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 633 527",
+          "sleep 0.004",
+          "input motionevent MOVE 599 561",
+          "sleep 0.004",
+          "input motionevent MOVE 565 596",
+          "sleep 0.004",
+          "input motionevent MOVE 531 630",
+          "sleep 0.004",
+          "input motionevent MOVE 497 664",
+          "sleep 0.004",
+          "input motionevent MOVE 492 647",
+          "sleep 0.004",
+          "input motionevent MOVE 488 630",
+          "sleep 0.004"
+        ],
+        "script_line_count": 58
+      },
+      {
+        "rank": 4,
+        "word": "BANAGOS",
+        "path": [
+          12,
+          7,
+          6,
+          10,
+          11,
+          16
+        ],
+        "coords": [
+          [
+            362,
+            802
+          ],
+          [
+            341,
+            725
+          ],
+          [
+            188,
+            665
+          ],
+          [
+            97,
+            869
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            189,
+            934
+          ]
+        ],
+        "segment_lengths": [
+          79.81,
+          164.34,
+          223.38,
+          131.32,
+          107.52
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 12,
+            "row": 2,
+            "col": 2,
+            "center": [
+              362,
+              802
+            ],
+            "coord": [
+              362,
+              802
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              341,
+              725
+            ],
+            "coord": [
+              341,
+              725
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 6,
+            "row": 1,
+            "col": 1,
+            "center": [
+              188,
+              665
+            ],
+            "coord": [
+              188,
+              665
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 10,
+            "row": 2,
+            "col": 0,
+            "center": [
+              97,
+              869
+            ],
+            "coord": [
+              97,
+              869
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 11,
+            "row": 2,
+            "col": 1,
+            "center": [
+              223,
+              832
+            ],
+            "coord": [
+              223,
+              832
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 16,
+            "row": 3,
+            "col": 1,
+            "center": [
+              189,
+              934
+            ],
+            "coord": [
+              189,
+              934
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 362 802",
+          "sleep 0.004",
+          "input motionevent MOVE 357 783",
+          "sleep 0.004",
+          "input motionevent MOVE 352 764",
+          "sleep 0.004",
+          "input motionevent MOVE 346 744",
+          "sleep 0.004",
+          "input motionevent MOVE 341 725",
+          "sleep 0.004",
+          "input motionevent MOVE 303 710",
+          "sleep 0.004",
+          "input motionevent MOVE 264 695",
+          "sleep 0.004"
+        ],
+        "script_line_count": 42
+      },
+      {
+        "rank": 5,
+        "word": "EOGAEAN",
+        "path": [
+          17,
+          11,
+          10,
+          6,
+          2,
+          7
+        ],
+        "coords": [
+          [
+            393,
+            939
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            97,
+            869
+          ],
+          [
+            188,
+            665
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            341,
+            725
+          ]
+        ],
+        "segment_lengths": [
+          200.87,
+          131.32,
+          223.38,
+          220.52,
+          198.91
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 17,
+            "row": 3,
+            "col": 2,
+            "center": [
+              393,
+              939
+            ],
+            "coord": [
+              393,
+              939
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 11,
+            "row": 2,
+            "col": 1,
+            "center": [
+              223,
+              832
+            ],
+            "coord": [
+              223,
+              832
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 10,
+            "row": 2,
+            "col": 0,
+            "center": [
+              97,
+              869
+            ],
+            "coord": [
+              97,
+              869
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 6,
+            "row": 1,
+            "col": 1,
+            "center": [
+              188,
+              665
+            ],
+            "coord": [
+              188,
+              665
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 2,
+            "row": 0,
+            "col": 2,
+            "center": [
+              360,
+              527
+            ],
+            "coord": [
+              360,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              341,
+              725
+            ],
+            "coord": [
+              341,
+              725
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 393 939",
+          "sleep 0.004",
+          "input motionevent MOVE 350 912",
+          "sleep 0.004",
+          "input motionevent MOVE 308 886",
+          "sleep 0.004",
+          "input motionevent MOVE 266 859",
+          "sleep 0.004",
+          "input motionevent MOVE 223 832",
+          "sleep 0.004",
+          "input motionevent MOVE 192 841",
+          "sleep 0.004",
+          "input motionevent MOVE 160 850",
+          "sleep 0.004"
+        ],
+        "script_line_count": 42
+      }
+    ],
+    "overlay": "C:\\experiments\\destroy her\\new images\\gt_swipe_3.png"
+  },
+  {
+    "image": "4.jpeg",
+    "grid": [
+      [
+        "S",
+        "H",
+        "H",
+        "W",
+        "E"
+      ],
+      [
+        "E",
+        "R",
+        "A",
+        "O",
+        "A"
+      ],
+      [
+        "A",
+        "O",
+        "A",
+        "J",
+        "H"
+      ],
+      [
+        "D",
+        "ER",
+        "O",
+        "I",
+        "Z"
+      ],
+      [
+        "L",
+        "T",
+        "N",
+        "G",
+        "R"
+      ]
+    ],
+    "word_count": 302,
+    "top_words": [
+      {
+        "rank": 1,
+        "word": "HOARHEAD",
+        "path": [
+          2,
+          8,
+          7,
+          6,
+          1,
+          5,
+          10,
+          15
+        ],
+        "coords": [
+          [
+            360,
+            527
+          ],
+          [
+            555,
+            693
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            280,
+            537
+          ],
+          [
+            87,
+            664
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            937
+          ]
+        ],
+        "segment_lengths": [
+          256.09,
+          197.29,
+          137.0,
+          138.29,
+          231.04,
+          136.0,
+          137.0
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 2,
+            "row": 0,
+            "col": 2,
+            "center": [
+              360,
+              527
+            ],
+            "coord": [
+              360,
+              527
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 8,
+            "row": 1,
+            "col": 3,
+            "center": [
+              555,
+              693
+            ],
+            "coord": [
+              555,
+              693
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              360,
+              663
+            ],
+            "coord": [
+              360,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 6,
+            "row": 1,
+            "col": 1,
+            "center": [
+              223,
+              663
+            ],
+            "coord": [
+              223,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 1,
+            "row": 0,
+            "col": 1,
+            "center": [
+              280,
+              537
+            ],
+            "coord": [
+              280,
+              537
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 5,
+            "row": 1,
+            "col": 0,
+            "center": [
+              87,
+              664
+            ],
+            "coord": [
+              87,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 10,
+            "row": 2,
+            "col": 0,
+            "center": [
+              87,
+              800
+            ],
+            "coord": [
+              87,
+              800
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 15,
+            "row": 3,
+            "col": 0,
+            "center": [
+              87,
+              937
+            ],
+            "coord": [
+              87,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 360 527",
+          "sleep 0.004",
+          "input motionevent MOVE 409 568",
+          "sleep 0.004",
+          "input motionevent MOVE 458 610",
+          "sleep 0.004",
+          "input motionevent MOVE 506 652",
+          "sleep 0.004",
+          "input motionevent MOVE 555 693",
+          "sleep 0.004",
+          "input motionevent MOVE 506 686",
+          "sleep 0.004",
+          "input motionevent MOVE 458 678",
+          "sleep 0.004"
+        ],
+        "script_line_count": 58
+      },
+      {
+        "rank": 2,
+        "word": "DERAIGN",
+        "path": [
+          15,
+          16,
+          12,
+          18,
+          23,
+          22
+        ],
+        "coords": [
+          [
+            87,
+            937
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            424,
+            817
+          ],
+          [
+            496,
+            937
+          ],
+          [
+            571,
+            1129
+          ],
+          [
+            358,
+            1089
+          ]
+        ],
+        "segment_lengths": [
+          136.0,
+          234.1,
+          139.94,
+          206.13,
+          216.72
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 15,
+            "row": 3,
+            "col": 0,
+            "center": [
+              87,
+              937
+            ],
+            "coord": [
+              87,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 16,
+            "row": 3,
+            "col": 1,
+            "center": [
+              223,
+              937
+            ],
+            "coord": [
+              223,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 12,
+            "row": 2,
+            "col": 2,
+            "center": [
+              424,
+              817
+            ],
+            "coord": [
+              424,
+              817
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 18,
+            "row": 3,
+            "col": 3,
+            "center": [
+              496,
+              937
+            ],
+            "coord": [
+              496,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 23,
+            "row": 4,
+            "col": 3,
+            "center": [
+              571,
+              1129
+            ],
+            "coord": [
+              571,
+              1129
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 22,
+            "row": 4,
+            "col": 2,
+            "center": [
+              358,
+              1089
+            ],
+            "coord": [
+              358,
+              1089
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 87 937",
+          "sleep 0.004",
+          "input motionevent MOVE 121 937",
+          "sleep 0.004",
+          "input motionevent MOVE 155 937",
+          "sleep 0.004",
+          "input motionevent MOVE 189 937",
+          "sleep 0.004",
+          "input motionevent MOVE 223 937",
+          "sleep 0.004",
+          "input motionevent MOVE 273 907",
+          "sleep 0.004",
+          "input motionevent MOVE 324 877",
+          "sleep 0.004"
+        ],
+        "script_line_count": 42
+      },
+      {
+        "rank": 3,
+        "word": "GRINTER",
+        "path": [
+          23,
+          24,
+          18,
+          22,
+          21,
+          16
+        ],
+        "coords": [
+          [
+            571,
+            1129
+          ],
+          [
+            633,
+            1073
+          ],
+          [
+            496,
+            937
+          ],
+          [
+            358,
+            1089
+          ],
+          [
+            293,
+            1081
+          ],
+          [
+            223,
+            937
+          ]
+        ],
+        "segment_lengths": [
+          83.55,
+          193.04,
+          205.3,
+          65.49,
+          160.11
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 23,
+            "row": 4,
+            "col": 3,
+            "center": [
+              571,
+              1129
+            ],
+            "coord": [
+              571,
+              1129
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 24,
+            "row": 4,
+            "col": 4,
+            "center": [
+              633,
+              1073
+            ],
+            "coord": [
+              633,
+              1073
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 18,
+            "row": 3,
+            "col": 3,
+            "center": [
+              496,
+              937
+            ],
+            "coord": [
+              496,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 22,
+            "row": 4,
+            "col": 2,
+            "center": [
+              358,
+              1089
+            ],
+            "coord": [
+              358,
+              1089
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 21,
+            "row": 4,
+            "col": 1,
+            "center": [
+              293,
+              1081
+            ],
+            "coord": [
+              293,
+              1081
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 16,
+            "row": 3,
+            "col": 1,
+            "center": [
+              223,
+              937
+            ],
+            "coord": [
+              223,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 571 1129",
+          "sleep 0.004",
+          "input motionevent MOVE 586 1115",
+          "sleep 0.004",
+          "input motionevent MOVE 602 1101",
+          "sleep 0.004",
+          "input motionevent MOVE 618 1087",
+          "sleep 0.004",
+          "input motionevent MOVE 633 1073",
+          "sleep 0.004",
+          "input motionevent MOVE 599 1039",
+          "sleep 0.004",
+          "input motionevent MOVE 564 1005",
+          "sleep 0.004"
+        ],
+        "script_line_count": 42
+      },
+      {
+        "rank": 4,
+        "word": "JOINTER",
+        "path": [
+          13,
+          17,
+          18,
+          22,
+          21,
+          16
+        ],
+        "coords": [
+          [
+            526,
+            812
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            496,
+            937
+          ],
+          [
+            358,
+            1089
+          ],
+          [
+            293,
+            1081
+          ],
+          [
+            223,
+            937
+          ]
+        ],
+        "segment_lengths": [
+          207.8,
+          136.0,
+          205.3,
+          65.49,
+          160.11
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 13,
+            "row": 2,
+            "col": 3,
+            "center": [
+              526,
+              812
+            ],
+            "coord": [
+              526,
+              812
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 17,
+            "row": 3,
+            "col": 2,
+            "center": [
+              360,
+              937
+            ],
+            "coord": [
+              360,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 18,
+            "row": 3,
+            "col": 3,
+            "center": [
+              496,
+              937
+            ],
+            "coord": [
+              496,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 22,
+            "row": 4,
+            "col": 2,
+            "center": [
+              358,
+              1089
+            ],
+            "coord": [
+              358,
+              1089
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 21,
+            "row": 4,
+            "col": 1,
+            "center": [
+              293,
+              1081
+            ],
+            "coord": [
+              293,
+              1081
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 16,
+            "row": 3,
+            "col": 1,
+            "center": [
+              223,
+              937
+            ],
+            "coord": [
+              223,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 526 812",
+          "sleep 0.004",
+          "input motionevent MOVE 484 843",
+          "sleep 0.004",
+          "input motionevent MOVE 443 874",
+          "sleep 0.004",
+          "input motionevent MOVE 402 906",
+          "sleep 0.004",
+          "input motionevent MOVE 360 937",
+          "sleep 0.004",
+          "input motionevent MOVE 394 937",
+          "sleep 0.004",
+          "input motionevent MOVE 428 937",
+          "sleep 0.004"
+        ],
+        "script_line_count": 42
+      },
+      {
+        "rank": 5,
+        "word": "JARHEAD",
+        "path": [
+          13,
+          7,
+          6,
+          1,
+          5,
+          10,
+          15
+        ],
+        "coords": [
+          [
+            526,
+            812
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            280,
+            537
+          ],
+          [
+            87,
+            664
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            937
+          ]
+        ],
+        "segment_lengths": [
+          223.06,
+          137.0,
+          138.29,
+          231.04,
+          136.0,
+          137.0
+        ],
+        "all_points_hit_centers": true,
+        "hits": [
+          {
+            "index": 13,
+            "row": 2,
+            "col": 3,
+            "center": [
+              526,
+              812
+            ],
+            "coord": [
+              526,
+              812
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 7,
+            "row": 1,
+            "col": 2,
+            "center": [
+              360,
+              663
+            ],
+            "coord": [
+              360,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 6,
+            "row": 1,
+            "col": 1,
+            "center": [
+              223,
+              663
+            ],
+            "coord": [
+              223,
+              663
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 1,
+            "row": 0,
+            "col": 1,
+            "center": [
+              280,
+              537
+            ],
+            "coord": [
+              280,
+              537
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 5,
+            "row": 1,
+            "col": 0,
+            "center": [
+              87,
+              664
+            ],
+            "coord": [
+              87,
+              664
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 10,
+            "row": 2,
+            "col": 0,
+            "center": [
+              87,
+              800
+            ],
+            "coord": [
+              87,
+              800
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          },
+          {
+            "index": 15,
+            "row": 3,
+            "col": 0,
+            "center": [
+              87,
+              937
+            ],
+            "coord": [
+              87,
+              937
+            ],
+            "distance_from_center": 0.0,
+            "within_radius": true
+          }
+        ],
+        "script_preview": [
+          "input motionevent DOWN 526 812",
+          "sleep 0.004",
+          "input motionevent MOVE 484 775",
+          "sleep 0.004",
+          "input motionevent MOVE 443 738",
+          "sleep 0.004",
+          "input motionevent MOVE 402 700",
+          "sleep 0.004",
+          "input motionevent MOVE 360 663",
+          "sleep 0.004",
+          "input motionevent MOVE 326 663",
+          "sleep 0.004",
+          "input motionevent MOVE 292 663",
+          "sleep 0.004"
+        ],
+        "script_line_count": 50
+      }
+    ],
+    "overlay": "C:\\experiments\\destroy her\\new images\\gt_swipe_4.png"
+  }
+]

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import threading
 from pathlib import Path
 from typing import Optional
 
@@ -14,8 +15,69 @@ from autoplay_v2.config import (
 )
 from autoplay_v2.feedback import read_recent_feedback
 from autoplay_v2.hotkey import run_hotkey_loop
-from autoplay_v2.session import run_once
+from autoplay_v2.session import auto_detect_and_solve, auto_play_loop, run_once
 
+
+# ---------------------------------------------------------------------------
+# NEW: auto-detect commands
+# ---------------------------------------------------------------------------
+
+def _cmd_auto(args: argparse.Namespace) -> int:
+    """One-shot: auto-detect board, OCR, solve, print results."""
+    debug_dir: Optional[Path] = None
+    if args.debug is not None:
+        debug_dir = Path(args.debug)
+        debug_dir.mkdir(parents=True, exist_ok=True)
+        print(f"Debug images → {debug_dir.resolve()}")
+
+    result = auto_detect_and_solve(
+        status=lambda msg: print(msg),
+        debug_dir=debug_dir,
+    )
+    if result is None:
+        return 2
+    for w in result["ranked_words"][:30]:
+        print(f"  {w.word:20s}  score={w.score:.0f}  len={w.length}  path={w.path}")
+    return 0
+
+
+def _cmd_auto_play(args: argparse.Namespace) -> int:
+    """Continuous play: auto-detect → solve → swipe all words."""
+    stop = threading.Event()
+    try:
+        auto_play_loop(
+            stop_event=stop,
+            status=lambda msg: print(msg),
+            dry_run=not args.live,
+            max_words=args.max_words,
+            word_delay=args.word_delay,
+            strategy=args.strategy,
+            game_duration_s=args.game_duration,
+            short_word_injection=not args.no_short_word_injection,
+            last_seconds_window_s=args.last_seconds_window,
+            speed_solve_budget_s=args.speed_solve_budget,
+            speed_max_word_len=args.speed_max_word_len,
+            speed_max_candidates=args.speed_max_candidates,
+            use_path_blacklist=not args.no_path_blacklist,
+            path_blacklist_path=Path(args.path_blacklist) if args.path_blacklist else None,
+        )
+    except KeyboardInterrupt:
+        stop.set()
+        print("\nStopped.")
+    return 0
+
+
+def _cmd_gui(args: argparse.Namespace) -> int:
+    """Launch the floating Start/Stop GUI."""
+    from autoplay_v2.gui import AutoplayGUI
+    gui = AutoplayGUI(dry_run=not args.live)
+    gui.run()
+    return 0
+
+
+# ---------------------------------------------------------------------------
+# Legacy commands (kept for backward compat)
+# ---------------------------------------------------------------------------
 
 def _cmd_calibrate(args: argparse.Namespace) -> int:
     manual_mode = all(v is not None for v in (args.left, args.top, args.width, args.height))
@@ -122,15 +184,82 @@ def _cmd_review_last(args: argparse.Namespace) -> int:
     return 0
 
 
+# ---------------------------------------------------------------------------
+# Parser
+# ---------------------------------------------------------------------------
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="autoplay-v2")
     sub = parser.add_subparsers(dest="command", required=True)
 
-    calibrate = sub.add_parser("calibrate", help="Create and persist board calibration")
-    calibrate.add_argument("--left", type=int, default=None, help="Fallback/debug manual ROI left")
-    calibrate.add_argument("--top", type=int, default=None, help="Fallback/debug manual ROI top")
-    calibrate.add_argument("--width", type=int, default=None, help="Fallback/debug manual ROI width")
-    calibrate.add_argument("--height", type=int, default=None, help="Fallback/debug manual ROI height")
+    # --- NEW commands ---
+    auto = sub.add_parser("auto", help="One-shot: auto-detect → OCR → solve (print only)")
+    auto.add_argument(
+        "--debug",
+        metavar="DIR",
+        default=None,
+        help="Save debug images (HSV mask, candidates, Hough) to DIR",
+    )
+    auto.set_defaults(func=_cmd_auto)
+
+    auto_play = sub.add_parser("auto-play", help="Auto-detect → solve → swipe words")
+    auto_play.add_argument("--live", action="store_true", help="Execute swipes (default: dry-run)")
+    auto_play.add_argument("--max-words", type=int, default=None)
+    auto_play.add_argument("--word-delay", type=float, default=0.04, help="Seconds between words")
+    auto_play.add_argument("--strategy", choices=["speed", "balanced"], default="speed")
+    auto_play.add_argument("--game-duration", type=float, default=60.0, help="Round duration in seconds")
+    auto_play.add_argument(
+        "--no-short-word-injection",
+        action="store_true",
+        help="Disable 3/4-letter injection in speed strategy",
+    )
+    auto_play.add_argument(
+        "--last-seconds-window",
+        type=float,
+        default=8.0,
+        help="Seconds left to switch to shortest-word sweep in speed strategy",
+    )
+    auto_play.add_argument(
+        "--speed-solve-budget",
+        type=float,
+        default=None,
+        help="Cap solver time in speed mode (seconds); default 2.0",
+    )
+    auto_play.add_argument(
+        "--speed-max-word-len",
+        type=int,
+        default=7,
+        help="Maximum word length to keep in speed mode candidate set",
+    )
+    auto_play.add_argument(
+        "--speed-max-candidates",
+        type=int,
+        default=None,
+        help="Maximum number of candidate words to attempt in speed mode (default 120)",
+    )
+    auto_play.add_argument(
+        "--no-path-blacklist",
+        action="store_true",
+        help="Disable do-not-attempt path-signature blacklist",
+    )
+    auto_play.add_argument(
+        "--path-blacklist",
+        type=str,
+        default=None,
+        help="Optional explicit path blacklist JSON (default data/path_blacklist.json)",
+    )
+    auto_play.set_defaults(func=_cmd_auto_play)
+
+    gui = sub.add_parser("gui", help="Launch floating Start/Stop GUI")
+    gui.add_argument("--live", action="store_true", help="Execute swipes (default: dry-run)")
+    gui.set_defaults(func=_cmd_gui)
+
+    # --- Legacy commands ---
+    calibrate = sub.add_parser("calibrate", help="(Legacy) Create and persist board calibration")
+    calibrate.add_argument("--left", type=int, default=None)
+    calibrate.add_argument("--top", type=int, default=None)
+    calibrate.add_argument("--width", type=int, default=None)
+    calibrate.add_argument("--height", type=int, default=None)
     calibrate.add_argument("--grid-size", type=int, choices=[4, 5], default=5)
     calibrate.add_argument("--tile-padding", type=int, default=8)
     calibrate.add_argument("--emulator-label", type=str, default="android-studio")
@@ -138,19 +267,19 @@ def build_parser() -> argparse.ArgumentParser:
     calibrate.add_argument("--calibration-id", type=str, default="default")
     calibrate.set_defaults(func=_cmd_calibrate)
 
-    play_once = sub.add_parser("play-once", help="Run one capture->solve->play session")
+    play_once = sub.add_parser("play-once", help="(Legacy) Run one calibration-based session")
     play_once.add_argument("--fixture", type=str, default=None)
-    play_once.add_argument("--live", action="store_true", help="Use live ADB playback")
+    play_once.add_argument("--live", action="store_true")
     play_once.add_argument("--max-words", type=int, default=None)
     play_once.set_defaults(func=_cmd_play_once)
 
-    hotkey = sub.add_parser("hotkey", help="Start hotkey runtime")
+    hotkey = sub.add_parser("hotkey", help="(Legacy) Start hotkey runtime")
     hotkey.add_argument("--play-hotkey", type=str, default=DEFAULT_PLAY_HOTKEY)
     hotkey.add_argument("--calibrate-hotkey", type=str, default=DEFAULT_CALIBRATE_HOTKEY)
     hotkey.add_argument("--emulator-label", type=str, default="android-studio")
     hotkey.add_argument("--calibration-id", type=str, default="default")
     hotkey.add_argument("--tile-padding", type=int, default=8)
-    hotkey.add_argument("--live", action="store_true", help="Use live ADB playback")
+    hotkey.add_argument("--live", action="store_true")
     hotkey.add_argument("--max-words", type=int, default=None)
     hotkey.set_defaults(func=_cmd_hotkey)
 

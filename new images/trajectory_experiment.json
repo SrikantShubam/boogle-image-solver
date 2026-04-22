@@ -1,0 +1,5948 @@
+[
+  {
+    "image": "1.jpeg",
+    "ocr_grid": [
+      [
+        "E",
+        "M",
+        "U",
+        "O",
+        "H"
+      ],
+      [
+        "N",
+        "E",
+        "R",
+        "S",
+        "H"
+      ],
+      [
+        "D",
+        "W",
+        "K",
+        "I",
+        "I"
+      ],
+      [
+        "R",
+        "B",
+        "T",
+        "A",
+        "I"
+      ],
+      [
+        "U",
+        "N",
+        "E",
+        "Y",
+        "A"
+      ]
+    ],
+    "ground_truth_grid": [
+      [
+        "E",
+        "IN",
+        "U",
+        "O",
+        "H"
+      ],
+      [
+        "N",
+        "E",
+        "R",
+        "S",
+        "H"
+      ],
+      [
+        "D",
+        "W",
+        "K",
+        "I",
+        "I"
+      ],
+      [
+        "R",
+        "B",
+        "T",
+        "A",
+        "I"
+      ],
+      [
+        "U",
+        "N",
+        "E",
+        "Y",
+        "A"
+      ]
+    ],
+    "word_count": 443,
+    "top25_trajectory_mismatches": 11,
+    "top25": [
+      {
+        "rank": 1,
+        "solver_word": "BEAKERMEN",
+        "solver_path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          7,
+          1,
+          0,
+          5
+        ],
+        "coords": [
+          [
+            190,
+            935
+          ],
+          [
+            360,
+            1073
+          ],
+          [
+            476,
+            1001
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            223,
+            527
+          ],
+          [
+            87,
+            527
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          7,
+          1,
+          0,
+          5
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "BEAKERMEN",
+        "ground_truth_letters_from_touched_path": "BEAKERINEN",
+        "ground_truth_letters_from_solver_path": "BEAKERINEN",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 2,
+        "solver_word": "DEMURITY",
+        "solver_path": [
+          10,
+          6,
+          1,
+          2,
+          7,
+          13,
+          17,
+          23
+        ],
+        "coords": [
+          [
+            87,
+            800
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            223,
+            527
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            496,
+            1073
+          ]
+        ],
+        "touched_path": [
+          10,
+          6,
+          1,
+          2,
+          7,
+          13,
+          12,
+          17,
+          18,
+          23
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "DEMURIKTAY",
+        "ground_truth_letters_from_touched_path": "DEINURIKTAY",
+        "ground_truth_letters_from_solver_path": "DEINURITY",
+        "extra_tiles": [
+          12,
+          18
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 3,
+        "solver_word": "SHIREMEN",
+        "solver_path": [
+          8,
+          9,
+          13,
+          7,
+          6,
+          1,
+          0,
+          5
+        ],
+        "coords": [
+          [
+            497,
+            664
+          ],
+          [
+            632,
+            664
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            223,
+            527
+          ],
+          [
+            87,
+            527
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          8,
+          9,
+          13,
+          7,
+          6,
+          1,
+          0,
+          5
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "SHIREMEN",
+        "ground_truth_letters_from_touched_path": "SHIREINEN",
+        "ground_truth_letters_from_solver_path": "SHIREINEN",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 4,
+        "solver_word": "AKERITE",
+        "solver_path": [
+          18,
+          12,
+          6,
+          7,
+          13,
+          17,
+          22
+        ],
+        "coords": [
+          [
+            476,
+            1001
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            360,
+            1073
+          ]
+        ],
+        "touched_path": [
+          18,
+          12,
+          6,
+          7,
+          13,
+          12,
+          17,
+          22
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "AKERIKTE",
+        "ground_truth_letters_from_touched_path": "AKERIKTE",
+        "ground_truth_letters_from_solver_path": "AKERITE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 5,
+        "solver_word": "BEAKERS",
+        "solver_path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          7,
+          8
+        ],
+        "coords": [
+          [
+            190,
+            935
+          ],
+          [
+            360,
+            1073
+          ],
+          [
+            476,
+            1001
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            497,
+            664
+          ]
+        ],
+        "touched_path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          7,
+          8
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "BEAKERS",
+        "ground_truth_letters_from_touched_path": "BEAKERS",
+        "ground_truth_letters_from_solver_path": "BEAKERS",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 6,
+        "solver_word": "BETAKEN",
+        "solver_path": [
+          16,
+          22,
+          17,
+          18,
+          12,
+          6,
+          5
+        ],
+        "coords": [
+          [
+            190,
+            935
+          ],
+          [
+            360,
+            1073
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            476,
+            1001
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          16,
+          22,
+          17,
+          18,
+          12,
+          6,
+          5
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "BETAKEN",
+        "ground_truth_letters_from_touched_path": "BETAKEN",
+        "ground_truth_letters_from_solver_path": "BETAKEN",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 7,
+        "solver_word": "BETWEEN",
+        "solver_path": [
+          16,
+          22,
+          17,
+          11,
+          6,
+          0,
+          5
+        ],
+        "coords": [
+          [
+            190,
+            935
+          ],
+          [
+            360,
+            1073
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            223,
+            800
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            527
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          16,
+          22,
+          17,
+          12,
+          11,
+          6,
+          0,
+          5
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "BETKWEEN",
+        "ground_truth_letters_from_touched_path": "BETKWEEN",
+        "ground_truth_letters_from_solver_path": "BETWEEN",
+        "extra_tiles": [
+          12
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 8,
+        "solver_word": "EMERITA",
+        "solver_path": [
+          0,
+          1,
+          6,
+          7,
+          13,
+          17,
+          18
+        ],
+        "coords": [
+          [
+            87,
+            527
+          ],
+          [
+            223,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            476,
+            1001
+          ]
+        ],
+        "touched_path": [
+          0,
+          1,
+          6,
+          7,
+          13,
+          12,
+          17,
+          18
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "EMERIKTA",
+        "ground_truth_letters_from_touched_path": "EINERIKTA",
+        "ground_truth_letters_from_solver_path": "EINERITA",
+        "extra_tiles": [
+          12
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 9,
+        "solver_word": "ENWRITE",
+        "solver_path": [
+          0,
+          5,
+          11,
+          7,
+          13,
+          17,
+          22
+        ],
+        "coords": [
+          [
+            87,
+            527
+          ],
+          [
+            87,
+            664
+          ],
+          [
+            223,
+            800
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            360,
+            1073
+          ]
+        ],
+        "touched_path": [
+          0,
+          5,
+          11,
+          7,
+          13,
+          12,
+          17,
+          22
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "ENWRIKTE",
+        "ground_truth_letters_from_touched_path": "ENWRIKTE",
+        "ground_truth_letters_from_solver_path": "ENWRITE",
+        "extra_tiles": [
+          12
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 10,
+        "solver_word": "MEERKAT",
+        "solver_path": [
+          1,
+          0,
+          6,
+          7,
+          12,
+          18,
+          17
+        ],
+        "coords": [
+          [
+            223,
+            527
+          ],
+          [
+            87,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            476,
+            1001
+          ],
+          [
+            360,
+            937
+          ]
+        ],
+        "touched_path": [
+          1,
+          0,
+          6,
+          7,
+          12,
+          18,
+          17
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "MEERKAT",
+        "ground_truth_letters_from_touched_path": "INEERKAT",
+        "ground_truth_letters_from_solver_path": "INEERKAT",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 11,
+        "solver_word": "MENDERS",
+        "solver_path": [
+          1,
+          0,
+          5,
+          10,
+          6,
+          7,
+          8
+        ],
+        "coords": [
+          [
+            223,
+            527
+          ],
+          [
+            87,
+            527
+          ],
+          [
+            87,
+            664
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            497,
+            664
+          ]
+        ],
+        "touched_path": [
+          1,
+          0,
+          5,
+          10,
+          6,
+          7,
+          8
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "MENDERS",
+        "ground_truth_letters_from_touched_path": "INENDERS",
+        "ground_truth_letters_from_solver_path": "INENDERS",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 12,
+        "solver_word": "MURIATE",
+        "solver_path": [
+          1,
+          2,
+          7,
+          13,
+          18,
+          17,
+          22
+        ],
+        "coords": [
+          [
+            223,
+            527
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            476,
+            1001
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            360,
+            1073
+          ]
+        ],
+        "touched_path": [
+          1,
+          2,
+          7,
+          13,
+          18,
+          17,
+          22
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "MURIATE",
+        "ground_truth_letters_from_touched_path": "INURIATE",
+        "ground_truth_letters_from_solver_path": "INURIATE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 13,
+        "solver_word": "MURKISH",
+        "solver_path": [
+          1,
+          2,
+          7,
+          12,
+          13,
+          8,
+          4
+        ],
+        "coords": [
+          [
+            223,
+            527
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            575,
+            541
+          ]
+        ],
+        "touched_path": [
+          1,
+          2,
+          7,
+          12,
+          13,
+          8,
+          4
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "MURKISH",
+        "ground_truth_letters_from_touched_path": "INURKISH",
+        "ground_truth_letters_from_solver_path": "INURKISH",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 14,
+        "solver_word": "NEURITE",
+        "solver_path": [
+          5,
+          6,
+          2,
+          7,
+          13,
+          17,
+          22
+        ],
+        "coords": [
+          [
+            87,
+            664
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            360,
+            1073
+          ]
+        ],
+        "touched_path": [
+          5,
+          6,
+          2,
+          7,
+          13,
+          12,
+          17,
+          22
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "NEURIKTE",
+        "ground_truth_letters_from_touched_path": "NEURIKTE",
+        "ground_truth_letters_from_solver_path": "NEURITE",
+        "extra_tiles": [
+          12
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 15,
+        "solver_word": "RUNTISH",
+        "solver_path": [
+          15,
+          20,
+          21,
+          17,
+          13,
+          8,
+          4
+        ],
+        "coords": [
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1129
+          ],
+          [
+            223,
+            1072
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            575,
+            541
+          ]
+        ],
+        "touched_path": [
+          15,
+          20,
+          21,
+          17,
+          12,
+          13,
+          8,
+          4
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "RUNTKISH",
+        "ground_truth_letters_from_touched_path": "RUNTKISH",
+        "ground_truth_letters_from_solver_path": "RUNTISH",
+        "extra_tiles": [
+          12
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 16,
+        "solver_word": "SHIRKED",
+        "solver_path": [
+          8,
+          9,
+          13,
+          7,
+          12,
+          6,
+          10
+        ],
+        "coords": [
+          [
+            497,
+            664
+          ],
+          [
+            632,
+            664
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            800
+          ]
+        ],
+        "touched_path": [
+          8,
+          9,
+          13,
+          7,
+          12,
+          6,
+          10
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "SHIRKED",
+        "ground_truth_letters_from_touched_path": "SHIRKED",
+        "ground_truth_letters_from_solver_path": "SHIRKED",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 17,
+        "solver_word": "TIREMEN",
+        "solver_path": [
+          17,
+          13,
+          7,
+          6,
+          1,
+          0,
+          5
+        ],
+        "coords": [
+          [
+            360,
+            937
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            223,
+            527
+          ],
+          [
+            87,
+            527
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          17,
+          12,
+          13,
+          7,
+          6,
+          1,
+          0,
+          5
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "TKIREMEN",
+        "ground_truth_letters_from_touched_path": "TKIREINEN",
+        "ground_truth_letters_from_solver_path": "TIREINEN",
+        "extra_tiles": [
+          12
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 18,
+        "solver_word": "UNTAKEN",
+        "solver_path": [
+          20,
+          21,
+          17,
+          18,
+          12,
+          6,
+          5
+        ],
+        "coords": [
+          [
+            121,
+            1129
+          ],
+          [
+            223,
+            1072
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            476,
+            1001
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          20,
+          21,
+          17,
+          18,
+          12,
+          6,
+          5
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "UNTAKEN",
+        "ground_truth_letters_from_touched_path": "UNTAKEN",
+        "ground_truth_letters_from_solver_path": "UNTAKEN",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 19,
+        "solver_word": "UNTIRED",
+        "solver_path": [
+          20,
+          21,
+          17,
+          13,
+          7,
+          6,
+          10
+        ],
+        "coords": [
+          [
+            121,
+            1129
+          ],
+          [
+            223,
+            1072
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            800
+          ]
+        ],
+        "touched_path": [
+          20,
+          21,
+          17,
+          12,
+          13,
+          7,
+          6,
+          10
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "UNTKIRED",
+        "ground_truth_letters_from_touched_path": "UNTKIRED",
+        "ground_truth_letters_from_solver_path": "UNTIRED",
+        "extra_tiles": [
+          12
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 20,
+        "solver_word": "AIRMEN",
+        "solver_path": [
+          18,
+          13,
+          7,
+          1,
+          0,
+          5
+        ],
+        "coords": [
+          [
+            476,
+            1001
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            223,
+            527
+          ],
+          [
+            87,
+            527
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          18,
+          13,
+          7,
+          1,
+          0,
+          5
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "AIRMEN",
+        "ground_truth_letters_from_touched_path": "AIRINEN",
+        "ground_truth_letters_from_solver_path": "AIRINEN",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 21,
+        "solver_word": "ATWEEN",
+        "solver_path": [
+          18,
+          17,
+          11,
+          6,
+          0,
+          5
+        ],
+        "coords": [
+          [
+            476,
+            1001
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            223,
+            800
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            527
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          18,
+          17,
+          12,
+          11,
+          6,
+          0,
+          5
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "ATKWEEN",
+        "ground_truth_letters_from_touched_path": "ATKWEEN",
+        "ground_truth_letters_from_solver_path": "ATWEEN",
+        "extra_tiles": [
+          12
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 22,
+        "solver_word": "BEAKED",
+        "solver_path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          10
+        ],
+        "coords": [
+          [
+            190,
+            935
+          ],
+          [
+            360,
+            1073
+          ],
+          [
+            476,
+            1001
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            800
+          ]
+        ],
+        "touched_path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          10
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "BEAKED",
+        "ground_truth_letters_from_touched_path": "BEAKED",
+        "ground_truth_letters_from_solver_path": "BEAKED",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 23,
+        "solver_word": "BEAKER",
+        "solver_path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          7
+        ],
+        "coords": [
+          [
+            190,
+            935
+          ],
+          [
+            360,
+            1073
+          ],
+          [
+            476,
+            1001
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            663
+          ]
+        ],
+        "touched_path": [
+          16,
+          22,
+          18,
+          12,
+          6,
+          7
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "BEAKER",
+        "ground_truth_letters_from_touched_path": "BEAKER",
+        "ground_truth_letters_from_solver_path": "BEAKER",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 24,
+        "solver_word": "BETAKE",
+        "solver_path": [
+          16,
+          22,
+          17,
+          18,
+          12,
+          6
+        ],
+        "coords": [
+          [
+            190,
+            935
+          ],
+          [
+            360,
+            1073
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            476,
+            1001
+          ],
+          [
+            375,
+            865
+          ],
+          [
+            223,
+            663
+          ]
+        ],
+        "touched_path": [
+          16,
+          22,
+          17,
+          18,
+          12,
+          6
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "BETAKE",
+        "ground_truth_letters_from_touched_path": "BETAKE",
+        "ground_truth_letters_from_solver_path": "BETAKE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 25,
+        "solver_word": "BETIRE",
+        "solver_path": [
+          16,
+          22,
+          17,
+          13,
+          7,
+          6
+        ],
+        "coords": [
+          [
+            190,
+            935
+          ],
+          [
+            360,
+            1073
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            459,
+            793
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            223,
+            663
+          ]
+        ],
+        "touched_path": [
+          16,
+          22,
+          17,
+          12,
+          13,
+          7,
+          6
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "BETKIRE",
+        "ground_truth_letters_from_touched_path": "BETKIRE",
+        "ground_truth_letters_from_solver_path": "BETIRE",
+        "extra_tiles": [
+          12
+        ],
+        "skipped_tiles": []
+      }
+    ],
+    "overlay": "C:\\experiments\\destroy her\\new images\\trajectory_1.png"
+  },
+  {
+    "image": "2.jpeg",
+    "ocr_grid": [
+      [
+        "X",
+        "D",
+        "L",
+        "E",
+        "N"
+      ],
+      [
+        "N",
+        "E",
+        "O",
+        "T",
+        "R"
+      ],
+      [
+        "O",
+        "S",
+        "A",
+        "O",
+        "Y"
+      ],
+      [
+        "X",
+        "E",
+        "O",
+        "A",
+        "U"
+      ],
+      [
+        "I",
+        "A",
+        "T",
+        "D",
+        "TH"
+      ]
+    ],
+    "ground_truth_grid": [
+      [
+        "X",
+        "D",
+        "K",
+        "E",
+        "B"
+      ],
+      [
+        "N",
+        "E",
+        "O",
+        "T",
+        "R"
+      ],
+      [
+        "O",
+        "S",
+        "A",
+        "O",
+        "U"
+      ],
+      [
+        "X",
+        "E",
+        "O",
+        "A",
+        "U"
+      ],
+      [
+        "K",
+        "A",
+        "T",
+        "D",
+        "TH"
+      ]
+    ],
+    "word_count": 436,
+    "top25_trajectory_mismatches": 4,
+    "top25": [
+      {
+        "rank": 1,
+        "solver_word": "DELETORY",
+        "solver_path": [
+          1,
+          6,
+          2,
+          3,
+          8,
+          13,
+          9,
+          14
+        ],
+        "coords": [
+          [
+            225,
+            589
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            503,
+            831
+          ],
+          [
+            632,
+            664
+          ],
+          [
+            632,
+            800
+          ]
+        ],
+        "touched_path": [
+          1,
+          6,
+          2,
+          3,
+          8,
+          13,
+          9,
+          14
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "DELETORY",
+        "ground_truth_letters_from_touched_path": "DEKETORU",
+        "ground_truth_letters_from_solver_path": "DEKETORU",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 2,
+        "solver_word": "RETOOLED",
+        "solver_path": [
+          9,
+          3,
+          8,
+          13,
+          7,
+          2,
+          6,
+          1
+        ],
+        "coords": [
+          [
+            632,
+            664
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            503,
+            831
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            225,
+            589
+          ]
+        ],
+        "touched_path": [
+          9,
+          3,
+          8,
+          13,
+          7,
+          2,
+          6,
+          1
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "RETOOLED",
+        "ground_truth_letters_from_touched_path": "RETOOKED",
+        "ground_truth_letters_from_solver_path": "RETOOKED",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 3,
+        "solver_word": "TAXEATER",
+        "solver_path": [
+          22,
+          21,
+          15,
+          16,
+          12,
+          8,
+          3,
+          9
+        ],
+        "coords": [
+          [
+            373,
+            1159
+          ],
+          [
+            223,
+            1135
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            360,
+            800
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            632,
+            664
+          ]
+        ],
+        "touched_path": [
+          22,
+          21,
+          20,
+          15,
+          16,
+          11,
+          12,
+          8,
+          3,
+          9
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "TAIXESATER",
+        "ground_truth_letters_from_touched_path": "TAKXESATER",
+        "ground_truth_letters_from_solver_path": "TAXEATER",
+        "extra_tiles": [
+          20,
+          11
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 4,
+        "solver_word": "TEASELER",
+        "solver_path": [
+          22,
+          16,
+          12,
+          11,
+          6,
+          2,
+          3,
+          9
+        ],
+        "coords": [
+          [
+            373,
+            1159
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            360,
+            800
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            632,
+            664
+          ]
+        ],
+        "touched_path": [
+          22,
+          16,
+          11,
+          12,
+          11,
+          6,
+          2,
+          3,
+          9
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "TESASELER",
+        "ground_truth_letters_from_touched_path": "TESASEKER",
+        "ground_truth_letters_from_solver_path": "TEASEKER",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 5,
+        "solver_word": "ATAXIES",
+        "solver_path": [
+          18,
+          22,
+          21,
+          15,
+          20,
+          16,
+          11
+        ],
+        "coords": [
+          [
+            531,
+            937
+          ],
+          [
+            373,
+            1159
+          ],
+          [
+            223,
+            1135
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1117
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            223,
+            832
+          ]
+        ],
+        "touched_path": [
+          18,
+          23,
+          22,
+          21,
+          20,
+          15,
+          20,
+          16,
+          11
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "ADTAIXIES",
+        "ground_truth_letters_from_touched_path": "ADTAKXKES",
+        "ground_truth_letters_from_solver_path": "ATAXKES",
+        "extra_tiles": [
+          23
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 6,
+        "solver_word": "DENSATE",
+        "solver_path": [
+          1,
+          6,
+          5,
+          11,
+          12,
+          8,
+          3
+        ],
+        "coords": [
+          [
+            225,
+            589
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            664
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            360,
+            800
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            499,
+            593
+          ]
+        ],
+        "touched_path": [
+          1,
+          6,
+          5,
+          11,
+          12,
+          8,
+          3
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "DENSATE",
+        "ground_truth_letters_from_touched_path": "DENSATE",
+        "ground_truth_letters_from_solver_path": "DENSATE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 7,
+        "solver_word": "ELODEAS",
+        "solver_path": [
+          3,
+          2,
+          7,
+          1,
+          6,
+          12,
+          11
+        ],
+        "coords": [
+          [
+            499,
+            593
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            225,
+            589
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            800
+          ],
+          [
+            223,
+            832
+          ]
+        ],
+        "touched_path": [
+          3,
+          2,
+          7,
+          1,
+          6,
+          12,
+          11
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "ELODEAS",
+        "ground_truth_letters_from_touched_path": "EKODEAS",
+        "ground_truth_letters_from_solver_path": "EKODEAS",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 8,
+        "solver_word": "ESOTERY",
+        "solver_path": [
+          6,
+          11,
+          7,
+          8,
+          3,
+          9,
+          14
+        ],
+        "coords": [
+          [
+            223,
+            663
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            632,
+            664
+          ],
+          [
+            632,
+            800
+          ]
+        ],
+        "touched_path": [
+          6,
+          11,
+          7,
+          8,
+          3,
+          9,
+          14
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "ESOTERY",
+        "ground_truth_letters_from_touched_path": "ESOTERU",
+        "ground_truth_letters_from_solver_path": "ESOTERU",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 9,
+        "solver_word": "RELEASE",
+        "solver_path": [
+          9,
+          3,
+          2,
+          6,
+          12,
+          11,
+          16
+        ],
+        "coords": [
+          [
+            632,
+            664
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            800
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            223,
+            937
+          ]
+        ],
+        "touched_path": [
+          9,
+          3,
+          2,
+          6,
+          12,
+          11,
+          16
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "RELEASE",
+        "ground_truth_letters_from_touched_path": "REKEASE",
+        "ground_truth_letters_from_solver_path": "REKEASE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 10,
+        "solver_word": "ROODLES",
+        "solver_path": [
+          9,
+          13,
+          7,
+          1,
+          2,
+          6,
+          11
+        ],
+        "coords": [
+          [
+            632,
+            664
+          ],
+          [
+            503,
+            831
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            225,
+            589
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            223,
+            832
+          ]
+        ],
+        "touched_path": [
+          9,
+          13,
+          7,
+          1,
+          2,
+          6,
+          11
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "ROODLES",
+        "ground_truth_letters_from_touched_path": "ROODKES",
+        "ground_truth_letters_from_solver_path": "ROODKES",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 11,
+        "solver_word": "TOOTLED",
+        "solver_path": [
+          22,
+          17,
+          13,
+          8,
+          2,
+          6,
+          1
+        ],
+        "coords": [
+          [
+            373,
+            1159
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            503,
+            831
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            225,
+            589
+          ]
+        ],
+        "touched_path": [
+          22,
+          17,
+          13,
+          8,
+          2,
+          6,
+          1
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "TOOTLED",
+        "ground_truth_letters_from_touched_path": "TOOTKED",
+        "ground_truth_letters_from_solver_path": "TOOTKED",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 12,
+        "solver_word": "TOOTLER",
+        "solver_path": [
+          22,
+          17,
+          13,
+          8,
+          2,
+          3,
+          9
+        ],
+        "coords": [
+          [
+            373,
+            1159
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            503,
+            831
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            632,
+            664
+          ]
+        ],
+        "touched_path": [
+          22,
+          17,
+          13,
+          8,
+          2,
+          3,
+          9
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "TOOTLER",
+        "ground_truth_letters_from_touched_path": "TOOTKER",
+        "ground_truth_letters_from_solver_path": "TOOTKER",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 13,
+        "solver_word": "TOOTLES",
+        "solver_path": [
+          22,
+          17,
+          13,
+          8,
+          2,
+          6,
+          11
+        ],
+        "coords": [
+          [
+            373,
+            1159
+          ],
+          [
+            360,
+            937
+          ],
+          [
+            503,
+            831
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            223,
+            832
+          ]
+        ],
+        "touched_path": [
+          22,
+          17,
+          13,
+          8,
+          2,
+          6,
+          11
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "TOOTLES",
+        "ground_truth_letters_from_touched_path": "TOOTKES",
+        "ground_truth_letters_from_solver_path": "TOOTKES",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 14,
+        "solver_word": "AORTAE",
+        "solver_path": [
+          18,
+          13,
+          9,
+          8,
+          12,
+          6
+        ],
+        "coords": [
+          [
+            531,
+            937
+          ],
+          [
+            503,
+            831
+          ],
+          [
+            632,
+            664
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            360,
+            800
+          ],
+          [
+            223,
+            663
+          ]
+        ],
+        "touched_path": [
+          18,
+          13,
+          9,
+          8,
+          12,
+          6
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "AORTAE",
+        "ground_truth_letters_from_touched_path": "AORTAE",
+        "ground_truth_letters_from_solver_path": "AORTAE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 15,
+        "solver_word": "AORTAS",
+        "solver_path": [
+          18,
+          13,
+          9,
+          8,
+          12,
+          11
+        ],
+        "coords": [
+          [
+            531,
+            937
+          ],
+          [
+            503,
+            831
+          ],
+          [
+            632,
+            664
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            360,
+            800
+          ],
+          [
+            223,
+            832
+          ]
+        ],
+        "touched_path": [
+          18,
+          13,
+          9,
+          8,
+          12,
+          11
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "AORTAS",
+        "ground_truth_letters_from_touched_path": "AORTAS",
+        "ground_truth_letters_from_solver_path": "AORTAS",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 16,
+        "solver_word": "ATELES",
+        "solver_path": [
+          12,
+          8,
+          3,
+          2,
+          6,
+          11
+        ],
+        "coords": [
+          [
+            360,
+            800
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            223,
+            832
+          ]
+        ],
+        "touched_path": [
+          12,
+          8,
+          3,
+          2,
+          6,
+          11
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "ATELES",
+        "ground_truth_letters_from_touched_path": "ATEKES",
+        "ground_truth_letters_from_solver_path": "ATEKES",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 17,
+        "solver_word": "AXONES",
+        "solver_path": [
+          21,
+          15,
+          10,
+          5,
+          6,
+          11
+        ],
+        "coords": [
+          [
+            223,
+            1135
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            154,
+            827
+          ],
+          [
+            87,
+            664
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            223,
+            832
+          ]
+        ],
+        "touched_path": [
+          21,
+          20,
+          15,
+          11,
+          10,
+          11,
+          5,
+          6,
+          11
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "AIXSOSNES",
+        "ground_truth_letters_from_touched_path": "AKXSOSNES",
+        "ground_truth_letters_from_solver_path": "AXONES",
+        "extra_tiles": [
+          20
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 18,
+        "solver_word": "DELTAS",
+        "solver_path": [
+          1,
+          6,
+          2,
+          8,
+          12,
+          11
+        ],
+        "coords": [
+          [
+            225,
+            589
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            360,
+            800
+          ],
+          [
+            223,
+            832
+          ]
+        ],
+        "touched_path": [
+          1,
+          6,
+          2,
+          8,
+          12,
+          11
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "DELTAS",
+        "ground_truth_letters_from_touched_path": "DEKTAS",
+        "ground_truth_letters_from_solver_path": "DEKTAS",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 19,
+        "solver_word": "DESOLE",
+        "solver_path": [
+          1,
+          6,
+          11,
+          7,
+          2,
+          3
+        ],
+        "coords": [
+          [
+            225,
+            589
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            499,
+            593
+          ]
+        ],
+        "touched_path": [
+          1,
+          6,
+          11,
+          7,
+          2,
+          3
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "DESOLE",
+        "ground_truth_letters_from_touched_path": "DESOKE",
+        "ground_truth_letters_from_solver_path": "DESOKE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 20,
+        "solver_word": "DOATER",
+        "solver_path": [
+          1,
+          7,
+          12,
+          8,
+          3,
+          9
+        ],
+        "coords": [
+          [
+            225,
+            589
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            360,
+            800
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            632,
+            664
+          ]
+        ],
+        "touched_path": [
+          1,
+          7,
+          12,
+          8,
+          3,
+          9
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "DOATER",
+        "ground_truth_letters_from_touched_path": "DOATER",
+        "ground_truth_letters_from_solver_path": "DOATER",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 21,
+        "solver_word": "DOLENT",
+        "solver_path": [
+          1,
+          7,
+          2,
+          3,
+          4,
+          8
+        ],
+        "coords": [
+          [
+            225,
+            589
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            605,
+            593
+          ],
+          [
+            497,
+            664
+          ]
+        ],
+        "touched_path": [
+          1,
+          7,
+          2,
+          3,
+          4,
+          8
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "DOLENT",
+        "ground_truth_letters_from_touched_path": "DOKEBT",
+        "ground_truth_letters_from_solver_path": "DOKEBT",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 22,
+        "solver_word": "EATERY",
+        "solver_path": [
+          6,
+          12,
+          8,
+          3,
+          9,
+          14
+        ],
+        "coords": [
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            800
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            499,
+            593
+          ],
+          [
+            632,
+            664
+          ],
+          [
+            632,
+            800
+          ]
+        ],
+        "touched_path": [
+          6,
+          12,
+          8,
+          3,
+          9,
+          14
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "EATERY",
+        "ground_truth_letters_from_touched_path": "EATERU",
+        "ground_truth_letters_from_solver_path": "EATERU",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 23,
+        "solver_word": "ELODEA",
+        "solver_path": [
+          3,
+          2,
+          7,
+          1,
+          6,
+          12
+        ],
+        "coords": [
+          [
+            499,
+            593
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            225,
+            589
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            360,
+            800
+          ]
+        ],
+        "touched_path": [
+          3,
+          2,
+          7,
+          1,
+          6,
+          12
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "ELODEA",
+        "ground_truth_letters_from_touched_path": "EKODEA",
+        "ground_truth_letters_from_solver_path": "EKODEA",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 24,
+        "solver_word": "ELODES",
+        "solver_path": [
+          3,
+          2,
+          7,
+          1,
+          6,
+          11
+        ],
+        "coords": [
+          [
+            499,
+            593
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            225,
+            589
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            223,
+            832
+          ]
+        ],
+        "touched_path": [
+          3,
+          2,
+          7,
+          1,
+          6,
+          11
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "ELODES",
+        "ground_truth_letters_from_touched_path": "EKODES",
+        "ground_truth_letters_from_solver_path": "EKODES",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 25,
+        "solver_word": "ENROOT",
+        "solver_path": [
+          3,
+          4,
+          9,
+          13,
+          7,
+          8
+        ],
+        "coords": [
+          [
+            499,
+            593
+          ],
+          [
+            605,
+            593
+          ],
+          [
+            632,
+            664
+          ],
+          [
+            503,
+            831
+          ],
+          [
+            360,
+            663
+          ],
+          [
+            497,
+            664
+          ]
+        ],
+        "touched_path": [
+          3,
+          4,
+          9,
+          13,
+          7,
+          8
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "ENROOT",
+        "ground_truth_letters_from_touched_path": "EBROOT",
+        "ground_truth_letters_from_solver_path": "EBROOT",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      }
+    ],
+    "overlay": "C:\\experiments\\destroy her\\new images\\trajectory_2.png"
+  },
+  {
+    "image": "3.jpeg",
+    "ocr_grid": [
+      [
+        "O",
+        "L",
+        "E",
+        "V",
+        "W"
+      ],
+      [
+        "Y",
+        "A",
+        "AN",
+        "A",
+        "E"
+      ],
+      [
+        "G",
+        "O",
+        "B",
+        "R",
+        "U"
+      ],
+      [
+        "U",
+        "S",
+        "E",
+        "H",
+        "E"
+      ],
+      [
+        "I",
+        "O",
+        "R",
+        "X",
+        "E"
+      ]
+    ],
+    "ground_truth_grid": [
+      [
+        "O",
+        "L",
+        "E",
+        "V",
+        "W"
+      ],
+      [
+        "Y",
+        "A",
+        "AN",
+        "A",
+        "E"
+      ],
+      [
+        "G",
+        "O",
+        "B",
+        "R",
+        "U"
+      ],
+      [
+        "U",
+        "S",
+        "E",
+        "H",
+        "E"
+      ],
+      [
+        "I",
+        "O",
+        "R",
+        "X",
+        "E"
+      ]
+    ],
+    "word_count": 398,
+    "top25_trajectory_mismatches": 17,
+    "top25": [
+      {
+        "rank": 1,
+        "solver_word": "HEBRAEAN",
+        "solver_path": [
+          18,
+          17,
+          12,
+          13,
+          8,
+          2,
+          7
+        ],
+        "coords": [
+          [
+            482,
+            1000
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            362,
+            802
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            341,
+            725
+          ]
+        ],
+        "touched_path": [
+          18,
+          17,
+          12,
+          13,
+          8,
+          3,
+          2,
+          7
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "HEBRAVEAN",
+        "ground_truth_letters_from_touched_path": "HEBRAVEAN",
+        "ground_truth_letters_from_solver_path": "HEBRAEAN",
+        "extra_tiles": [
+          3
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 2,
+        "solver_word": "URBANELY",
+        "solver_path": [
+          14,
+          13,
+          12,
+          7,
+          2,
+          1,
+          5
+        ],
+        "coords": [
+          [
+            637,
+            865
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            362,
+            802
+          ],
+          [
+            341,
+            725
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            157,
+            547
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          14,
+          13,
+          12,
+          7,
+          2,
+          1,
+          6,
+          5
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "URBANELAY",
+        "ground_truth_letters_from_touched_path": "URBANELAY",
+        "ground_truth_letters_from_solver_path": "URBANELY",
+        "extra_tiles": [
+          6
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 3,
+        "solver_word": "WAVERERS",
+        "solver_path": [
+          4,
+          8,
+          3,
+          9,
+          13,
+          17,
+          22,
+          16
+        ],
+        "coords": [
+          [
+            633,
+            527
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            478,
+            595
+          ],
+          [
+            605,
+            733
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            307,
+            1063
+          ],
+          [
+            189,
+            934
+          ]
+        ],
+        "touched_path": [
+          4,
+          3,
+          8,
+          3,
+          8,
+          3,
+          9,
+          13,
+          17,
+          22,
+          16
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "WVAVAVERERS",
+        "ground_truth_letters_from_touched_path": "WVAVAVERERS",
+        "ground_truth_letters_from_solver_path": "WAVERERS",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 4,
+        "solver_word": "BANAGOS",
+        "solver_path": [
+          12,
+          7,
+          6,
+          10,
+          11,
+          16
+        ],
+        "coords": [
+          [
+            362,
+            802
+          ],
+          [
+            341,
+            725
+          ],
+          [
+            188,
+            665
+          ],
+          [
+            97,
+            869
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            189,
+            934
+          ]
+        ],
+        "touched_path": [
+          12,
+          7,
+          6,
+          10,
+          11,
+          16
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "BANAGOS",
+        "ground_truth_letters_from_touched_path": "BANAGOS",
+        "ground_truth_letters_from_solver_path": "BANAGOS",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 5,
+        "solver_word": "EOGAEAN",
+        "solver_path": [
+          17,
+          11,
+          10,
+          6,
+          2,
+          7
+        ],
+        "coords": [
+          [
+            393,
+            939
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            97,
+            869
+          ],
+          [
+            188,
+            665
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            341,
+            725
+          ]
+        ],
+        "touched_path": [
+          17,
+          11,
+          10,
+          6,
+          2,
+          7
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "EOGAEAN",
+        "ground_truth_letters_from_touched_path": "EOGAEAN",
+        "ground_truth_letters_from_solver_path": "EOGAEAN",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 6,
+        "solver_word": "HERBANE",
+        "solver_path": [
+          18,
+          17,
+          13,
+          12,
+          7,
+          2
+        ],
+        "coords": [
+          [
+            482,
+            1000
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            362,
+            802
+          ],
+          [
+            341,
+            725
+          ],
+          [
+            360,
+            527
+          ]
+        ],
+        "touched_path": [
+          18,
+          17,
+          13,
+          12,
+          7,
+          2
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "HERBANE",
+        "ground_truth_letters_from_touched_path": "HERBANE",
+        "ground_truth_letters_from_solver_path": "HERBANE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 7,
+        "solver_word": "HUAVEAN",
+        "solver_path": [
+          18,
+          14,
+          8,
+          3,
+          2,
+          7
+        ],
+        "coords": [
+          [
+            482,
+            1000
+          ],
+          [
+            637,
+            865
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            478,
+            595
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            341,
+            725
+          ]
+        ],
+        "touched_path": [
+          18,
+          14,
+          8,
+          3,
+          2,
+          7
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "HUAVEAN",
+        "ground_truth_letters_from_touched_path": "HUAVEAN",
+        "ground_truth_letters_from_solver_path": "HUAVEAN",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 8,
+        "solver_word": "URANOUS",
+        "solver_path": [
+          14,
+          13,
+          7,
+          11,
+          15,
+          16
+        ],
+        "coords": [
+          [
+            637,
+            865
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            341,
+            725
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            189,
+            934
+          ]
+        ],
+        "touched_path": [
+          14,
+          13,
+          12,
+          7,
+          11,
+          16,
+          15,
+          16
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "URBANOSUS",
+        "ground_truth_letters_from_touched_path": "URBANOSUS",
+        "ground_truth_letters_from_solver_path": "URANOUS",
+        "extra_tiles": [
+          12
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 9,
+        "solver_word": "AUREOUS",
+        "solver_path": [
+          8,
+          14,
+          13,
+          17,
+          11,
+          15,
+          16
+        ],
+        "coords": [
+          [
+            497,
+            664
+          ],
+          [
+            637,
+            865
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            189,
+            934
+          ]
+        ],
+        "touched_path": [
+          8,
+          14,
+          13,
+          17,
+          11,
+          16,
+          15,
+          16
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "AUREOSUS",
+        "ground_truth_letters_from_touched_path": "AUREOSUS",
+        "ground_truth_letters_from_solver_path": "AUREOUS",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 10,
+        "solver_word": "BAGUIOS",
+        "solver_path": [
+          12,
+          6,
+          10,
+          15,
+          20,
+          21,
+          16
+        ],
+        "coords": [
+          [
+            362,
+            802
+          ],
+          [
+            188,
+            665
+          ],
+          [
+            97,
+            869
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1129
+          ],
+          [
+            223,
+            1129
+          ],
+          [
+            189,
+            934
+          ]
+        ],
+        "touched_path": [
+          12,
+          7,
+          6,
+          10,
+          15,
+          20,
+          21,
+          16
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "BANAGUIOS",
+        "ground_truth_letters_from_touched_path": "BANAGUIOS",
+        "ground_truth_letters_from_solver_path": "BAGUIOS",
+        "extra_tiles": [
+          7
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 11,
+        "solver_word": "BALEARE",
+        "solver_path": [
+          12,
+          6,
+          1,
+          2,
+          8,
+          13,
+          9
+        ],
+        "coords": [
+          [
+            362,
+            802
+          ],
+          [
+            188,
+            665
+          ],
+          [
+            157,
+            547
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            605,
+            733
+          ]
+        ],
+        "touched_path": [
+          12,
+          7,
+          6,
+          1,
+          2,
+          3,
+          8,
+          13,
+          9
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "BANALEVARE",
+        "ground_truth_letters_from_touched_path": "BANALEVARE",
+        "ground_truth_letters_from_solver_path": "BALEARE",
+        "extra_tiles": [
+          7,
+          3
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 12,
+        "solver_word": "BEREAVE",
+        "solver_path": [
+          12,
+          17,
+          13,
+          9,
+          8,
+          3,
+          2
+        ],
+        "coords": [
+          [
+            362,
+            802
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            605,
+            733
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            478,
+            595
+          ],
+          [
+            360,
+            527
+          ]
+        ],
+        "touched_path": [
+          12,
+          17,
+          13,
+          9,
+          8,
+          3,
+          2
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "BEREAVE",
+        "ground_truth_letters_from_touched_path": "BEREAVE",
+        "ground_truth_letters_from_solver_path": "BEREAVE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 13,
+        "solver_word": "BRAVELY",
+        "solver_path": [
+          12,
+          13,
+          8,
+          3,
+          2,
+          1,
+          5
+        ],
+        "coords": [
+          [
+            362,
+            802
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            478,
+            595
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            157,
+            547
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          12,
+          13,
+          8,
+          3,
+          2,
+          1,
+          6,
+          5
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "BRAVELAY",
+        "ground_truth_letters_from_touched_path": "BRAVELAY",
+        "ground_truth_letters_from_solver_path": "BRAVELY",
+        "extra_tiles": [
+          6
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 14,
+        "solver_word": "HERBOSE",
+        "solver_path": [
+          18,
+          19,
+          13,
+          12,
+          11,
+          16,
+          17
+        ],
+        "coords": [
+          [
+            482,
+            1000
+          ],
+          [
+            637,
+            997
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            362,
+            802
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            189,
+            934
+          ],
+          [
+            393,
+            939
+          ]
+        ],
+        "touched_path": [
+          18,
+          19,
+          13,
+          12,
+          11,
+          16,
+          17
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "HERBOSE",
+        "ground_truth_letters_from_touched_path": "HERBOSE",
+        "ground_truth_letters_from_solver_path": "HERBOSE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 15,
+        "solver_word": "HERBOUS",
+        "solver_path": [
+          18,
+          17,
+          13,
+          12,
+          11,
+          15,
+          16
+        ],
+        "coords": [
+          [
+            482,
+            1000
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            362,
+            802
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            189,
+            934
+          ]
+        ],
+        "touched_path": [
+          18,
+          17,
+          13,
+          12,
+          11,
+          16,
+          15,
+          16
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "HERBOSUS",
+        "ground_truth_letters_from_touched_path": "HERBOSUS",
+        "ground_truth_letters_from_solver_path": "HERBOUS",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 16,
+        "solver_word": "ISOBARE",
+        "solver_path": [
+          20,
+          16,
+          11,
+          12,
+          8,
+          13,
+          9
+        ],
+        "coords": [
+          [
+            121,
+            1129
+          ],
+          [
+            189,
+            934
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            362,
+            802
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            605,
+            733
+          ]
+        ],
+        "touched_path": [
+          20,
+          16,
+          11,
+          12,
+          13,
+          8,
+          13,
+          9
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "ISOBRARE",
+        "ground_truth_letters_from_touched_path": "ISOBRARE",
+        "ground_truth_letters_from_solver_path": "ISOBARE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 17,
+        "solver_word": "LEVERER",
+        "solver_path": [
+          1,
+          2,
+          3,
+          9,
+          13,
+          17,
+          22
+        ],
+        "coords": [
+          [
+            157,
+            547
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            478,
+            595
+          ],
+          [
+            605,
+            733
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            307,
+            1063
+          ]
+        ],
+        "touched_path": [
+          1,
+          2,
+          3,
+          8,
+          3,
+          9,
+          13,
+          17,
+          22
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "LEVAVERER",
+        "ground_truth_letters_from_touched_path": "LEVAVERER",
+        "ground_truth_letters_from_solver_path": "LEVERER",
+        "extra_tiles": [
+          8
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 18,
+        "solver_word": "ROSEBAY",
+        "solver_path": [
+          22,
+          21,
+          16,
+          17,
+          12,
+          6,
+          5
+        ],
+        "coords": [
+          [
+            307,
+            1063
+          ],
+          [
+            223,
+            1129
+          ],
+          [
+            189,
+            934
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            362,
+            802
+          ],
+          [
+            188,
+            665
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          22,
+          21,
+          16,
+          17,
+          12,
+          7,
+          6,
+          5
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "ROSEBANAY",
+        "ground_truth_letters_from_touched_path": "ROSEBANAY",
+        "ground_truth_letters_from_solver_path": "ROSEBAY",
+        "extra_tiles": [
+          7
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 19,
+        "solver_word": "VERBOSE",
+        "solver_path": [
+          3,
+          9,
+          13,
+          12,
+          11,
+          16,
+          17
+        ],
+        "coords": [
+          [
+            478,
+            595
+          ],
+          [
+            605,
+            733
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            362,
+            802
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            189,
+            934
+          ],
+          [
+            393,
+            939
+          ]
+        ],
+        "touched_path": [
+          3,
+          8,
+          3,
+          9,
+          13,
+          12,
+          11,
+          16,
+          17
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "VAVERBOSE",
+        "ground_truth_letters_from_touched_path": "VAVERBOSE",
+        "ground_truth_letters_from_solver_path": "VERBOSE",
+        "extra_tiles": [
+          8
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 20,
+        "solver_word": "VERBOUS",
+        "solver_path": [
+          3,
+          9,
+          13,
+          12,
+          11,
+          15,
+          16
+        ],
+        "coords": [
+          [
+            478,
+            595
+          ],
+          [
+            605,
+            733
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            362,
+            802
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            189,
+            934
+          ]
+        ],
+        "touched_path": [
+          3,
+          8,
+          3,
+          9,
+          13,
+          12,
+          11,
+          16,
+          15,
+          16
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "VAVERBOSUS",
+        "ground_truth_letters_from_touched_path": "VAVERBOSUS",
+        "ground_truth_letters_from_solver_path": "VERBOUS",
+        "extra_tiles": [
+          8
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 21,
+        "solver_word": "WAVERER",
+        "solver_path": [
+          4,
+          8,
+          3,
+          9,
+          13,
+          17,
+          22
+        ],
+        "coords": [
+          [
+            633,
+            527
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            478,
+            595
+          ],
+          [
+            605,
+            733
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            307,
+            1063
+          ]
+        ],
+        "touched_path": [
+          4,
+          3,
+          8,
+          3,
+          8,
+          3,
+          9,
+          13,
+          17,
+          22
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "WVAVAVERER",
+        "ground_truth_letters_from_touched_path": "WVAVAVERER",
+        "ground_truth_letters_from_solver_path": "WAVERER",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 22,
+        "solver_word": "WEARERS",
+        "solver_path": [
+          4,
+          9,
+          8,
+          13,
+          17,
+          22,
+          16
+        ],
+        "coords": [
+          [
+            633,
+            527
+          ],
+          [
+            605,
+            733
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            393,
+            939
+          ],
+          [
+            307,
+            1063
+          ],
+          [
+            189,
+            934
+          ]
+        ],
+        "touched_path": [
+          4,
+          9,
+          8,
+          13,
+          17,
+          22,
+          16
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "WEARERS",
+        "ground_truth_letters_from_touched_path": "WEARERS",
+        "ground_truth_letters_from_solver_path": "WEARERS",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 23,
+        "solver_word": "ARANEA",
+        "solver_path": [
+          8,
+          13,
+          7,
+          2,
+          6
+        ],
+        "coords": [
+          [
+            497,
+            664
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            341,
+            725
+          ],
+          [
+            360,
+            527
+          ],
+          [
+            188,
+            665
+          ]
+        ],
+        "touched_path": [
+          8,
+          13,
+          12,
+          7,
+          2,
+          6
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "ARBANEA",
+        "ground_truth_letters_from_touched_path": "ARBANEA",
+        "ground_truth_letters_from_solver_path": "ARANEA",
+        "extra_tiles": [
+          12
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 24,
+        "solver_word": "BANAGO",
+        "solver_path": [
+          12,
+          7,
+          6,
+          10,
+          11
+        ],
+        "coords": [
+          [
+            362,
+            802
+          ],
+          [
+            341,
+            725
+          ],
+          [
+            188,
+            665
+          ],
+          [
+            97,
+            869
+          ],
+          [
+            223,
+            832
+          ]
+        ],
+        "touched_path": [
+          12,
+          7,
+          6,
+          10,
+          11
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "BANAGO",
+        "ground_truth_letters_from_touched_path": "BANAGO",
+        "ground_truth_letters_from_solver_path": "BANAGO",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 25,
+        "solver_word": "BRANLE",
+        "solver_path": [
+          12,
+          13,
+          7,
+          1,
+          2
+        ],
+        "coords": [
+          [
+            362,
+            802
+          ],
+          [
+            469,
+            787
+          ],
+          [
+            341,
+            725
+          ],
+          [
+            157,
+            547
+          ],
+          [
+            360,
+            527
+          ]
+        ],
+        "touched_path": [
+          12,
+          13,
+          12,
+          7,
+          6,
+          1,
+          2
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "BRBANALE",
+        "ground_truth_letters_from_touched_path": "BRBANALE",
+        "ground_truth_letters_from_solver_path": "BRANLE",
+        "extra_tiles": [
+          6
+        ],
+        "skipped_tiles": []
+      }
+    ],
+    "overlay": "C:\\experiments\\destroy her\\new images\\trajectory_3.png"
+  },
+  {
+    "image": "4.jpeg",
+    "ocr_grid": [
+      [
+        "S",
+        "H",
+        "H",
+        "W",
+        "E"
+      ],
+      [
+        "S",
+        "H",
+        "H",
+        "W",
+        "E"
+      ],
+      [
+        "E",
+        "R",
+        "A",
+        "O",
+        "A"
+      ],
+      [
+        "A",
+        "O",
+        "A",
+        "I",
+        "H"
+      ],
+      [
+        "D",
+        "D",
+        "O",
+        "I",
+        "Z"
+      ]
+    ],
+    "ground_truth_grid": [
+      [
+        "S",
+        "H",
+        "H",
+        "W",
+        "E"
+      ],
+      [
+        "E",
+        "R",
+        "A",
+        "O",
+        "A"
+      ],
+      [
+        "A",
+        "O",
+        "A",
+        "J",
+        "H"
+      ],
+      [
+        "D",
+        "ER",
+        "O",
+        "I",
+        "Z"
+      ],
+      [
+        "L",
+        "T",
+        "N",
+        "G",
+        "R"
+      ]
+    ],
+    "word_count": 205,
+    "top25_trajectory_mismatches": 11,
+    "top25": [
+      {
+        "rank": 1,
+        "solver_word": "DOORHEAD",
+        "solver_path": [
+          21,
+          22,
+          16,
+          11,
+          6,
+          10,
+          15,
+          20
+        ],
+        "coords": [
+          [
+            293,
+            1081
+          ],
+          [
+            358,
+            1089
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1129
+          ]
+        ],
+        "touched_path": [
+          21,
+          22,
+          21,
+          16,
+          11,
+          6,
+          10,
+          15,
+          20
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "DODORHEAD",
+        "ground_truth_letters_from_touched_path": "TNTERORADL",
+        "ground_truth_letters_from_solver_path": "TNERORADL",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 2,
+        "solver_word": "HOARHEAD",
+        "solver_path": [
+          7,
+          13,
+          12,
+          11,
+          6,
+          10,
+          15,
+          20
+        ],
+        "coords": [
+          [
+            360,
+            663
+          ],
+          [
+            526,
+            812
+          ],
+          [
+            424,
+            817
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1129
+          ]
+        ],
+        "touched_path": [
+          7,
+          12,
+          13,
+          12,
+          11,
+          6,
+          10,
+          15,
+          20
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "HAOARHEAD",
+        "ground_truth_letters_from_touched_path": "AAJAORADL",
+        "ground_truth_letters_from_solver_path": "AJAORADL",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 3,
+        "solver_word": "SHARADA",
+        "solver_path": [
+          0,
+          6,
+          12,
+          11,
+          15,
+          21,
+          17
+        ],
+        "coords": [
+          [
+            87,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            424,
+            817
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            293,
+            1081
+          ],
+          [
+            360,
+            937
+          ]
+        ],
+        "touched_path": [
+          0,
+          6,
+          12,
+          11,
+          15,
+          21,
+          17
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "SHARADA",
+        "ground_truth_letters_from_touched_path": "SRAODTO",
+        "ground_truth_letters_from_solver_path": "SRAODTO",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 4,
+        "solver_word": "WARHEAD",
+        "solver_path": [
+          8,
+          12,
+          11,
+          6,
+          10,
+          15,
+          20
+        ],
+        "coords": [
+          [
+            497,
+            664
+          ],
+          [
+            424,
+            817
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1129
+          ]
+        ],
+        "touched_path": [
+          8,
+          12,
+          11,
+          6,
+          10,
+          15,
+          20
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "WARHEAD",
+        "ground_truth_letters_from_touched_path": "OAORADL",
+        "ground_truth_letters_from_solver_path": "OAORADL",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 5,
+        "solver_word": "ADOORS",
+        "solver_path": [
+          15,
+          21,
+          22,
+          16,
+          11,
+          5
+        ],
+        "coords": [
+          [
+            87,
+            937
+          ],
+          [
+            293,
+            1081
+          ],
+          [
+            358,
+            1089
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          15,
+          21,
+          22,
+          21,
+          16,
+          11,
+          5
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "ADODORS",
+        "ground_truth_letters_from_touched_path": "DTNTEROE",
+        "ground_truth_letters_from_solver_path": "DTNEROE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 6,
+        "solver_word": "ADORES",
+        "solver_path": [
+          15,
+          20,
+          16,
+          11,
+          10,
+          5
+        ],
+        "coords": [
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1129
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          15,
+          20,
+          16,
+          11,
+          10,
+          5
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "ADORES",
+        "ground_truth_letters_from_touched_path": "DLEROAE",
+        "ground_truth_letters_from_solver_path": "DLEROAE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 7,
+        "solver_word": "DADOES",
+        "solver_path": [
+          20,
+          15,
+          21,
+          16,
+          10,
+          5
+        ],
+        "coords": [
+          [
+            121,
+            1129
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            293,
+            1081
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          20,
+          15,
+          21,
+          16,
+          11,
+          10,
+          5
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "DADORES",
+        "ground_truth_letters_from_touched_path": "LDTEROAE",
+        "ground_truth_letters_from_solver_path": "LDTERAE",
+        "extra_tiles": [
+          11
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 8,
+        "solver_word": "DORADO",
+        "solver_path": [
+          20,
+          16,
+          11,
+          15,
+          21,
+          22
+        ],
+        "coords": [
+          [
+            121,
+            1129
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            293,
+            1081
+          ],
+          [
+            358,
+            1089
+          ]
+        ],
+        "touched_path": [
+          20,
+          16,
+          11,
+          15,
+          21,
+          22
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "DORADO",
+        "ground_truth_letters_from_touched_path": "LERODTN",
+        "ground_truth_letters_from_solver_path": "LERODTN",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 9,
+        "solver_word": "HAWAII",
+        "solver_path": [
+          6,
+          12,
+          8,
+          14,
+          18,
+          23
+        ],
+        "coords": [
+          [
+            223,
+            663
+          ],
+          [
+            424,
+            817
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            632,
+            800
+          ],
+          [
+            496,
+            937
+          ],
+          [
+            496,
+            1084
+          ]
+        ],
+        "touched_path": [
+          6,
+          12,
+          8,
+          13,
+          14,
+          13,
+          18,
+          23
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "HAWOAOII",
+        "ground_truth_letters_from_touched_path": "RAOJHJIG",
+        "ground_truth_letters_from_solver_path": "RAOHIG",
+        "extra_tiles": [
+          13,
+          13
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 10,
+        "solver_word": "HOARSE",
+        "solver_path": [
+          7,
+          13,
+          12,
+          11,
+          5,
+          10
+        ],
+        "coords": [
+          [
+            360,
+            663
+          ],
+          [
+            526,
+            812
+          ],
+          [
+            424,
+            817
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            664
+          ],
+          [
+            87,
+            800
+          ]
+        ],
+        "touched_path": [
+          7,
+          12,
+          13,
+          12,
+          11,
+          5,
+          10
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "HAOARSE",
+        "ground_truth_letters_from_touched_path": "AAJAOEA",
+        "ground_truth_letters_from_solver_path": "AJAOEA",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 11,
+        "solver_word": "SHARES",
+        "solver_path": [
+          0,
+          6,
+          12,
+          11,
+          10,
+          5
+        ],
+        "coords": [
+          [
+            87,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            424,
+            817
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          0,
+          6,
+          12,
+          11,
+          10,
+          5
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "SHARES",
+        "ground_truth_letters_from_touched_path": "SRAOAE",
+        "ground_truth_letters_from_solver_path": "SRAOAE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 12,
+        "solver_word": "SHEARS",
+        "solver_path": [
+          0,
+          6,
+          10,
+          15,
+          11,
+          5
+        ],
+        "coords": [
+          [
+            87,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          0,
+          6,
+          10,
+          15,
+          11,
+          5
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "SHEARS",
+        "ground_truth_letters_from_touched_path": "SRADOE",
+        "ground_truth_letters_from_solver_path": "SRADOE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 13,
+        "solver_word": "SHRADD",
+        "solver_path": [
+          0,
+          6,
+          11,
+          15,
+          20,
+          21
+        ],
+        "coords": [
+          [
+            87,
+            527
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1129
+          ],
+          [
+            293,
+            1081
+          ]
+        ],
+        "touched_path": [
+          0,
+          6,
+          11,
+          15,
+          20,
+          21
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "SHRADD",
+        "ground_truth_letters_from_touched_path": "SRODLT",
+        "ground_truth_letters_from_solver_path": "SRODLT",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 14,
+        "solver_word": "ADORE",
+        "solver_path": [
+          15,
+          20,
+          16,
+          11,
+          10
+        ],
+        "coords": [
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1129
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            800
+          ]
+        ],
+        "touched_path": [
+          15,
+          20,
+          16,
+          11,
+          10
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "ADORE",
+        "ground_truth_letters_from_touched_path": "DLEROA",
+        "ground_truth_letters_from_solver_path": "DLEROA",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 15,
+        "solver_word": "AHEAD",
+        "solver_path": [
+          12,
+          6,
+          10,
+          15,
+          20
+        ],
+        "coords": [
+          [
+            424,
+            817
+          ],
+          [
+            223,
+            663
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1129
+          ]
+        ],
+        "touched_path": [
+          12,
+          6,
+          10,
+          15,
+          20
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "AHEAD",
+        "ground_truth_letters_from_touched_path": "ARADL",
+        "ground_truth_letters_from_solver_path": "ARADL",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 16,
+        "solver_word": "ARADO",
+        "solver_path": [
+          12,
+          11,
+          15,
+          20,
+          16
+        ],
+        "coords": [
+          [
+            424,
+            817
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1129
+          ],
+          [
+            223,
+            937
+          ]
+        ],
+        "touched_path": [
+          12,
+          11,
+          15,
+          20,
+          16
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "ARADO",
+        "ground_truth_letters_from_touched_path": "AODLER",
+        "ground_truth_letters_from_solver_path": "AODLER",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 17,
+        "solver_word": "ARAWA",
+        "solver_path": [
+          15,
+          11,
+          12,
+          8,
+          14
+        ],
+        "coords": [
+          [
+            87,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            424,
+            817
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            632,
+            800
+          ]
+        ],
+        "touched_path": [
+          15,
+          11,
+          12,
+          8,
+          13,
+          14
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "ARAWOA",
+        "ground_truth_letters_from_touched_path": "DOAOJH",
+        "ground_truth_letters_from_solver_path": "DOAOH",
+        "extra_tiles": [
+          13
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 18,
+        "solver_word": "AREAD",
+        "solver_path": [
+          12,
+          11,
+          10,
+          15,
+          20
+        ],
+        "coords": [
+          [
+            424,
+            817
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            121,
+            1129
+          ]
+        ],
+        "touched_path": [
+          12,
+          11,
+          10,
+          15,
+          20
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "AREAD",
+        "ground_truth_letters_from_touched_path": "AOADL",
+        "ground_truth_letters_from_solver_path": "AOADL",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 19,
+        "solver_word": "AWARE",
+        "solver_path": [
+          14,
+          8,
+          12,
+          11,
+          10
+        ],
+        "coords": [
+          [
+            632,
+            800
+          ],
+          [
+            497,
+            664
+          ],
+          [
+            424,
+            817
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            800
+          ]
+        ],
+        "touched_path": [
+          14,
+          13,
+          8,
+          12,
+          11,
+          10
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "AOWARE",
+        "ground_truth_letters_from_touched_path": "HJOAOA",
+        "ground_truth_letters_from_solver_path": "HOAOA",
+        "extra_tiles": [
+          13
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 20,
+        "solver_word": "DARES",
+        "solver_path": [
+          20,
+          15,
+          11,
+          10,
+          5
+        ],
+        "coords": [
+          [
+            121,
+            1129
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          20,
+          15,
+          11,
+          10,
+          5
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "DARES",
+        "ground_truth_letters_from_touched_path": "LDOAE",
+        "ground_truth_letters_from_solver_path": "LDOAE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 21,
+        "solver_word": "DAROO",
+        "solver_path": [
+          20,
+          15,
+          11,
+          16,
+          22
+        ],
+        "coords": [
+          [
+            121,
+            1129
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            358,
+            1089
+          ]
+        ],
+        "touched_path": [
+          20,
+          15,
+          11,
+          16,
+          21,
+          22
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "DARODO",
+        "ground_truth_letters_from_touched_path": "LDOERTN",
+        "ground_truth_letters_from_solver_path": "LDOERN",
+        "extra_tiles": [
+          21
+        ],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 22,
+        "solver_word": "DOERS",
+        "solver_path": [
+          20,
+          16,
+          10,
+          11,
+          5
+        ],
+        "coords": [
+          [
+            121,
+            1129
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            87,
+            800
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          20,
+          16,
+          11,
+          10,
+          11,
+          5
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "DORERS",
+        "ground_truth_letters_from_touched_path": "LEROAOE",
+        "ground_truth_letters_from_solver_path": "LERAOE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 23,
+        "solver_word": "DOORS",
+        "solver_path": [
+          21,
+          22,
+          16,
+          11,
+          5
+        ],
+        "coords": [
+          [
+            293,
+            1081
+          ],
+          [
+            358,
+            1089
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            664
+          ]
+        ],
+        "touched_path": [
+          21,
+          22,
+          21,
+          16,
+          11,
+          5
+        ],
+        "touched_matches_solver": false,
+        "ocr_letters_from_touched_path": "DODORS",
+        "ground_truth_letters_from_touched_path": "TNTEROE",
+        "ground_truth_letters_from_solver_path": "TNEROE",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 24,
+        "solver_word": "DORAD",
+        "solver_path": [
+          20,
+          16,
+          11,
+          15,
+          21
+        ],
+        "coords": [
+          [
+            121,
+            1129
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            937
+          ],
+          [
+            293,
+            1081
+          ]
+        ],
+        "touched_path": [
+          20,
+          16,
+          11,
+          15,
+          21
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "DORAD",
+        "ground_truth_letters_from_touched_path": "LERODT",
+        "ground_truth_letters_from_solver_path": "LERODT",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      },
+      {
+        "rank": 25,
+        "solver_word": "DORSE",
+        "solver_path": [
+          20,
+          16,
+          11,
+          5,
+          10
+        ],
+        "coords": [
+          [
+            121,
+            1129
+          ],
+          [
+            223,
+            937
+          ],
+          [
+            223,
+            832
+          ],
+          [
+            87,
+            664
+          ],
+          [
+            87,
+            800
+          ]
+        ],
+        "touched_path": [
+          20,
+          16,
+          11,
+          5,
+          10
+        ],
+        "touched_matches_solver": true,
+        "ocr_letters_from_touched_path": "DORSE",
+        "ground_truth_letters_from_touched_path": "LEROEA",
+        "ground_truth_letters_from_solver_path": "LEROEA",
+        "extra_tiles": [],
+        "skipped_tiles": []
+      }
+    ],
+    "overlay": "C:\\experiments\\destroy her\\new images\\trajectory_4.png"
+  }
+]

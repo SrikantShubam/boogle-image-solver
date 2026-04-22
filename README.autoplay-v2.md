@@ -96,3 +96,11 @@ python -m autoplay_v2.cli review-last --show-feedback
 - Feedback log: `data/dictionary_feedback.jsonl`
 
 Rejected playback attempts are always logged to feedback (append-only).
+
+## OCR validation commands
+
+```bash
+python -m pytest tests/autoplay_v2/test_ocr.py -q
+python -m pytest tests/autoplay_v2/test_e2e_fixture.py -q
+python -m pytest tests/autoplay_v2/test_solver.py::test_solver_does_not_reuse_tiles_for_single_word -q
+```
